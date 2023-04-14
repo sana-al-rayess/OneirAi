@@ -7,4 +7,8 @@ import("./login.css");
 return (
     <div className="flex">
         <div className="flex">
-            
+            <a href="/" className="flex">
+                <img className="logo" src={Logo} alt="logo" />
+            </a>
+        </div>
+        
