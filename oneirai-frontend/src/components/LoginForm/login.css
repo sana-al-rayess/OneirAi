@@ -85,3 +85,16 @@ input{
     background: #3370A6;
       border: 2px solid #F2B544;
   }
+  .login{
+    height: 460px;
+    background: #F2B544;
+    border-radius: 60% / 10%;
+         
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+  }
+  
+  .login label{
+    color: #182E59;
+    transform: scale(.6);
+  }
