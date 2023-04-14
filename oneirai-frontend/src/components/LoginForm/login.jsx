@@ -1,14 +1,23 @@
 import React, { useState } from "react";
 import Logo from "../../images/logo_oneira.png";
 import("./login.css");
+
 function LoginForm() {
-    
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [name, setName] = useState("");
 	const [emailError, setEmailError] = useState("");
 	const [passwordError, setPasswordError] = useState("");
 	const [nameError, setNameError] = useState("");
+
+    const handleSubmit = (e) => {
+		e.preventDefault();
+		let valid = true;
+		if (!name.trim()) {
+			setNameError("Name is required");
+			valid = false;
+		}
+		
 
 
 return (
