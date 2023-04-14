@@ -32,3 +32,22 @@
 	align-items: center;
 	min-height: 100vh;
 }
+input{
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+.input-with-user-icon {
+    padding-left: 40px;
+    background-image: url("../../images/user-16.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+  }
