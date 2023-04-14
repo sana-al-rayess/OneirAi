@@ -16,3 +16,19 @@
     justify-content: center;
       
 }
+.container{
+	width: 350px;
+	height: 500px;
+	background: #182E59;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #F2B544;
+}
+.main{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
