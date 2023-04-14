@@ -17,7 +17,25 @@ function LoginForm() {
 			setNameError("Name is required");
 			valid = false;
 		}
+		if (!email.trim()) {
+			setEmailError("Email is required");
+			valid = false;
+		} else if (!/\S+@\S+\.\S+/.test(email)) {
+			setEmailError("Email is invalid");
+			valid = false;
+		}
+		if (!password.trim()) {
+			setPasswordError("Password is required");
+			valid = false;
+		} else if (password.trim().length < 6) {
+			setPasswordError("Password must be at least 6 characters");
+			valid = false;
+		}
+		if (valid) {
 		
+			console.log("Form submitted");
+		}
+	};
 
 
 return (
