@@ -10,3 +10,9 @@
          url('https://fonts.cdnfonts.com/s/19997/Macondo-Regular.woff') format('woff');
   }
   
+  .flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+      
+}
