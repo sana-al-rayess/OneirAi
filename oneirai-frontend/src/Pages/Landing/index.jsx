@@ -21,7 +21,9 @@ const Landing = () => {
             <br/><br/>
             <div> <Features /> </div>
             <br/><br/>
-            
+            <div> <Parallax backgroundImage={Image2}>
+            </Parallax></div>
+            <br/><br/>
 
 
 
