@@ -21,6 +21,16 @@ const Features = () => {
                 </div>
             </div>
 
+            <div className="features-container">
+
+                <div className="feature-txt-button">
+                    <div><p className="feature1">Lorem Epsum Lorem Epsum <br />Lorem Epsum Lorem Epsum  </p></div>
+
+                    <div><Button>Try Now</Button></div>
+                </div>
+                <img className="photo" src={Feature2} alt="photo" />
+            </div>
+
            
         </div>
     );
