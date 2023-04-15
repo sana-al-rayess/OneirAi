@@ -58,4 +58,22 @@
     }
   }
   
- 
+  @media screen and (max-width: 480px) {
+    .parallax {
+      height: 200px;
+    }
+    
+    .parallax::before {
+      transform: translateZ(-1px) scale(1);
+    }
+    
+    @keyframes parallax {
+      from {
+        transform: translateZ(-1px) scale(1);
+      }
+      to {
+        transform: translateZ(-200px) scale(1);
+      }
+    }
+  }
+  
