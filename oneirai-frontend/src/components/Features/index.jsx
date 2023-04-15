@@ -31,7 +31,16 @@ const Features = () => {
                 <img className="photo" src={Feature2} alt="photo" />
             </div>
 
-           
+            <div className="features-container">
+
+                <img className="photo" src={Feature3} alt="photo" />
+
+                <div className="feature-txt-button">
+                    <div><p className="feature1">Lorem Epsum Lorem Epsum <br />Lorem Epsum Lorem Epsum  </p></div>
+
+                    <div><Button>Try Now</Button></div>
+                </div>
+            </div>
         </div>
     );
 
