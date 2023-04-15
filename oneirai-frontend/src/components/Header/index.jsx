@@ -1,6 +1,7 @@
 import React from 'react';
 import "./header.css";
 import Logo from "../../images/logo_oneira.png";
+import Button from "../../components/Button";
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
     </div>
     <div className="button-container">
       <button className='login-button'>Login</button>
-      <button className='signup-button'>SignUp</button>
+      <Button>SignUp</Button>
     </div>
   </div>
   );
