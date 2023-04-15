@@ -4,7 +4,11 @@ import Button from "../Button";
 import './intro.css';
 
 const Intro = () => {
- 
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+
+    localStorage.getItem("user_id") ? window.location.href = "/home" : window.location.href = "/login"
   };
 
   return (
@@ -17,7 +21,7 @@ const Intro = () => {
         <p className="slogan-txt2">Unleash the power of AI to visualize and interpret<br /> your subconscious mind!</p></div>
       <div>
         <div>
-          <Button>Get Started</Button>
+          <Button onClick={handleClick}>Get Started</Button>
         </div>
       </div>
 
