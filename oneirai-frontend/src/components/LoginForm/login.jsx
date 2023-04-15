@@ -49,7 +49,29 @@ function LoginForm() {
 
         }
     }
-   
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        try {
+            const formData = {email, password };
+            const response = await axios.post(
+                "http://127.0.0.1:8000/api/login", formData);
+            const { user, authorisation } = response.data;
+            localStorage.setItem("token", authorisation.token);
+            localStorage.setItem("name", response.data.user.name);
+            localStorage.setItem("user_id", response.data.user.id);
+            localStorage.setItem("email", response.data.user.email);
+            console.log("User created successfully:", user);
+
+            if (response.data.user.type == "admin") {
+                window.location.href = "/admin";
+            } else {
+                window.location.href = "/Home";
+            }
+        } catch (error) {
+            form.reset();
+            console.error(error);
+        }
     }
 
 
