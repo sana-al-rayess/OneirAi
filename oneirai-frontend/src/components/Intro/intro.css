@@ -1,0 +1,49 @@
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  }
+  span{
+    color: #F2B544;
+  }
+  
+  .slogan-txt {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 64px;
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+    /* animation: color-loop 5s infinite; */
+  }
+/*   
+  @keyframes color-loop {
+    0% {
+      color: white; 
+    }
+    25% {
+      color: #F2B544; 
+    }
+    50% {
+      color: white;
+    }
+    75% {
+      color: #F2B544; 
+    }
+    100% {
+      color:white;
+    }
+  } */
+  
+  
+  .slogan-txt2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 32px;
+    text-align: center;
+    color: #F2B544;
+  }
