@@ -1,0 +1,39 @@
+.features-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    padding: 3rem;
+  }
+  
+  .feature1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .photo{
+    width: 20%;
+    height: auto;
+  }
+  
+  .feature-title{
+    color: #F2B544;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.8rem;
+    text-align: center;
+    padding: 5rem;
+  }
+ 
+.feature-txt-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
