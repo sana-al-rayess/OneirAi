@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SideNav from "../../components/SideNav";
 import './userdashboard.css';
+import UserDash from "../../components/UserDash";
 
 
 const UserDashboard = () => {
@@ -9,7 +10,7 @@ const UserDashboard = () => {
      <div className="box">
 
       <div className="side-nav"> <SideNav /> </div>
-      <div className="page-left"> </div>
+      <div className="page-left"> <UserDash /> </div>
 
      </div>
     </div>
