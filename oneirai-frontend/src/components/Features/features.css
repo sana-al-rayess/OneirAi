@@ -19,16 +19,37 @@
   .photo{
     width: 20%;
     height: auto;
-  }
+    }
+
+    
+    .feature-title {
+      color: #F2B544;
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: 0.8rem;
+      text-align: center;
+      padding: 5rem;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 0.15em solid orange;
+      animation: typing 4s steps(40) forwards infinite;
+    }
+    
+    @keyframes typing {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+        border-right: none;
+      }
+    }
+    
+
   
-  .feature-title{
-    color: #F2B544;
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: 0.8rem;
-    text-align: center;
-    padding: 5rem;
-  }
+  
+  
  
 .feature-txt-button{
     display: flex;
