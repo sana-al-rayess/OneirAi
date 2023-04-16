@@ -1,9 +1,12 @@
+body{
+    overflow: auto;
+}
 .nav-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-
+    overflow: auto;
 }
 
 .profile-pic {
