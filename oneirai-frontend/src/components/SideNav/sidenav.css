@@ -43,3 +43,13 @@ menu-icon{
     font-size: large;
 }
 
+.linking {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    
+  }
+  .linking:hover{
+    color: #F2B544;
+    transform: scale(1.1);
+  }
