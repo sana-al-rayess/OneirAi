@@ -1,0 +1,29 @@
+.button2 {
+    background-color: #182E59;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    color: #fff;
+    border: 0;
+    font-size: 1em;
+    font-weight: bold;
+  }
+   
+  .button2:hover {
+    transform: scale(1.1);
+    border:2px solid #F2B544;
+    }
+  
+  
+  .button2:active {
+    transform: translateY(4px);
+  }
+  
+  .button2:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
