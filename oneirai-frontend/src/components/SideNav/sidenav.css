@@ -24,6 +24,12 @@ body{
     align-items: center;
     color: #fff;
 }
+.passchange{
+    cursor: pointer;
+}
+.passchange:hover{
+    color: #F2B544;
+}
 
 .menu {
     display: flex;
