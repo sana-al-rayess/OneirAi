@@ -26,7 +26,10 @@ const UserDash = () => {
             <br /><br />
             <div className="row1">
                 <div className="user-title">Dream Journal</div>
-                
+                <div>
+                    <Button2 onClick={togglePopup}>Add Dream</Button2>
+                    {showPopup ? (<AddDream closePopup={togglePopup} />) : null}</div>
+            </div>
         </div>
 
 
