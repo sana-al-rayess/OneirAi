@@ -1,0 +1,83 @@
+.info {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 1px solid #3370A6;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+    color: #fff;
+}
+
+
+#center_logo {
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(244, 218, 22, 0.962);
+  }
+  
+
+
+.sm_icons {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.icons {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+   
+    cursor: pointer;
+  
+  }
+  .logo-footer{
+    width: 1rem;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+.slogan {
+    text-align: center;
+    font-size: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hover {
+    display: flex;
+
+}
+
+.hover:hover {
+    color: #F2B544;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .icons {
+        margin-left: 0;
+    }
+
+    .slogan {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hover:hover {
+        transform: none;
+    }
+}
