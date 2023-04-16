@@ -6,6 +6,8 @@ import Parallax from "../../components/Parallax";
 import Features from "../../components/Features";
 import Facts from "../../components/Facts";
 import Subscribe from "../../components/Subscribe";
+import Feedback from "../../components/Feedback"
+import Footer from "../../components/Footer";
 import Image1 from "../../images/starry.jpg";
 import Image2 from "../../images/starry2.jpg";
 import Image3 from "../../images/starry3.jpg";
@@ -32,7 +34,9 @@ const Landing = () => {
             </Parallax></div>
             <br/><br/>
             <div> <Subscribe /> </div>
-
+            <div> <Feedback /> </div>
+            <br/><br/>
+            <div> <Footer /> </div>
 
 
 

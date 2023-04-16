@@ -3,10 +3,11 @@ import Button from "../Button";
 import Feature1 from "../../images/Mask.png";
 import Feature2 from "../../images/transai.png";
 import Feature3 from "../../images/7248902.png"
+
 import './features.css';
 
 const Features = () => {
-
+ 
     return (
         <div>
             <p className="feature-title">FEATURES</p>
