@@ -6,7 +6,7 @@ body{
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    overflow: auto;
+   
 }
 
 .profile-pic {
