@@ -10,7 +10,14 @@ import './sidenav.css';
 
 
 const SideNav = () => {
-  
+  const [clicked, setClicked] = useState(false);
+	const active_user = localStorage.getItem("name");
+  const user_email = localStorage.getItem("email");
+
+	const handleClick = () => {
+		window.location.href = "/login";
+		localStorage.clear();
+	};
 
   return (
     <div className="nav-container">
@@ -19,8 +26,9 @@ const SideNav = () => {
 
       <div className="personal-info">
         <div> <img src={PP1} alt="Profile Image" className="profile-pic"></img> </div>
-        <div><p>John Doe</p></div>
-        <div><a>Change Password</a></div>
+        <div><p>{active_user}</p></div>
+        <div><p>{user_email}</p></div>
+        <div><a><u>Change Password</u></a></div>
       </div>
       <br /><br />
       <div className="menu">
@@ -52,7 +60,9 @@ const SideNav = () => {
           </div>
 
         </div>
-        <div><Button>Logout</Button></div>
+        <div><Button onClick={handleClick}>Logout</Button></div>
+        
+        
 
       </div>
 
