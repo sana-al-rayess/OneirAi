@@ -3,7 +3,25 @@ import Button3 from "../Button3";
 import "./adddream.css";
 
 const AddDream = (props) => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [date, setDate] = useState("");
 
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const handleDescriptionChange = (e) => {
+    setDescription(e.target.value);
+  };
+
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
   };
 
   return (
