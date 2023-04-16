@@ -17,8 +17,12 @@ const SideNav = () => {
 
       <div> <img className="logo" src={Logo} alt="logo" /></div>
 
+      <div className="personal-info">
+        <div> <img src={PP1} alt="Profile Image" className="profile-pic"></img> </div>
+        <div><p>John Doe</p></div>
+        <div><a>Change Password</a></div>
+      </div>
       
-
     </div>
   );
 }
