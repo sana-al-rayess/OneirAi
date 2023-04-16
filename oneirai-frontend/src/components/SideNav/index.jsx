@@ -6,18 +6,26 @@ import Journal from "../../images/journal.png"
 import Pattern from "../../images/pattern.png"
 import Edit from "../../images/editprof.png"
 import Button from "../../components/Button"
+import ChangePass from "../../components/ChangePass";
 import './sidenav.css';
 
 
 const SideNav = () => {
   const [clicked, setClicked] = useState(false);
-	const active_user = localStorage.getItem("name");
+  const active_user = localStorage.getItem("name");
   const user_email = localStorage.getItem("email");
+  const [showPopup, setShowPopup] = useState(false);
 
-	const handleClick = () => {
-		window.location.href = "/login";
-		localStorage.clear();
-	};
+ 
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
+  const handleClick = () => {
+    window.location.href = "/login";
+    localStorage.clear();
+  };
 
   return (
     <div className="nav-container">
@@ -28,8 +36,14 @@ const SideNav = () => {
         <div> <img src={PP1} alt="Profile Image" className="profile-pic"></img> </div>
         <div><p>{active_user}</p></div>
         <div><p>{user_email}</p></div>
-        <div><a><u>Change Password</u></a></div>
-      </div>
+
+        <div><a className="passchange" onClick={togglePopup}><u>Change Password</u></a></div>
+        {showPopup && <ChangePass closePopup={togglePopup} />}
+
+        
+      </div> 
+        
+
       <br /><br />
       <div className="menu">
         <div>
@@ -61,8 +75,8 @@ const SideNav = () => {
 
         </div>
         <div><Button onClick={handleClick}>Logout</Button></div>
-        
-        
+
+
 
       </div>
 
