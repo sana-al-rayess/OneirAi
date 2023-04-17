@@ -2,7 +2,11 @@ import React, { useState } from "react";
 
 import Button from "../Button";
 import Button2 from "../Button2";
-import AddDream from "../AddDream";
+import ProfilePhoto from "../ProfilePhoto";
+
+import "./userprofile.css"
+import EditProfileForm from "../EditProfileForm";
+
 
 const UserProfile = () => {
     const [showPopup, setShowPopup] = useState(false);
@@ -26,8 +30,15 @@ const UserProfile = () => {
             <br /><br />
             <div className="row1">
                 <div className="user-title">Edit Profile</div>
-
             </div>
+            <br/><br/>
+
+            <div className="row3">
+            <div> <ProfilePhoto/> </div>
+            <div className="div2"> <EditProfileForm/></div>
+            
+            </div>
+
         </div>
 
 
