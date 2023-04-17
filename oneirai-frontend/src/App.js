@@ -5,6 +5,7 @@ import LoginPage from "./Pages/LoginPage";
 import Home from "./Pages/Home";
 import Landing from "./Pages/Landing";
 import UserDashboard from "./Pages/UserDashboard";
+import Profile from "./Pages/Profile";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/home" element={<Home />} />
       <Route path="/landing" element={<Landing />} />
       <Route path="/user" element={<UserDashboard />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="*" element={<div>404</div>} />
     </Routes>
   </BrowserRouter>
