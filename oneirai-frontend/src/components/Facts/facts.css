@@ -87,3 +87,30 @@
     width: 600px;
   }
   
+  
+@media (max-width: 768px) {
+  .container-cards {
+    flex-direction: column;
+    
+  }
+  
+  .card {
+    max-width: none;
+    margin: 0;
+    margin-right: 15rem;
+  }
+  
+  .card:not(:first-child) {
+    margin-left: 0;
+  }
+  
+  .bar {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .feature-title {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
