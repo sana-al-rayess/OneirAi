@@ -58,3 +58,34 @@
     align-items: center;
     gap: 5rem;
 }
+
+
+
+@media screen and (max-width: 640px) {
+
+  .features-container {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1.5rem;
+  }
+
+  .photo {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .feature-title {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  .feature1 {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .feature-txt-button {
+    gap: 2rem;
+  }
+
+}
