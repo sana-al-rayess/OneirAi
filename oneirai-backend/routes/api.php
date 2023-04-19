@@ -13,6 +13,7 @@ Route::post('logout', [UserController::class, 'logout']);
 
 
 Route::group(['middleware' => 'user.role'], function () {
-       Route::post('updateUserInfo', [UserController::class, 'updateUser']);
+    Route::get('userInfo', [UserController::class, 'getUser']);
+    Route::post('updateUserInfo', [UserController::class, 'updateUser']);
 
 });
