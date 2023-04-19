@@ -11,3 +11,8 @@ Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
 Route::post('logout', [UserController::class, 'logout']);
 
+
+Route::group(['middleware' => 'user.role'], function () {
+       Route::post('updateUserInfo', [UserController::class, 'updateUser']);
+
+});
