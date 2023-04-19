@@ -13,7 +13,7 @@ class UserController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login', 'updateUser', 'register']]);
+        $this->middleware('auth:api', ['except' => ['login','getUser', 'updateUser', 'register']]);
     }
 
     public function login(Request $request)
@@ -97,7 +97,15 @@ class UserController extends Controller
         ]);
     }
 
-  
+    public function getUser()
+    {
+        $user = Auth::user();
+        return response()->json([
+            'status' => 'success',
+            'user' => $user
+        ], 200);
+    }
+
 
     public function updateUser(Request $request)
     {
