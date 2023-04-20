@@ -1,87 +1,93 @@
 .cards-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 5rem;
-  }
-  
-  .card1 {
-    display: flex;
-    height: 380px;
-    width: 300px;
-    margin: 150px auto 0;
-    background-image: url("../../images/feedback_1.png");
-    background-position: center;
-    background-size: cover;
-    box-shadow: -1rem 0 3rem #000;
-    text-align: center;
-    font-size: 20px;
-    border-radius: 15px;
-    transition: 0.4s ease-out;
-    position: relative;
-  }
-  
-  
-  .card1:not(:first-child) {
-    margin-left: -50px;
-  }
-  
-  .card1:hover {
-    transform: translateY(-20px);
-    transition: 0.4s ease-out;
-  }
-  
-  .card1:hover ~ .card {
-    position: relative;
-    left: 50px;
-    transition: 0.4s ease-out;
-  }
-  .card1 .card-header {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 48px;
-  }
-  
-  .card1 .card-header .profile-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 1000px;
-    position: absolute;
-    left: 50%;
-    top: -3rem;
-    transform: translateX(-50%);
-    border: 8px solid #F2B544;
-    box-shadow: 0 0 20px #00000033;
-    
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
 
-  
-  .card1 .card-body {
-    padding: 10px 40px;
-  }
-  
-  .card1 .card-body .name {
-    align-items: center;
-    padding-top: 10rem;
-    font-size: 20px;
-    color: #fff;
-  }
- .feedback-title {
-  color: #F2B544;
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 0.8rem;
+.card1 {
+  display: flex;
+  height: 380px;
+  width: 300px;
+  margin: 150px auto 0;
+  background-image: url("../../images/feedback_1.png");
+  background-position: center;
+  background-size: cover;
+  box-shadow: -1rem 0 3rem #000;
   text-align: center;
-  animation: neon-glow 1.5s ease-in-out alternate infinite;
+  font-size: 20px;
+  border-radius: 15px;
+  transition: 0.4s ease-out;
+  position:sticky;
+}
+
+
+.card1:not(:first-child) {
+  margin-left: -50px;
+}
+
+.card1:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card1:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+.card1 .card-header {
+  position: absolute;
+  
+  left: 50%;
+  transform: translateX(-50%);
+  height: 48px;
+  
+}
+
+.card1 .card-header .profile-img {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 1000px;
+  margin-top: -4rem;
+  margin-left: 10rem; 
+  object-fit: cover;
+  /* position: absolute; */
+  left: 50%;
+  top: -3rem;
+  transform: translateX(-50%);
+  border: 8px solid #F2B544;
+  box-shadow: 0 0 20px #00000033;
+  
+}
+
+
+
+.card1 .card-body {
+  padding: 10px 40px;
+}
+
+.card1 .card-body .name {
+  align-items: center;
+  padding-top: 10rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.feedback-title {
+color: #F2B544;
+font-size: 3rem;
+font-weight: 400;
+letter-spacing: 0.8rem;
+text-align: center;
+animation: neon-glow 1.5s ease-in-out alternate infinite;
 }
 
 @keyframes neon-glow {
-  0% {
-    text-shadow: 0 0 5px #F2B544;
-  }
-  100% {
-    text-shadow: 0 0 10px #F2B544, 0 0 20px #F2B544, 0 0 30px #F2B544, 0 0 40px #F2B544, 0 0 50px #F2B544, 0 0 60px #F2B544, 0 0 70px #F2B544;
-  }
+0% {
+  text-shadow: 0 0 5px #F2B544;
 }
+100% {
+  text-shadow: 0 0 10px #F2B544, 0 0 20px #F2B544, 0 0 30px #F2B544, 0 0 40px #F2B544, 0 0 50px #F2B544, 0 0 60px #F2B544, 0 0 70px #F2B544;
+}
+}
+
