@@ -1,23 +1,53 @@
-import React, { useState } from "react";
-
-import Button from "../Button";
-import Button2 from "../Button2";
-import ProfilePhoto from "../ProfilePhoto";
-
 import "./userprofile.css"
 import EditProfileForm from "../EditProfileForm";
-
-
+import React, { useState, useRef } from 'react';
+import '../../components/ProfilePhoto/ProfilePhoto.css';
+import Camera from "../../images/camera.png"
+import axios from "axios";
 const UserProfile = () => {
+    const today = new Date().toLocaleDateString();
+    const active_user = localStorage.getItem("name");
+
+    const [profilePic, setProfilePic] = useState(null);
+    const fileInputRef = useRef(null);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [age, setAge] = useState("");
     const [showPopup, setShowPopup] = useState(false);
 
     const togglePopup = () => {
         setShowPopup(!showPopup);
     };
 
+    const handleNameChange = (event) => {
+        setName(event.target.value);
+    };
 
-    const active_user = localStorage.getItem("name");
-    const today = new Date().toLocaleDateString();
+    const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+    };
+
+    const handleAgeChange = (event) => {
+        setAge(event.target.value);
+    };
+
+    const handleProfilePicChange = (event) => {
+        setProfilePic(event.target.value);
+    };
+
+    const handleFileUpload = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                setProfilePic(reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
+  
+
 
     return (
         <div className="user-container">
@@ -31,12 +61,56 @@ const UserProfile = () => {
             <div className="row1">
                 <div className="user-title">Edit Profile</div>
             </div>
-            <br/><br/>
+            <br /><br />
 
             <div className="row3">
-            <div> <ProfilePhoto/> </div>
-            <div className="div2"> <EditProfileForm/></div>
-            
+                <div><div className="edit-profile-pic2">
+                    {profilePic ? (
+                        <img className="profile-pic2" src={profilePic} alt="Profile" />
+                    ) : (
+                        <div className="empty-profile-pic2">
+
+                            <img src={Camera} alt='camera' />
+                        </div>
+                    )}
+                    <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleFileUpload}
+                        style={{ display: 'none' }}
+                        ref={fileInputRef}
+                    />
+                    <div
+                        className="circular-border"
+                        onClick={() => fileInputRef.current.click()}
+                    >
+
+                    </div>
+                </div></div>
+
+
+                <div className="div2"> <div className="edit-profile-form">
+                    <div>
+                        <div className="row1 margin">
+                            <label>Name:</label>
+                            <input type="text" id="name-input" value={name} onChange={handleNameChange} />
+                        </div>
+                    </div>
+                    <div>
+                        <div className="row1 margin">
+                            <label>Email:</label>
+                            <input type="email" id="email" value={email} onChange={handleEmailChange} />
+                        </div>
+                    </div>
+                    <div>
+                        <div className="row1 margin">
+                            <label>Age:</label>
+                            <input type="number" id="age-input" value={age} onChange={handleAgeChange} />
+                        </div>
+                        <div><button className="save" onClick={handleSave}>Save</button></div>
+                    </div>
+                </div></div>
+
             </div>
 
         </div>
