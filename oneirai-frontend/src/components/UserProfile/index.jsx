@@ -46,7 +46,31 @@ const UserProfile = () => {
         }
     };
 
-  
+    const handleSave = () => {
+        const formData = new FormData();
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("Age", age);
+        formData.append("profile_picture", profilePic);
+      
+        axios
+          .post("http://127.0.0.1:8000/api/updateUserInfo", formData, {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+              "Content-Type": "multipart/form-data",
+            },
+          })
+          .then((response) => {
+            console.log(response.data);
+            console.log("edited successfully!");
+      
+          })
+          .catch((error) => {
+            console.error(error);
+            console.log("Error editing");
+          });
+      };
+      
 
 
     return (
