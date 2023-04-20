@@ -64,6 +64,13 @@ const UserProfile = () => {
             console.log(response.data);
             console.log("edited successfully!");
       
+            const updatedUser = response.data.updated_user;
+            localStorage.setItem("name", updatedUser.name);
+            localStorage.setItem("profile_picture", updatedUser.profile_picture);
+            localStorage.setItem("email", updatedUser.email);
+      
+            console.log("local storage updated");
+            window.location.reload();
           })
           .catch((error) => {
             console.error(error);
