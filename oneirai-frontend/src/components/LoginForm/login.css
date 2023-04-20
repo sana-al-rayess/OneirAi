@@ -10,11 +10,7 @@
          url('https://fonts.cdnfonts.com/s/19997/Macondo-Regular.woff') format('woff');
   }
   
-  /* body{
-    background-image: url('../../images/Login_mockup_1.jpg');
-    background-size: cover;
-} */
-.body1 {
+ .body1 {
 	background-image: url('../../images/Login_mockup_1.jpg');
     background-size: cover;
     position: fixed;
