@@ -41,19 +41,20 @@ function LoginForm() {
                 const { user, authorisation } = response.data;
                 localStorage.setItem('token', authorisation.token);
                 localStorage.setItem("name", response.data.user.name);
-                localStorage.setItem("user_id", response.data.user.id);
+                localStorage.setItem("profile_picture", response.data.user.profile_picture);
                 localStorage.setItem("email", response.data.user.email);
                 console.log('User created successfully:', user);
-                window.location.href = "/Home";
+                window.location.href = "/user";
             } catch (error) {
                 console.error(error);
+                
             }
 
         }
     }
     const handleLogin = async (e) => {
         e.preventDefault();
-        // const form = document.getElementById("login-form");
+        
         const form = e.target;
         try {
             const formData = { email, password };
@@ -64,18 +65,20 @@ function LoginForm() {
             localStorage.setItem("name", response.data.user.name);
             localStorage.setItem("user_id", response.data.user.id);
             localStorage.setItem("email", response.data.user.email);
+            localStorage.setItem("profile_picture", response.data.user.profile_picture);
             console.log("User logged in successfully:", user);
-            // if (response.data.user.type == "admin") {
-            //     window.location.href = "/admin";
-            // } else {
-            //     window.location.href = "/Home";
-            // }
+            if (response.data.user.type == "admin") {
+                window.location.href = "/admin";
+            } else {
+                window.location.href = "/user";
+            }
         } catch (error) {
 
             form.reset();
             setLoginError("Wrong Credentials");
             console.log("wrong credentials");
             console.error(error);
+            
         }
     }
 
