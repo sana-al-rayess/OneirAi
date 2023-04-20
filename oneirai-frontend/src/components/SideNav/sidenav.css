@@ -11,9 +11,9 @@ body{
 
 .profile-pic {
     display: flex;
-    width: 130px;
-    height: 130px;
-    border-radius: 1000px;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10rem;
     box-shadow: 0 0 20px #00000033;
 }
 
@@ -62,3 +62,4 @@ menu-icon{
     color: #F2B544;
     transform: scale(1.1);
   }
+
