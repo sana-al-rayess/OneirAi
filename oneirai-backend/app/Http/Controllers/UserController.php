@@ -124,41 +124,7 @@ class UserController extends Controller
         ], 200);
     }
 
-    public function updatePassword(Request $request)
-    {
-        $user_id = Auth::id();
-        $password_updated = User::find($user_id);
-    
-        $validator = Validator::make($request->all(), [
-            'current_password' => 'required',
-            'password' => 'required|min:8|confirmed',
-        ]);
-    
-        if ($validator->fails()) {
-            return response()->json([
-                'status' => 'error',
-                'errors' => $validator->errors()
-            ], 422);
-        }
-    
-        $current_password = $request->input('current_password');
-    
-        if (!Hash::check($current_password, $password_updated->password)) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'The current password is incorrect.'
-            ], 401);
-        }
-    
-        $password_updated->password = Hash::make($request->input('password'));
-        $password_updated->save();
-    
-        return response()->json([
-            "status" => "success",
-            "updated_user" => $password_updated
-        ], 200);
-    }
-    
+   
     
     
     
