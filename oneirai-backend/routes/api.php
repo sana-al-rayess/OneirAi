@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\DreamController;
 
 
 
@@ -17,4 +17,5 @@ Route::group(['middleware' => 'user.role'], function () {
     Route::get('userInfo', [UserController::class, 'getUser']);
     Route::post('updateUserInfo', [UserController::class, 'updateUser']);
     Route::post('updatePassword', [UserController::class, 'updatePassword']);
+    Route::post('addDream', [DreamController::class, 'addDream']);
 });
