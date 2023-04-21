@@ -31,4 +31,31 @@ class DreamController extends Controller
         ]);
     }
     
+    public function deleteDream(Request $request, $id)
+{
+    $dream = Dream::find($id);
+
+    if (!$dream) {
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Dream not found',
+        ], 404);
+    }
+
+    if ($dream->user_id != Auth::id()) {
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Unauthorized',
+        ], 401);
+    }
+
+    $dream->delete();
+
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Dream deleted successfully',
+    ]);
+}
+
+
 }
