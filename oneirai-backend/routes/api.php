@@ -18,4 +18,5 @@ Route::group(['middleware' => 'user.role'], function () {
     Route::post('updateUserInfo', [UserController::class, 'updateUser']);
     Route::post('updatePassword', [UserController::class, 'updatePassword']);
     Route::post('addDream', [DreamController::class, 'addDream']);
+    Route::delete('deleteDream/{id}', [DreamController::class, 'deleteDream']);
 });
