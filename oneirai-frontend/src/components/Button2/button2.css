@@ -1,12 +1,12 @@
 .button2 {
-    background-color: #182E59;
+    background-color: #F2B544;
     width: 8rem;
     height: 2rem;
     border-radius: 1rem;
     border: none;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-    color: #fff;
+    color: #334B71;
     border: 0;
     font-size: 1em;
     font-weight: bold;
@@ -14,7 +14,8 @@
    
   .button2:hover {
     transform: scale(1.1);
-    border:2px solid #F2B544;
+    border:2px solid #fff;
+    background-color: #e9a321;
     }
   
   
