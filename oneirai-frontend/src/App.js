@@ -7,6 +7,7 @@ import Landing from "./Pages/Landing";
 import UserDashboard from "./Pages/UserDashboard";
 import Profile from "./Pages/Profile";
 import Patterns from "./Pages/Patterns";
+import Admin from "./Pages/Admin";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/user" element={<UserDashboard />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/pattern" element={<Patterns />} />
+      <Route path="/admin" element={<Admin />} />
       <Route path="*" element={<div>404</div>} />
     </Routes>
   </BrowserRouter>
