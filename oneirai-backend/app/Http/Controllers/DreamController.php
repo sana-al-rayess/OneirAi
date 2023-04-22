@@ -71,5 +71,17 @@ class DreamController extends Controller
         ]);
     }
     
+    public function searchByTitle(Request $request)
+    {
+        $query = $request->input('q');
+        $user_id = $request->user()->id;
 
+        $dreams = Dream::where('user_id', $user_id)
+                        ->where('title', 'like', "%$query%")
+                        ->orderBy('date', 'desc')
+                        ->get();
+
+        return response()->json(['dreams' => $dreams]);
+    }
 }
+
