@@ -30,7 +30,7 @@ class DreamController extends Controller
             'dream' => $dream,
         ]);
     }
-
+   
     public function deleteDream(Request $request, $id)
     {
         $dream = Dream::find($id);
@@ -58,14 +58,18 @@ class DreamController extends Controller
     }
 
     public function getDreams()
-{
-    $dreams = Dream::where('user_id', Auth::id())->get();
-
-    return response()->json([
-        'status' => 'success',
-        'data' => $dreams,
-    ]);
-}
-
+    {
+        $dreams = Dream::where('user_id', Auth::id())->get();
+    
+        foreach ($dreams as $dream) {
+            $dream->date = date('d-m-Y', strtotime($dream->date));
+        }
+    
+        return response()->json([
+            'status' => 'success',
+            'data' => $dreams,
+        ]);
+    }
+    
 
 }
