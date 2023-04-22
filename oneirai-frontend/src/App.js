@@ -2,7 +2,6 @@ import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 import LoginPage from "./Pages/LoginPage";
-import Home from "./Pages/Home";
 import Landing from "./Pages/Landing";
 import UserDashboard from "./Pages/UserDashboard";
 import Profile from "./Pages/Profile";
@@ -15,7 +14,6 @@ function App() {
     <Routes>
      
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/home" element={<Home />} />
       <Route path="/landing" element={<Landing />} />
       <Route path="/user" element={<UserDashboard />} />
       <Route path="/profile" element={<Profile />} />
