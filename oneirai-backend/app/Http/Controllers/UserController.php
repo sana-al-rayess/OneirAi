@@ -15,7 +15,7 @@ class UserController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login','getUser', 'updateUser', 'register']]);
+        $this->middleware('auth:api', ['except' => ['login', 'getUser', 'updateUser', 'register']]);
     }
 
     public function login(Request $request)
@@ -111,6 +111,7 @@ class UserController extends Controller
 
     public function updateUser(Request $request)
     {
+        
         $user_id = Auth::id();
         $user_updated = User::find($user_id);
         $user_updated->name = $request->name;
@@ -125,40 +126,51 @@ class UserController extends Controller
     }
 
     public function updatePassword(Request $request)
-{
-    $user_id = Auth::id();
-    $password_updated = User::find($user_id);
+    {
+        $user_id = Auth::id();
+        $password_updated = User::find($user_id);
 
-    $validator = Validator::make($request->all(), [
-        'current_password' => 'required',
-        'password' => 'required|min:8|confirmed',
-        'password_confirmation' => 'required|same:password',
-    ]);
+        $validator = Validator::make($request->all(), [
+            'current_password' => 'required',
+            'password' => 'required|min:8|confirmed',
+            'password_confirmation' => 'required|same:password',
+        ]);
 
-    if ($validator->fails()) {
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'error',
+                'errors' => $validator->errors()
+            ], 422);
+        }
+
+        $current_password = $request->input('current_password');
+
+        if (!Hash::check($current_password, $password_updated->password)) {
+            return response()->json(['error' => 'The current password is incorrect.'], 422);
+        }
+
+        $password_updated->password = Hash::make($request->input('password'));
+        $password_updated->save();
+
         return response()->json([
-            'status' => 'error',
-            'errors' => $validator->errors()
-        ], 422);
+            "status" => "success",
+            "updated_user" => $password_updated
+        ], 200);
     }
 
-    $current_password = $request->input('current_password');
+    public function getUsers()
+    {
+        $users = User::all();
 
-    if (!Hash::check($current_password, $password_updated->password)) {
-        return response()->json(['error' => 'The current password is incorrect.'], 422);
+        return response()->json([
+            'status' => 'success',
+            'data' => $users,
+        ]);
     }
 
-    $password_updated->password = Hash::make($request->input('password'));
-    $password_updated->save();
 
-    return response()->json([
-        "status" => "success",
-        "updated_user" => $password_updated
-    ], 200);
-}
 
-    
-    
-    
-    
+
+
+
 }
