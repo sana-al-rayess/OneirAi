@@ -24,12 +24,12 @@ const AddDream = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const token = localStorage.getItem('access_token');
-  
+
     const formData = new FormData();
     formData.append('title', title);
     formData.append('description', description);
     formData.append('date', date);
-  
+
     axios
       .post("http://127.0.0.1:8000/api/addDream", formData, {
         headers: {
@@ -40,13 +40,14 @@ const AddDream = (props) => {
       .then((response) => {
         console.log(response.data);
         console.log("Dream added successfully!")
+        window.location.reload();
       })
       .catch((error) => {
         console.log(error.response.data);
         console.log("Error adding dream")
       });
   };
-  
+
 
 
   return (
@@ -86,8 +87,8 @@ const AddDream = (props) => {
             />
           </div>
           <div className="model-btn">
-            <Button3 type="submit">Save</Button3>
             <Button3 onClick={props.closePopup}>Close</Button3>
+            <Button3 type="submit">Save</Button3>
           </div>
         </form>
       </div>
