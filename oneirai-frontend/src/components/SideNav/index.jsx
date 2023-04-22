@@ -53,7 +53,7 @@ const SideNav = () => {
         <div>
           <div className="menu-item">
             <img src={Journal} alt="icon" className="menu-icon"></img>
-            <Link to="/user" className="linking">
+            <Link to="/user" className="linking" style={window.location.pathname === '/user' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
               Dream Journal
             </Link>
           </div>
@@ -61,7 +61,7 @@ const SideNav = () => {
           <div>
             <div className="menu-item">
               <img src={Pattern} alt="icon" className="menu-icon"></img>
-              <Link to="/pattern" className="linking">
+              <Link to="/pattern" className="linking" style={window.location.pathname === '/pattern' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
                 Pattern Tracker
               </Link>
             </div>
@@ -69,7 +69,7 @@ const SideNav = () => {
             <div>
               <div className="menu-item">
                 <img src={Edit} alt="icon" className="menu-icon"></img>
-                <Link to="/profile" className="linking">
+                <Link to="/profile" className="linking" style={window.location.pathname === '/profile' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
                   Profile
                 </Link>
               </div>
@@ -78,7 +78,9 @@ const SideNav = () => {
           </div>
 
         </div>
-        <div><Button onClick={handleClick}>Logout</Button></div>
+        <div className="empty-space"></div>
+        <div><Button className="logout" onClick={handleClick}>Logout</Button></div>
+        <div className="empty-space"></div>
 
 
 
