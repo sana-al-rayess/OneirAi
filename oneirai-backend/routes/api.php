@@ -6,8 +6,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\DreamController;
 
 
-
-
 Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
 Route::post('logout', [UserController::class, 'logout']);
@@ -21,6 +19,12 @@ Route::group(['middleware' => 'user.role'], function () {
     Route::post('addDream', [DreamController::class, 'addDream']);
     Route::delete('deleteDream/{id}', [DreamController::class, 'deleteDream']);
     Route::get('getDreams', [DreamController::class, 'getDreams']);
-    
+    Route::get('searchByTitle', [DreamController::class, 'searchByTitle']);
+});
 
+Route::group(['prefix' => 'admin'], function () {
+    Route::group(['middleware' => 'admin.role'], function () {
+        Route::get('getUsers', [UserController::class, 'getUsers']);
+      
+    });
 });
