@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Button3 from "../Button3";
 import "./adddream.css";
+import axios from "axios";
+
 
 const AddDream = (props) => {
   const [title, setTitle] = useState("");
@@ -21,14 +23,38 @@ const AddDream = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    const token = localStorage.getItem('access_token');
+  
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('description', description);
+    formData.append('date', date);
+  
+    axios
+      .post("http://127.0.0.1:8000/api/addDream", formData, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((response) => {
+        console.log(response.data);
+        console.log("Dream added successfully!")
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+        console.log("Error adding dream")
+      });
   };
+  
+
 
   return (
     <div className="popup">
-
       <div className="popup-inner">
-        <div className="title-model"><h1>Add Dream</h1></div>
+        <div className="title-model">
+          <h1>Add Dream</h1>
+        </div>
         <form onSubmit={handleSubmit}>
           <div className="labeltext">
             <label htmlFor="title">Title:</label>
@@ -38,7 +64,8 @@ const AddDream = (props) => {
               name="title"
               value={title}
               onChange={handleTitleChange}
-            /></div>
+            />
+          </div>
           <div className="labeltext">
             <label htmlFor="description">Description:</label>
             <textarea
@@ -46,8 +73,8 @@ const AddDream = (props) => {
               name="description"
               value={description}
               onChange={handleDescriptionChange}
-            ></textarea></div>
-
+            ></textarea>
+          </div>
           <div className="labeltext">
             <label htmlFor="date">Date:</label>
             <input
@@ -56,10 +83,12 @@ const AddDream = (props) => {
               name="date"
               value={date}
               onChange={handleDateChange}
-            /></div>
+            />
+          </div>
           <div className="model-btn">
             <Button3 type="submit">Save</Button3>
-            <Button3 onClick={props.closePopup}>Close</Button3></div>
+            <Button3 onClick={props.closePopup}>Close</Button3>
+          </div>
         </form>
       </div>
     </div>
