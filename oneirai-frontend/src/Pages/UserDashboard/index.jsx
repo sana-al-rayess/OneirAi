@@ -16,12 +16,37 @@ const UserDashboard = () => {
           },
         });
         setDreams(response.data.data);
+        
       } catch (error) {
         console.log(error);
       }
     };
-    getDreams();
-  }, []);
+    
+    if (dreams.length === 0) {
+      getDreams();
+    }
+    
+  }, [dreams]);
+
+  const handleDeleteDream = (id) => {
+    axios.delete(`http://127.0.0.1:8000/api/deleteDream/${id}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
+    .then(response => {
+      if (response.data.status === 'success') {
+        const updatedDreams = dreams.filter(dream => dream.id !== id);
+        setDreams(updatedDreams);
+        console.log("Dream deleted successfully!")
+        
+      }
+    })
+    .catch(error => {
+      console.log(error);
+      console.log("Error deleting..")
+    });
+  }
 
   return (
     <div className="body2">
@@ -44,7 +69,7 @@ const UserDashboard = () => {
                 <div className="dream-card-button">
                  <div> <button className="button-dream">Visualize</button></div>
                  <div> <button className="button-dream">Interpret</button></div>
-                 <div> <button className="button-dream">Delete</button></div>
+                 <div> <button className="button-dream" onClick={() => handleDeleteDream(dream.id)}>Delete</button></div>
                 </div>
               </div>
             ))}
