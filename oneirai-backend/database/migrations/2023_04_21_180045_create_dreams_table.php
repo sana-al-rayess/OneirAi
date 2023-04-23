@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('dreams', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('id')->on('users');
+            $table->foreignId('user_id')->constrained('users')->on('id');
             $table->string('title'); 
             $table->string('description'); 
-            $table->dateTime('date');
+            $table->date('date');
             $table->timestamps();
         });
     }
