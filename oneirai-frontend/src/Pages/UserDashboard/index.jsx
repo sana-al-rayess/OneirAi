@@ -3,6 +3,10 @@ import SideNav from "../../components/SideNav";
 import "./userdashboard.css";
 import UserDash from "../../components/UserDash";
 import axios from "axios";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+
 
 const UserDashboard = () => {
   const [dreams, setDreams] = useState([]);
@@ -16,16 +20,16 @@ const UserDashboard = () => {
           },
         });
         setDreams(response.data.data);
-        
+
       } catch (error) {
         console.log(error);
       }
     };
-    
+
     if (dreams.length === 0) {
       getDreams();
     }
-    
+
   }, [dreams]);
 
   const handleDeleteDream = (id) => {
@@ -34,19 +38,64 @@ const UserDashboard = () => {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     })
-    .then(response => {
-      if (response.data.status === 'success') {
-        const updatedDreams = dreams.filter(dream => dream.id !== id);
-        setDreams(updatedDreams);
-        console.log("Dream deleted successfully!")
-        
-      }
-    })
-    .catch(error => {
-      console.log(error);
-      console.log("Error deleting..")
-    });
+      .then(response => {
+        if (response.data.status === 'success') {
+          const updatedDreams = dreams.filter(dream => dream.id !== id);
+          setDreams(updatedDreams);
+          console.log("Dream deleted successfully!")
+
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        console.log("Error deleting..")
+      });
   }
+
+
+  const [inputValue, setInputValue] = useState("");
+
+  useEffect(() => {
+    console.log(inputValue);
+    const delay = 500;
+    let timeoutId;
+
+    const searchDreamsByTitle = async () => {
+      const url = `http://127.0.0.1:8000/api/searchByTitle?${new URLSearchParams({
+        q: inputValue,
+      })}`;
+      const response = await axios.get(url, {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      });
+      const data = response.data;
+      console.log(data);
+      setDreams(data.dreams);
+    };
+
+    const debounceSearch = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(searchDreamsByTitle, delay);
+    };
+
+    debounceSearch();
+
+    return () => clearTimeout(timeoutId);
+  }, [inputValue]);
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  }
+
+  const sortDreamsByDate = async (sortOrder) => {
+    const url = `http://127.0.0.1:8000/api/sortByDate/${sortOrder}`;
+    const response = await axios.get(url, {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    });
+    const data = response.data;
+    console.log(data);
+    setDreams(data.dreams);
+  };
+
 
   return (
     <div className="body2">
@@ -56,20 +105,34 @@ const UserDashboard = () => {
         </div>
         <div className="page-left">
           <UserDash />
+
           <div className="dreams-container">
-           
+            <div className="search-container">
+              <div className="search-div">
+                <input
+                  type="text"
+                  placeholder="Search for dreams..."
+                  value={inputValue}
+                  onChange={handleInputChange}
+                />
+
+                <FontAwesomeIcon icon={faArrowDown} className="arrow-icons" onClick={() => sortDreamsByDate('recent')} />
+                <FontAwesomeIcon icon={faArrowUp} className="arrow-icons" onClick={() => sortDreamsByDate('oldest')} />
+              </div>
+            </div>
+
             {dreams.map((dream) => (
               <div className="dream-card" key={dream.id}>
                 <div className="dream-details">
                   <h3>{dream.title}</h3>
-                  <p2>{dream.date}</p2><br/><br/>
+                  <p2>{dream.date}</p2><br /><br />
                   <p1>{dream.description}</p1>
-                  
+
                 </div>
                 <div className="dream-card-button">
-                 <div> <button className="button-dream">Visualize</button></div>
-                 <div> <button className="button-dream">Interpret</button></div>
-                 <div> <button className="button-dream" onClick={() => handleDeleteDream(dream.id)}>Delete</button></div>
+                  <div> <button className="button-dream">Visualize</button></div>
+                  <div> <button className="button-dream">Interpret</button></div>
+                  <div> <button className="button-dream" onClick={() => handleDeleteDream(dream.id)}>Delete</button></div>
                 </div>
               </div>
             ))}
