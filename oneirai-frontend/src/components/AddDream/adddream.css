@@ -25,10 +25,10 @@
 }
 .labeltext{
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  gap: 1rem;
-  padding-right: 3rem;
+  gap: 8rem;
+  padding-right: 8rem;
   
 }
 .model-btn{
@@ -37,7 +37,7 @@
   align-items: center;
   gap: 1rem;
   padding-top: 2rem;
-  padding-right: 6rem;
+  padding-right: 8rem;
   
 }
 .title-model{
@@ -61,12 +61,13 @@
   display:flex;
   justify-content: right;
   width: 5%; 
+  
 }
 
 
 
 .popup-inner label {
-  display: inline-block;
+  display: flex;
   width: 25%;
   
   margin-top: 20px;
