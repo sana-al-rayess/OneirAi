@@ -18,8 +18,10 @@ Route::group(['middleware' => 'user.role'], function () {
 
     Route::post('addDream', [DreamController::class, 'addDream']);
     Route::delete('deleteDream/{id}', [DreamController::class, 'deleteDream']);
+
     Route::get('getDreams', [DreamController::class, 'getDreams']);
     Route::get('searchByTitle', [DreamController::class, 'searchByTitle']);
+    Route::get('sortByDate/{sort}', [DreamController::class, 'sortByDate']);
 });
 
 Route::group(['prefix' => 'admin'], function () {
