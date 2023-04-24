@@ -14,7 +14,14 @@ const Header = () => {
     localStorage.clear();
   };
 
- 
+  function handleLogin() {
+    if (localStorage.getItem("user_id")) {
+      window.location.href = "/user";
+    } else {
+      window.location.href = "/login";
+    }
+  }
+
   const handleRoute = (route) => {
     return active_user ? route : "/reg";
   };
@@ -25,9 +32,11 @@ const Header = () => {
         <img className='logo' src={Logo} alt='logo' />
       </div>
       <div className="button-container">
-       
+        <button className='login-button' onClick={handleLogin}>
+          {localStorage.getItem("user_id") ? "My Profile" : "Log In"}
+        </button>
 
-        <Button onClick={handleClick}>{localStorage.getItem("user_id") ? "Log Out" : "Sign In "}</Button>
+        <Button onClick={handleClick}>{localStorage.getItem("user_id") ? "Log Out" : "Sign Up "}</Button>
       </div>
     </div>
   );
