@@ -31,7 +31,9 @@ const SideNav = () => {
   return (
     <div className="nav-container">
 
-      <div> <img className="logo" src={Logo} alt="logo" /></div>
+      <div>  <a href="/landing">
+        <img className="logo" src={Logo} alt="logo" />
+      </a></div>
 
       <div className="personal-info">
         {/* <div> <img src={user_photo} alt="Profile Image" className="profile-pic"></img> </div> */}
