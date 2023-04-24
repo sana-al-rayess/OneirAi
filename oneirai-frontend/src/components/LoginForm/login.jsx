@@ -87,7 +87,7 @@ function LoginForm() {
         <div className="body1">
             <div className="flex">
                 <div className="flex">
-                    <a href="/" className="flex">
+                    <a href="/landing" className="flex">
                         <img className="logo" src={Logo} alt="logo" />
                     </a>
                 </div>
