@@ -9,6 +9,7 @@ const ChangePass = (props) => {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPasswords, setShowPasswords] = useState(false); // add state variable
   const [errors, setErrors] = useState({});
 
   const handleCurrentPasswordChange = (e) => {
@@ -48,6 +49,11 @@ const ChangePass = (props) => {
         setErrors(error.response.data.errors);
       });
   }
+
+  const togglePasswordVisibility = () => { // add toggle function
+    setShowPasswords(!showPasswords);
+  }
+
   return (
     <div className="popup">
       <div className="popup-inner">
@@ -58,7 +64,7 @@ const ChangePass = (props) => {
           <div className="labeltext">
             <label>Current Password:</label>
             <input
-              type="password"
+              type={showPasswords ? "text" : "password"} // conditionally set type
               name="current_password"
               value={currentPassword || ''}
               onChange={handleCurrentPasswordChange}
@@ -70,7 +76,7 @@ const ChangePass = (props) => {
           <div className="labeltext">
             <label htmlFor="password">New Password:</label>
             <input
-              type="password"
+              type={showPasswords ? "text" : "password"} // conditionally set type
               name="password"
               value={newPassword || ''}
               onChange={handleNewPasswordChange}
@@ -82,7 +88,7 @@ const ChangePass = (props) => {
           <div className="labeltext">
             <label>Confirm Password:</label>
             <input
-              type="password"
+              type={showPasswords ? "text" : "password"} // conditionally set type
               name="password_confirmation"
               value={confirmPassword || ''}
               onChange={handleConfirmPasswordChange}
