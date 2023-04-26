@@ -106,6 +106,50 @@
   .button-dream:hover{
     color:  #F2B138;
     transform: scale(1.1);
+    border: transparent;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .search-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    width: 50%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-div input[type="text"] {
+    border: none;
+    color: #182E59;
+    font-size: 18px;
+    width: 100%;
+    margin-right: 10px;
+    background-color: transparent;
+  }
+  
+  .arrow-icons {
+    cursor: pointer;
+    color: #182E59;
+    padding-left: 10px;
+  }
+  .arrow-icons:hover{
+    transform: scale(1.1)
+  }
+  
+  @media (max-width: 768px) {
+    .search-div {
+      width: 80%;
+    }
   }
   
   
