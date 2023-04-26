@@ -32,7 +32,27 @@ const DreamModal = ({ dream, onClose }) => {
   }, []);
 
   return (
-   
+    <div className="dream-modal">
+      <button className="close-button" onClick={onClose}>
+        &times;
+      </button>
+      <div className="dream-modal-content">
+        <div className="dream-details">
+          <h3>{dream.title}</h3>
+          <p2>{dream.date}</p2>
+          <br />
+          <br />
+          <p1>{dream.description}{message}</p1>
+        </div>
+      </div>
+      <div><h1 className="interpret">Interpretation</h1></div>
+      <div className="interpret-modal-content">{response}</div>
+
+      <div className="interpret-model-btn">
+        <Button3 onClick={onClose}>Close</Button3>
+        <Button2 type="submit">Save</Button2>
+      </div>
+    </div>
   );
 };
 
