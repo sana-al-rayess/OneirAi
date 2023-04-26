@@ -6,11 +6,26 @@ import axios from "axios";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
-
+import DreamModal from "../../components/DreamModal";
+import ErrorPage from "../../components/ErrorPage";
 
 const UserDashboard = () => {
+  const token = localStorage.getItem("token");
+
+
   const [dreams, setDreams] = useState([]);
 
+  const [selectedDream, setSelectedDream] = useState(null);
+  
+  const handleInterpretDream = (dream) => {
+    setSelectedDream(dream);
+  };
+
+  const handleCloseDreamModal = () => {
+    setSelectedDream(null);
+  };
+  
+ 
   useEffect(() => {
     const getDreams = async () => {
       try {
@@ -99,48 +114,86 @@ const UserDashboard = () => {
 
   return (
     <div className="body2">
-      <div className="box">
-        <div className="side-nav">
-          <SideNav />
-        </div>
-        <div className="page-left">
-          <UserDash />
-
-          <div className="dreams-container">
-            <div className="search-container">
-              <div className="search-div">
-                <input
-                  type="text"
-                  placeholder="Search for dreams..."
-                  value={inputValue}
-                  onChange={handleInputChange}
-                />
-
-                <FontAwesomeIcon icon={faArrowDown} className="arrow-icons" onClick={() => sortDreamsByDate('recent')} />
-                <FontAwesomeIcon icon={faArrowUp} className="arrow-icons" onClick={() => sortDreamsByDate('oldest')} />
+      {token ? (
+        <div className="box">
+          <div className="side-nav">
+            <SideNav />
+          </div>
+          <div className="page-left">
+            <UserDash />
+  
+            <div className="dreams-container">
+              <div className="search-container">
+                <div className="search-div">
+                  <input
+                    type="text"
+                    placeholder="Search for dreams..."
+                    value={inputValue}
+                    onChange={handleInputChange}
+                  />
+  
+                  <FontAwesomeIcon
+                    icon={faArrowDown}
+                    className="arrow-icons"
+                    onClick={() => sortDreamsByDate("recent")}
+                  />
+                  <FontAwesomeIcon
+                    icon={faArrowUp}
+                    className="arrow-icons"
+                    onClick={() => sortDreamsByDate("oldest")}
+                  />
+                </div>
               </div>
+  
+              {dreams.map((dream) => (
+                <div className="dream-card" key={dream.id}>
+                  <div className="dream-details">
+                    <h3>{dream.title}</h3>
+                    <p2>{dream.date}</p2>
+                    <br />
+                    <br />
+                    <p1>{dream.description}</p1>
+                  </div>
+                  <div className="dream-card-button">
+                    <div>
+                      {" "}
+                      <button className="button-dream">Visualize</button>
+                    </div>
+                    <div>
+                      {" "}
+                      <button
+                        className="button-dream"
+                        onClick={() => {
+                          setSelectedDream(dream);
+                          handleInterpretDream(dream);
+                        }}
+                      >
+                        Interpret
+                      </button>
+                    </div>
+                    <div>
+                      {" "}
+                      <button
+                        className="button-dream"
+                        onClick={() => handleDeleteDream(dream.id)}
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-
-            {dreams.map((dream) => (
-              <div className="dream-card" key={dream.id}>
-                <div className="dream-details">
-                  <h3>{dream.title}</h3>
-                  <p2>{dream.date}</p2><br /><br />
-                  <p1>{dream.description}</p1>
-
-                </div>
-                <div className="dream-card-button">
-                  <div> <button className="button-dream">Visualize</button></div>
-                  <div> <button className="button-dream">Interpret</button></div>
-                  <div> <button className="button-dream" onClick={() => handleDeleteDream(dream.id)}>Delete</button></div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
-      </div>
+      ) : (
+        <ErrorPage />
+      )}
+  
+      {selectedDream && (
+        <DreamModal dream={selectedDream} onClose={handleCloseDreamModal} />
+      )}
     </div>
   );
-};
-
+      }  
 export default UserDashboard;
