@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Dream;
+use Illuminate\Support\Facades\Http;
+
 
 class DreamController extends Controller
 {
@@ -132,6 +134,20 @@ class DreamController extends Controller
     }
 
 
-
-
+    public function generateImage(Request $request)
+    {
+        $apiKey = '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';
+        $apiUrl = 'https://api.openai.com/v1/images/generations';
+    
+        $response = Http::withHeaders([
+            'Authorization' => 'Bearer ' . $apiKey,
+        ])->post($apiUrl, [
+            'model' => 'image-alpha-001',
+            'prompt' => $request->input('prompt'),
+            
+          
+        ]);
+    
+        return response($response->body(), $response->status());
+    }
 }
