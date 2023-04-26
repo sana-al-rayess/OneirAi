@@ -144,7 +144,8 @@ class DreamController extends Controller
         ])->post($apiUrl, [
             'model' => 'image-alpha-001',
             'prompt' => $request->input('prompt'),
-            
+            'num_images' => 2,
+            'size' => '256x256',
           
         ]);
     
