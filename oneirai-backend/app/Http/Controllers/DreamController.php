@@ -111,7 +111,7 @@ class DreamController extends Controller
         $data = array(
             'prompt' => $message,
             'temperature' => 0.4,
-            'max_tokens' => 1000,
+            'max_tokens' => 50,
             'n' => 1,
             // 'stop' => ["\n",],
         );
