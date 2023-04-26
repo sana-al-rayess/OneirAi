@@ -1,0 +1,59 @@
+.dream-modal {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #182E59;
+    width: 50%;
+    height: auto;
+       
+    z-index: 999;
+}
+
+
+.dream-modal-content {
+    background-color: #182E59;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 2.5rem;
+}
+
+.close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.5rem;
+    height: auto;
+    background-color: #182E59;
+    color: aliceblue;
+}
+
+.interpret{
+    color: #F2B544;
+    font-size: 1.5rem;
+    padding: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.interpret-modal-content {
+    background-color: #fff;
+    color: #182E59;
+    margin: 1rem;
+    height: 7rem;
+    padding: 1rem;
+    margin: 1rem;
+    
+}
+
+.interpret-model-btn{
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+        
+  }
