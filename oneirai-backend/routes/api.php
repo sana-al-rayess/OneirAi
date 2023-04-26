@@ -10,6 +10,7 @@ Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
 Route::post('logout', [UserController::class, 'logout']);
 
+Route::post('/chatgpt', [DreamController::class, 'getResponse']);
 
 Route::group(['middleware' => 'user.role'], function () {
     Route::get('userInfo', [UserController::class, 'getUser']);
@@ -22,6 +23,7 @@ Route::group(['middleware' => 'user.role'], function () {
     Route::get('getDreams', [DreamController::class, 'getDreams']);
     Route::get('searchByTitle', [DreamController::class, 'searchByTitle']);
     Route::get('sortByDate/{sort}', [DreamController::class, 'sortByDate']);
+    
 });
 
 Route::group(['prefix' => 'admin'], function () {
