@@ -95,4 +95,43 @@ class DreamController extends Controller
 
         return response()->json(['dreams' => $dreams]);
     }
+
+    public function getResponse(Request $request)
+    {
+        $data = json_decode($request->getContent(), true);
+        $message = $data['message'];
+
+        $url = 'https://api.openai.com/v1/engines/text-davinci-002/completions';
+
+        $headers = array(
+            'Content-Type: application/json',
+            'Authorization: Bearer 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',
+        );
+
+        $data = array(
+            'prompt' => $message,
+            'temperature' => 0.4,
+            'max_tokens' => 1000,
+            'n' => 1,
+            // 'stop' => ["\n",],
+        );
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        $response = curl_exec($ch);
+
+        curl_close($ch);
+
+        return $response;
+    }
+
+
+
+
 }
