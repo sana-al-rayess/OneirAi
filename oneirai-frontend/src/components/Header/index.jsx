@@ -8,14 +8,14 @@ import Button from "../../components/Button";
 const Header = () => {
 
   const [clicked, setClicked] = useState(false);
-  const active_user = localStorage.getItem("user_id");
+  const active_user = localStorage.getItem("token");
   const handleClick = () => {
     window.location.href = "/login";
     localStorage.clear();
   };
 
   function handleLogin() {
-    if (localStorage.getItem("user_id")) {
+    if (localStorage.getItem("token")) {
       window.location.href = "/user";
     } else {
       window.location.href = "/login";
@@ -33,7 +33,7 @@ const Header = () => {
       </div>
       <div className="button-container">
         <button className='login-button' onClick={handleLogin}>
-          {localStorage.getItem("user_id") ? "My Profile" : "Log In"}
+          {localStorage.getItem("token") ? "My Profile" : "Log In"}
         </button>
 
         <Button onClick={handleClick}>{localStorage.getItem("user_id") ? "Log Out" : "Sign Up "}</Button>
