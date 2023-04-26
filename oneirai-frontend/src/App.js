@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        
+        <Route path="/" element={<Landing />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/landing" element={<Landing />} />
         <Route path="/user" element={<UserDashboard />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/pattern" element={<Patterns />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<div>404</div>} />
-        
+        <Route path="/error" element={<ErrorPage />} />
 
       </Routes>
     </BrowserRouter>
