@@ -11,6 +11,7 @@ Route::post('login', [UserController::class, 'login']);
 Route::post('logout', [UserController::class, 'logout']);
 
 Route::post('/chatgpt', [DreamController::class, 'getResponse']);
+Route::post('/dal-e', [DreamController::class, 'generateImage']);
 
 Route::group(['middleware' => 'user.role'], function () {
     Route::get('userInfo', [UserController::class, 'getUser']);
