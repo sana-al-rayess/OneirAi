@@ -19,6 +19,17 @@ const DreamModal = ({ dream, onClose }) => {
     return response.data;
   }
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getResponse(dream.description);
+      if (result && result.choices && result.choices[0] && result.choices[0].text) {
+        setResponse(result.choices[0].text);
+      } else {
+        setResponse('Error: Unable to retrieve response.');
+      }
+    }
+    fetchData();
+  }, []);
 
   return (
    
