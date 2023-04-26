@@ -1,0 +1,31 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #182E59;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  .error-h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .error-p {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  
