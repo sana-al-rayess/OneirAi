@@ -109,9 +109,9 @@ class DreamController extends Controller
         );
 
         $data = array(
-            'prompt' => $message,
+            'prompt' => $message . ' interpret this dream in maximum 3 lines, extract the elements in this dream, tell the meaning of each element',
             'temperature' => 0.4,
-            'max_tokens' => 50,
+            'max_tokens' => 1000,
             'n' => 1,
             // 'stop' => ["\n",],
         );
