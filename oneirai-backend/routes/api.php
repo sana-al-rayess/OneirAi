@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DreamController;
+use App\Http\Controllers\HoroscopeController;
 
 
 Route::post('register', [UserController::class, 'register']);
@@ -12,6 +13,9 @@ Route::post('logout', [UserController::class, 'logout']);
 
 Route::post('/chatgpt', [DreamController::class, 'getResponse']);
 Route::post('/dal-e', [DreamController::class, 'generateImage']);
+
+Route::post('getHoroscope', [HoroscopeController::class, 'getHoroscope']);
+
 
 Route::group(['middleware' => 'user.role'], function () {
     Route::get('userInfo', [UserController::class, 'getUser']);
@@ -24,6 +28,7 @@ Route::group(['middleware' => 'user.role'], function () {
     Route::get('getDreams', [DreamController::class, 'getDreams']);
     Route::get('searchByTitle', [DreamController::class, 'searchByTitle']);
     Route::get('sortByDate/{sort}', [DreamController::class, 'sortByDate']);
+
     
 });
 
