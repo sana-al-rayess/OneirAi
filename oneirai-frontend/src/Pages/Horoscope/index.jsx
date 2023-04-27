@@ -1,12 +1,15 @@
 import React from "react";
 import ParticlesBg from "particles-bg";
 import './horoscope.css';
+import Navbar from "../../components/NavBar";
+
 
 
 const Horoscope = () => {
   return (
     <div>
       <ParticlesBg type="cobweb" bg={true} color="#ffffff" num={50} shape="star" />
+      <Navbar className="navbar-horo" />
       
    
     </div>
