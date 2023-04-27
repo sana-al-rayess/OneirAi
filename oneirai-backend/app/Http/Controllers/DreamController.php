@@ -107,7 +107,7 @@ class DreamController extends Controller
 
         $headers = array(
             'Content-Type: application/json',
-            'Authorization: Bearer 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',
+            'Authorization: Bearer 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',
         );
 
         $data = array(
@@ -136,7 +136,7 @@ class DreamController extends Controller
 
     public function generateImage(Request $request)
     {
-        $apiKey = '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';
+        $apiKey = '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';
         $apiUrl = 'https://api.openai.com/v1/images/generations';
     
         $response = Http::withHeaders([
