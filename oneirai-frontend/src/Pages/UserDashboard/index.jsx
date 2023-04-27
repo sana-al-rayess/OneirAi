@@ -8,24 +8,41 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import DreamModal from "../../components/DreamModal";
 import ErrorPage from "../../components/ErrorPage";
+import DreamVisual from "../../components/DreamVisual";
 
 const UserDashboard = () => {
   const token = localStorage.getItem("token");
 
-
   const [dreams, setDreams] = useState([]);
-
   const [selectedDream, setSelectedDream] = useState(null);
-  
+  const [dreamVisualizeOpen, setDreamVisualizeOpen] = useState(false);
+  const [dreamModalOpen, setDreamModalOpen] = useState(false);
+
+  const handleOpenDreamVisualize = (dream) => {
+    setSelectedDream(dream);
+    setDreamVisualizeOpen(true);
+  };
+
+  const handleCloseDreamVisualize = () => {
+    setDreamVisualizeOpen(false);
+  };
+
   const handleInterpretDream = (dream) => {
     setSelectedDream(dream);
+    setDreamModalOpen(true);
+  };
+
+  const handleOpenDreamModal = (dream) => {
+    setSelectedDream(dream);
+    setDreamModalOpen(true);
   };
 
   const handleCloseDreamModal = () => {
     setSelectedDream(null);
+    setDreamModalOpen(false);
   };
-  
- 
+
+
   useEffect(() => {
     const getDreams = async () => {
       try {
@@ -111,7 +128,6 @@ const UserDashboard = () => {
     setDreams(data.dreams);
   };
 
-
   return (
     <div className="body2">
       {token ? (
@@ -121,7 +137,7 @@ const UserDashboard = () => {
           </div>
           <div className="page-left">
             <UserDash />
-  
+
             <div className="dreams-container">
               <div className="search-container">
                 <div className="search-div">
@@ -131,7 +147,7 @@ const UserDashboard = () => {
                     value={inputValue}
                     onChange={handleInputChange}
                   />
-  
+
                   <FontAwesomeIcon
                     icon={faArrowDown}
                     className="arrow-icons"
@@ -144,7 +160,7 @@ const UserDashboard = () => {
                   />
                 </div>
               </div>
-  
+
               {dreams.map((dream) => (
                 <div className="dream-card" key={dream.id}>
                   <div className="dream-details">
@@ -156,23 +172,22 @@ const UserDashboard = () => {
                   </div>
                   <div className="dream-card-button">
                     <div>
-                      {" "}
-                      <button className="button-dream">Visualize</button>
-                    </div>
-                    <div>
-                      {" "}
                       <button
                         className="button-dream"
-                        onClick={() => {
-                          setSelectedDream(dream);
-                          handleInterpretDream(dream);
-                        }}
+                        onClick={() => handleOpenDreamVisualize(dream)}
+                      >
+                        Visualize
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        className="button-dream"
+                        onClick={() => handleOpenDreamModal(dream)}
                       >
                         Interpret
                       </button>
                     </div>
                     <div>
-                      {" "}
                       <button
                         className="button-dream"
                         onClick={() => handleDeleteDream(dream.id)}
@@ -189,11 +204,24 @@ const UserDashboard = () => {
       ) : (
         <ErrorPage />
       )}
-  
       {selectedDream && (
-        <DreamModal dream={selectedDream} onClose={handleCloseDreamModal} />
+        <>
+          {dreamVisualizeOpen && (
+            <DreamVisual
+              dream={selectedDream}
+              onClose={handleCloseDreamVisualize}
+            />
+          )}
+          {!dreamVisualizeOpen && (
+            <DreamModal
+              dream={selectedDream}
+              onClose={handleCloseDreamModal}
+            />
+          )}
+        </>
       )}
     </div>
   );
-      }  
+}
+
 export default UserDashboard;
