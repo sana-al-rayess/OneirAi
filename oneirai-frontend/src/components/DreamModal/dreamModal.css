@@ -8,10 +8,14 @@
     background-color: #182E59;
     width: 50%;
     height: auto;
-       
     z-index: 999;
 }
 
+@media screen and (max-width: 768px) {
+    .dream-modal {
+        width: 90%;
+    }
+}
 
 .dream-modal-content {
     background-color: #182E59;
@@ -32,7 +36,7 @@
     color: aliceblue;
 }
 
-.interpret{
+.interpret {
     color: #F2B544;
     font-size: 1.5rem;
     padding: 1rem;
@@ -46,14 +50,39 @@
     height: 7rem;
     padding: 1rem;
     margin: 1rem;
-    
 }
 
-.interpret-model-btn{
+@media screen and (max-width: 768px) {
+    .interpret-modal-content {
+        height: 10rem;
+    }
+}
+
+.interpret-model-btn {
     display: flex;
-    justify-content:right;
+    justify-content: right;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .interpret-model-btn {
+        flex-direction: column;
+    }
+}
+
+.dream-img {
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    .dream-img {
+        padding: 0.5rem;
+        width: 30%;
+        height: auto;
         
-  }
+    }
+}
+
