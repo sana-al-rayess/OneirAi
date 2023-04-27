@@ -1,0 +1,39 @@
+
+.linking {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+}
+.linking:hover{
+  color: #F2B544;
+  transform: scale(1.1);
+}
+
+.button-container-horo {
+  display: flex;
+  gap: 3rem;
+  margin: 2rem;
+}
+
+
+
+/* Tablet styles */
+@media only screen and (max-width: 768px) {
+
+  .links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  }
+
+/* Mobile styles */
+@media only screen and (max-width: 480px) {
+
+  .links {
+    display: none;
+  }
+
+ 
+}
