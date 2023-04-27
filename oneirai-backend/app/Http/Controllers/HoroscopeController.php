@@ -19,7 +19,7 @@ class HoroscopeController extends Controller
                 'Authorization' => 'Bearer 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',
             ],
             'json' => [
-                'prompt' => 'Daily Horoscope for ' . $request->input('sign'),
+                'prompt' => 'Daily Horoscope for ' . $request->input('sign') . 'summarize it in one line',
                 'max_tokens' => 256,
                 'temperature' => 0.7,
             ],
