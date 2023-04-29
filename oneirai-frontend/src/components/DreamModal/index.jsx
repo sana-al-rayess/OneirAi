@@ -33,10 +33,7 @@ const DreamModal = ({ dream, onClose }) => {
 
   return (
     <div className="dream-modal">
-      <button className="close-button" onClick={onClose}>
-        &times;
-      </button>
-      <div className="dream-modal-content">
+          <div className="dream-modal-content">
         <div className="dream-details">
           <h3>{dream.title}</h3>
           <p2>{dream.date}</p2>
