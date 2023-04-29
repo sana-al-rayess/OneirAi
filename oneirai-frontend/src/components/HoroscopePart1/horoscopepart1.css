@@ -1,0 +1,23 @@
+  .text .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+  .text .wrapper .letter {
+    transition: ease-out 1s;
+    transform: translateY(40%);
+  }
+  .text .wrapper .shadow {
+    transform: scale(1, -1);
+    color: #F2EEB6;
+    opacity: 10%;
+    transition: ease-in 5s, ease-out 5s;
+  }
+  .text .wrapper:hover .letter {
+    transform: translateY(-100%);
+  }
+  .text .wrapper:hover .shadow {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+
