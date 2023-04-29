@@ -52,7 +52,16 @@ function HoroscopePart1() {
 
 
 
-          
+            <div className="text-photo-horo">
+                <div><h1 className="horo-slogan"><div>Get daily insights<br /> Powered by AI Technology<br /> & the wisdom of the stars -
+                    <br />Read your daily horoscope now.</div></h1>
+                    {/* <div><Button2>Daily Horoscope</Button2></div> */}
+                    <div><DailyHoroscope /></div>
+                </div>
+                <div>
+                    <img className="zodiac-photo" src={Zodiac2} alt="photo" />
+                </div>
+            </div>
             
         </div>
 
