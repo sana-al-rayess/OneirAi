@@ -67,7 +67,7 @@ class HoroscopeController extends Controller
             ],
             'json' => [
                 'prompt' => "act like you are an astrologist,you analyse personality 
-            according to birthdates: I was born on $userBirthday  analyse zodiac sign",
+            according to birthdates: I was born on $userBirthday  analyse zodiac sign, lucky number, color, birth stone in a table",
                 'max_tokens' => 500,
                 'temperature' => 0.5,
             ],
