@@ -58,7 +58,8 @@ function Personality() {
             <Button2 type="submit">Analyze</Button2>
           </div>
         </div>
-        
+        <div className="per-table">{tableHtml && <div dangerouslySetInnerHTML={{ __html: tableHtml }} />}</div>
+       
       </form>
     </div>
   );
