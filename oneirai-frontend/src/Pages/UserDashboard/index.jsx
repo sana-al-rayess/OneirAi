@@ -163,9 +163,12 @@ const UserDashboard = () => {
 
               {dreams.map((dream) => (
                 <div className="dream-card" key={dream.id}>
+                  <i className="fas fa-times delete-icon" onClick={() => handleDeleteDream(dream.id)}></i>
+
                   <div className="dream-details">
                     <h3>{dream.title}
-                    <i className="fas fa-edit"></i>
+                      <i className="fas fa-edit"></i>
+                    
                     </h3>
                     <p2>{dream.date}</p2>
                     <br />
