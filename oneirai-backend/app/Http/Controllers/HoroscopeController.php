@@ -96,6 +96,29 @@ class HoroscopeController extends Controller
     }
 
 
+    public function getPersonalityAnalysis(Request $request)
+    {
+       
+        $userBirthday = $request->input('userBirthday');
+       
+        $client = new Client(['base_uri' => 'https://api.openai.com/v1/']);
+        $response = $client->request('POST', 'engines/text-davinci-002/completions', [
+            'headers' => [
+                'Authorization' => 'Bearer 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',
+                'Content-Type' => 'application/json',
+            ],
+            'json' => [
+                'prompt' => "Analyze my personality i was born on $userBirthday  do this in 5 lines ",
+                'max_tokens' => 500,
+                'temperature' => 0.5,
+                // 'stop' => ['\n'],
+            ],
+        ]);
 
+        $data = json_decode($response->getBody(), true);
+        $compatibilityScore = $data['choices'][0]['text'];
+
+        return response()->json(['compatibility' => $compatibilityScore]);
+    }
 
 }
