@@ -9,6 +9,7 @@
     width: 50%;
     height: auto;
     z-index: 999;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -24,6 +25,7 @@
     padding: 1rem;
     margin: 1rem;
     margin-top: 2.5rem;
+    border-radius: 10px;
 }
 
 .close-button {
@@ -50,6 +52,7 @@
     height: 7rem;
     padding: 1rem;
     margin: 1rem;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {
