@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './userdash.css';
-import Button from "../Button";
 import Button2 from "../Button2";
 import AddDream from "../AddDream";
 
@@ -18,7 +17,7 @@ const UserDash = () => {
     return (
         <div className="user-container">
             <div>
-                <p> Hello, {active_user}</p>
+                <p className="date"> Hello, {active_user}</p>
             </div>
             <div className="date">
                 <p> Today is, {today}</p>
