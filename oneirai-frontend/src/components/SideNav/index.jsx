@@ -63,8 +63,8 @@ const SideNav = () => {
           <div>
             <div className="menu-item">
               <img src={Pattern} alt="icon" className="menu-icon"></img>
-              <Link to="/pattern" className="linking" style={window.location.pathname === '/pattern' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
-                Pattern Tracker
+              <Link to="/horo" className="linking" style={window.location.pathname === '/horo' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
+                Horoscopes
               </Link>
             </div>
             <br />
