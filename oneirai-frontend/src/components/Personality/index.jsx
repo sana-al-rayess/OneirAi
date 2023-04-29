@@ -20,7 +20,17 @@ function Personality() {
     } catch (error) {
       console.error(error);
     }
-   
+    try {
+      const response = await axios.post('http://127.0.0.1:8000/api/analysis', {
+        userBirthday: birthday,
+      });
+      setCompatibilityScore(response.data.compatibility);
+      setErrorMsg('');
+    } catch (error) {
+      console.error(error);
+      setErrorMsg('Error occurred while fetching data. Please try again later.');
+      setCompatibilityScore(null);
+    }
   };
 
   return (
