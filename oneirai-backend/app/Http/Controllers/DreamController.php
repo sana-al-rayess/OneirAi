@@ -143,7 +143,7 @@ class DreamController extends Controller
             'Authorization' => 'Bearer ' . $apiKey,
         ])->post($apiUrl, [
             'model' => 'image-alpha-001',
-            'prompt' => $request->input('prompt'),
+            'prompt' => $request->input('prompt') . 'visualize it as if it was painted by van gogh',
             'num_images' => 2,
             'size' => '256x256',
           
