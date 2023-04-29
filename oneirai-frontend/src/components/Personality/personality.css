@@ -1,0 +1,36 @@
+.per-table{
+    display: flex;
+    justify-content: flex-start;
+    color: #fff;
+    align-items: flex-start;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    margin-left: 4rem;
+    width: 18rem;
+    height: auto;
+    padding: 1rem;
+    
+}
+
+.date-horo3 {
+    margin-top: -3rem;
+    width: auto;
+    margin-left: 4rem;
+    cursor: pointer;
+    background-color: #182E59;
+    color: #fff;
+    border: 1px solid #fff;
+    padding-right: 20px;
+
+}
+.date-horo3::-webkit-calendar-picker-indicator {
+    
+    background-color: #fff;
+    border-radius: 15px;
+    opacity: 20%;
+}
+
+.btn-horo2 {
+    margin-top: -2.5rem;
+    margin-left: 2rem;
+ }
