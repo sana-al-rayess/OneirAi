@@ -10,7 +10,20 @@ function CompatibilityForm() {
     const [errorMsg, setErrorMsg] = useState('');
 
     const handleSubmit = (e) => {
-    
+        e.preventDefault();
+        axios.post('http://127.0.0.1:8000/api/getCompatibility', {
+            userBirthday: userBirthday,
+            partnerBirthday: partnerBirthday,
+        }).then(response => {
+            setCompatibilityScore(response.data.compatibility);
+            setErrorMsg('');
+        }).catch(error => {
+            console.error(error);
+            setErrorMsg('Error occurred while fetching data. Please try again later.');
+            setCompatibilityScore(null);
+        });
+    };
+
     return (
         <div>
 
