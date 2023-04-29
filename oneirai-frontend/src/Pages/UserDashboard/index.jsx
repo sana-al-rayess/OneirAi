@@ -164,7 +164,9 @@ const UserDashboard = () => {
               {dreams.map((dream) => (
                 <div className="dream-card" key={dream.id}>
                   <div className="dream-details">
-                    <h3>{dream.title}</h3>
+                    <h3>{dream.title}
+                    <i className="fas fa-edit"></i>
+                    </h3>
                     <p2>{dream.date}</p2>
                     <br />
                     <br />
@@ -186,6 +188,9 @@ const UserDashboard = () => {
                       >
                         Interpret
                       </button>
+                      <div className="dream-card-icons">
+
+                      </div>
                     </div>
                     <div>
                       <button
