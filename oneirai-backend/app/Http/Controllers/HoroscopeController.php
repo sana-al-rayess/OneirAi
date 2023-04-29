@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
 
 class HoroscopeController extends Controller
@@ -19,7 +16,7 @@ class HoroscopeController extends Controller
                 'Authorization' => 'Bearer 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',
             ],
             'json' => [
-                'prompt' => 'Daily Horoscope for ' . $request->input('sign') . 'summarize it in one line',
+                'prompt' => 'Get the current day and predict the Daily Horoscope for ' . $request->input('sign'),
                 'max_tokens' => 256,
                 'temperature' => 0.7,
             ],
@@ -28,4 +25,8 @@ class HoroscopeController extends Controller
         $horoscope = json_decode($response->getBody(), true)['choices'][0]['text'];
         return response()->json(['horoscope' => $horoscope]);
     }
+
+
+   
+
 }
