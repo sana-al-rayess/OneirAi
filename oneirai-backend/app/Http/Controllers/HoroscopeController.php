@@ -55,5 +55,47 @@ class HoroscopeController extends Controller
     }
 
 
+    public function getPersonality(Request $request)
+    {
+        $userBirthday = $request->input('userBirthday');
+
+        $client = new Client(['base_uri' => 'https://api.openai.com/v1/']);
+        $response = $client->request('POST', 'engines/text-davinci-002/completions', [
+            'headers' => [
+                'Authorization' => 'Bearer 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',
+                'Content-Type' => 'application/json',
+            ],
+            'json' => [
+                'prompt' => "act like you are an astrologist,you analyse personality 
+            according to birthdates: I was born on $userBirthday  analyse zodiac sign",
+                'max_tokens' => 500,
+                'temperature' => 0.5,
+            ],
+        ]);
+
+        $data = json_decode($response->getBody(), true);
+        $personalityData = $data['choices'][0]['text'];
+
+        // Split the response by newlines to separate the different pieces of data
+        $rows = explode("\n", $personalityData);
+
+        // Build an HTML table to display the data
+        $tableHtml = '<table>';
+        foreach ($rows as $row) {
+            $tableHtml .= '<tr>';
+            // Split each row of data by the pipe character
+            $rowData = explode('|', $row);
+            foreach ($rowData as $cell) {
+                $tableHtml .= '<td>' . trim($cell) . '</td>';
+            }
+            $tableHtml .= '</tr>';
+        }
+        $tableHtml .= '</table>';
+
+        return response()->json(['table' => $tableHtml]);
+    }
+
+
+
 
 }
