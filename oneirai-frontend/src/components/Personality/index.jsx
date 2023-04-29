@@ -59,7 +59,8 @@ function Personality() {
           </div>
         </div>
         <div className="per-table">{tableHtml && <div dangerouslySetInnerHTML={{ __html: tableHtml }} />}</div>
-       
+        {compatibilityScore && <div className="per-table">{compatibilityScore}</div>}
+        {errorMsg && <div className="error">{errorMsg}</div>}
       </form>
     </div>
   );
