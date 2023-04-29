@@ -2,7 +2,7 @@
     background-color: #F2B544;
     width: 8rem;
     height: 2rem;
-    border-radius: 1rem;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
