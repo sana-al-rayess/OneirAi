@@ -16,7 +16,31 @@ function Personality() {
 
   return (
     <div>
-     
+      <form className="form-horo" onSubmit={handleSubmit}>
+        <div className="horo-field">
+          <div>
+            <label className="horo-label" htmlFor="birthday">
+              Enter your birthday:
+            </label>
+          </div>
+        </div>
+        <div className="horo-field">
+          <div className="input-btn">
+            <input
+              className="date-horo3"
+              id="birthday"
+              type="date"
+              value={birthday}
+              onChange={(event) => setBirthday(event.target.value)}
+              required
+            />
+          </div>
+          <div className="btn-horo2">
+            <Button2 type="submit">Analyze</Button2>
+          </div>
+        </div>
+        
+      </form>
     </div>
   );
 }
