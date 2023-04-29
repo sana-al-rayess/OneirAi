@@ -108,7 +108,7 @@ class HoroscopeController extends Controller
                 'Content-Type' => 'application/json',
             ],
             'json' => [
-                'prompt' => "Analyze my personality i was born on $userBirthday  do this in 5 lines ",
+                'prompt' => "act like you are an astrologist, you predict personalities based on birthdayes: Analyze my personality i was born on $userBirthday  do this in 5 lines ",
                 'max_tokens' => 500,
                 'temperature' => 0.5,
                 // 'stop' => ['\n'],
