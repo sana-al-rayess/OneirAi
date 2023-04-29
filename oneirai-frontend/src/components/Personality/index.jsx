@@ -11,6 +11,15 @@ function Personality() {
   const [tableHtml, setTableHtml] = useState('');
 
   const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post('http://127.0.0.1:8000/api/getPersonality', {
+        userBirthday: birthday,
+      });
+      setTableHtml(response.data.table);
+    } catch (error) {
+      console.error(error);
+    }
    
   };
 
