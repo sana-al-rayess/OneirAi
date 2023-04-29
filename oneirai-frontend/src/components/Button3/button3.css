@@ -1,19 +1,20 @@
 .button3 {
-    background-color: #FFF;
+    background-color: #182E59;
     width: 8rem;
     height: 2rem;
-    border-radius: 1rem;
-    border: 1px solid #182E59;
+    border-radius: 10px;
+    border: 1px solid #FFF;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-    color: #182E59;
+    color: #FFF;
     font-size: 1em;
     font-weight: bold;
   }
    
   .button3:hover {
     transform: scale(1.1);
-    border:2px solid #182E59;
+    border:2px solid #F2B544;
+    color: #F2B544;
     }
   
   
