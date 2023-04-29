@@ -16,6 +16,8 @@ Route::post('/dal-e', [DreamController::class, 'generateImage']);
 
 Route::post('getHoroscope', [HoroscopeController::class, 'getHoroscope']);
 Route::post('getCompatibility', [HoroscopeController::class, 'getCompatibility']);
+Route::post('getPersonality', [HoroscopeController::class, 'getPersonality']);
+
 
 
 Route::group(['middleware' => 'user.role'], function () {
