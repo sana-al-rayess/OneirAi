@@ -37,28 +37,32 @@ function DailyHoroscope() {
   ];
 
   return (
-    <div className="daily-horoscope-container">
-      <h2 className="title-horo">Daily Horoscope</h2>
-      <select
-        value={sign}
-        onChange={(event) => setSign(event.target.value)}
-        className="input-horo"
-      >
-        <option value="">Select your zodiac sign</option>
-        {signs.map((sign) => (
-          <option key={sign} value={sign}>
-            {sign}
-          </option>
-        ))}
-      </select>
-      <Button2 onClick={getHoroscope}>
-        Daily Horoscope
-      </Button2>
-      {horoscope && (
-        <p className="horoscope" onAnimationEnd={() => setHoroscope("")}>
-          {horoscope}
-        </p>
-      )}
+    <div>
+      <div className="daily-horoscope-container">
+        {/* <h2 className="title-horo">Daily Horoscope</h2> */}
+        <select
+          value={sign}
+          onChange={(event) => setSign(event.target.value)}
+          className="input-horo"
+        >
+          <option value="">Select your zodiac sign</option>
+          {signs.map((sign) => (
+            <option key={sign} value={sign}>
+              {sign}
+            </option>
+          ))}
+        </select>
+        <Button2 onClick={getHoroscope}>
+          Daily Horoscope
+        </Button2>
+      </div>
+      <div>
+        {horoscope && (
+          <p className="horoscope" onAnimationEnd={() => setHoroscope("")}>
+            {horoscope}
+          </p>
+        )}
+      </div>
     </div>
   );
 }
