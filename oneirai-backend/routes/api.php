@@ -15,6 +15,7 @@ Route::post('/chatgpt', [DreamController::class, 'getResponse']);
 Route::post('/dal-e', [DreamController::class, 'generateImage']);
 
 Route::post('getHoroscope', [HoroscopeController::class, 'getHoroscope']);
+Route::post('getCompatibility', [HoroscopeController::class, 'getCompatibility']);
 
 
 Route::group(['middleware' => 'user.role'], function () {
