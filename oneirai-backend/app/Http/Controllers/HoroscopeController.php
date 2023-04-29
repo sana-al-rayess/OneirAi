@@ -41,7 +41,7 @@ class HoroscopeController extends Controller
                 'Content-Type' => 'application/json',
             ],
             'json' => [
-                'prompt' => "What is the compatibility of two people born on $userBirthday and $partnerBirthday? do this in 5 lines ",
+                'prompt' => "act like you are an astrologist, you predict compatibility between couples according to birthdates: What is the compatibility of two people born on $userBirthday and $partnerBirthday? do this in 5 lines ",
                 'max_tokens' => 500,
                 'temperature' => 0.5,
                 // 'stop' => ['\n'],
