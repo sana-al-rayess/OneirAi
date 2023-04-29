@@ -62,7 +62,8 @@ function CompatibilityForm() {
                     </div>
                 </div>
             </form>
-          
+            {errorMsg && <div className="error-msg">{errorMsg}</div>}
+      {compatibilityScore && <div className="compatibility-score">{compatibilityScore}</div>}
         </div>
     );
 }
