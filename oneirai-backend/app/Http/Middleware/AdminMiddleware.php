@@ -11,17 +11,18 @@ class AdminMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
-     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
+    * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
      */
     public function handle(Request $request, Closure $next)
     {
         $user = Auth::user();
-        if ($user && $user->type == "admin") {
 
+        if ($user && $user->type === 'admin') {
             return $next($request);
         }
-        dd("Don't even think about it!");
+
+        return redirect()->route('home')->with('error', 'You do not have permission to access this page.');
     }
 }
