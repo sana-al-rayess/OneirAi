@@ -153,4 +153,19 @@ class DreamController extends Controller
 
         return response($response->body(), $response->status());
     }
+
+    public function updateInterpretation(Request $request, $id)
+    {
+        $dream = Dream::findOrFail($id);
+        $dream->description = $request->input('description');
+        $dream->interpretation = $request->input('interpretation');
+        $dream->save();
+
+        return response()->json([
+            'message' => 'Dream updated successfully',
+            'dream' => $dream
+        ]);
+    }
+  
+    
 }
