@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button3 from "../Button3";
+import Button2 from "../Button2";
 import "./adddream.css";
 import axios from "axios";
 const AddDream = (props) => {
@@ -7,6 +8,7 @@ const AddDream = (props) => {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
   const [errors, setErrors] = useState({});
+  const [category, setCategory] = useState("");
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
@@ -22,6 +24,10 @@ const AddDream = (props) => {
     setDate(e.target.value);
     setErrors({});
   };
+  const handleCategoryChange = (e) => {
+    setCategory(e.target.value);
+    setErrors({});
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,8 +37,9 @@ const AddDream = (props) => {
     formData.append('title', title);
     formData.append('description', description);
     formData.append('date', date);
+    formData.append('category', category);
 
-   
+
     const errors = {};
     if (!title) {
       errors.title = "Title is required";
@@ -69,50 +76,91 @@ const AddDream = (props) => {
   return (
     <div className="popup">
       <div className="popup-inner">
+
         <div className="title-model">
           <h1>Add Dream</h1>
         </div>
-        <form onSubmit={handleSubmit}>
-          <div className="labeltext">
-            <label htmlFor="title">Title:</label>
-            <input
+        <div><form className="dream-form" onSubmit={handleSubmit}>
+
+          <div className="labeltext2">
+            <div className="div-lable"><label htmlFor="title">Title:</label></div>
+            <div><input
               type="text"
               id="title"
               name="title"
               value={title}
               onChange={handleTitleChange}
             />
-            {errors.title && <span className="error-dream">{errors.title}</span>}
-          </div>
-          <div className="labeltext">
-            <label htmlFor="description">Description:</label>
-            <textarea
-              id="description"
-              name="description"
-              value={description}
-              onChange={handleDescriptionChange}
-            ></textarea>
-            {errors.description && <span className="error-dream">{errors.description}</span>}
-          </div>
-          <div className="labeltext">
-            <label htmlFor="date">Date:</label>
-            <input
-              type="date"
-              id="date"
-              name="date"
-              value={date}
-              onChange={handleDateChange}
-            />
-            {errors.date && <span className="error-dream">{errors.date}</span>}
+              {errors.title && <span className="error-dream">{errors.title}</span>}
+            </div>
           </div>
 
+
+
+
+          <div className="labeltext2">
+            <div className="div-lable"> <label htmlFor="description">Description:</label></div>
+            <div>
+              <textarea
+                id="description"
+                name="description"
+                value={description}
+                onChange={handleDescriptionChange}
+              ></textarea>
+              {errors.description && <span className="error-dream">{errors.description}</span>}
+            </div>
+          </div>
+
+
+          <div className="labeltext2">
+            <div className="div-lable"><label htmlFor="date">Date:</label></div>
+            <div>
+              <input className="date-input"
+                type="date"
+                id="date"
+                name="date"
+                value={date}
+                onChange={handleDateChange}
+              />
+              {errors.date && <span className="error-dream">{errors.date}</span>}
+            </div>
+          </div>
+
+          <div className="labeltext2">
+            <div className="div-lable"><label htmlFor="category">Category:</label></div>
+            <select
+                id="category"
+                onChange={handleCategoryChange}
+                name="my-dropdown"
+                value={category}
+              >
+                <option value="">Select your category</option>
+                <option value="Falling">Falling</option>
+                <option value="Flying">Flying</option>
+                <option value="Death">Death</option>
+                <option value="Being Lost">Being Lost</option>
+                <option value="Being Late">Being Late</option>
+                <option value="Being Chased">Being Chased</option>
+                <option value="Losing something">Losing something</option>
+                <option value="Returning to childhood">Returning to childhood</option>
+                <option value="Other">Other</option>
+              </select>
+              {errors.category && (
+                <span className="error-dream">{errors.category}</span>
+              )}
+            </div>
+          
           <div className="model-btn">
             <Button3 onClick={props.closePopup}>Close</Button3>
-            <Button3 type="submit">Save</Button3>
+            <Button2 type="submit">Save</Button2>
           </div>
         </form>
+        </div>
       </div>
     </div>
+
+
+
   );
 };
 
