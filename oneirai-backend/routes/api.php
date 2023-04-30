@@ -31,7 +31,10 @@ Route::group(['middleware' => 'user.role'], function () {
     Route::get('getDreams', [DreamController::class, 'getDreams']);
     Route::get('searchByTitle', [DreamController::class, 'searchByTitle']);
     Route::get('sortByDate/{sort}', [DreamController::class, 'sortByDate']);
-
+   
+    Route::put('/dreams/{id}', [DreamController::class, 'updateInterpretation']);
+    
+    
     
 });
 
