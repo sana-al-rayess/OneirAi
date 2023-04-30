@@ -109,3 +109,59 @@
   font-size: 0.8rem;
   
 }
+
+
+@media only screen and (max-width: 600px) {
+  .popup-inner {
+    padding: 0.5rem;
+  }
+  
+  .dream-form {
+    flex-direction: column;
+    padding-right: 0;
+  }
+  
+  .model-btn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    padding-top: 1rem;
+  }
+  
+  .labeltext1, .labeltext2 {
+    align-items: center;
+    text-align: center;
+      
+  }
+  
+  .labeltext1 {
+    margin-bottom: 1rem;
+  }
+  
+  .div-lable {
+    padding-bottom: 4rem;
+  }
+  
+  .popup-inner select {
+    width: 100%;
+    margin-bottom: -1rem;
+  }
+  
+  .popup-inner input {
+    width: 80%;
+    margin-bottom: -1rem;
+        
+  }
+  .popup-inner textarea {
+    width: 90%;
+         
+  }
+  .error-dream {
+    color: red;
+    font-size: 0.8rem;
+    position:absolute;
+    margin-left: -3rem;
+    margin-top: 1.5rem; 
+  }
+}
