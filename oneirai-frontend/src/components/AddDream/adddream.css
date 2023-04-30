@@ -12,91 +12,100 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  
 }
 
 .popup-inner {
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 1rem;
-  width: 45rem;
-  height: 32rem;
   color: #182E59;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+  }
+
+.dream-form{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  padding-right: 3rem;
+  gap: -1rem;
 }
+
+
+
 .model-btn{
   display: flex;
-  justify-content:right;
-  align-items: center;
+  justify-content:flex-end;
+  align-items: flex-end;
   gap: 1rem;
-  padding-top: 2rem;
-  padding-right: 8rem;
+  padding-top: 3rem;
+  margin-left: 4.5rem;
   
 }
 .title-model{
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   color: #182E59;
-  justify-content: left;
-  padding: 2rem 3rem 2rem 4rem;
+  padding: 2rem 3rem 1rem 4rem;
 }
-
+.div-lable{
+  height: 4rem;
+  width: auto;
+}
 .popup-inner label {
   display: flex;
-  margin-top: 2rem;
-  font-weight: bold;
-  color: #182E59;
-  font-size: 2rem;
-}
-
-
-.popup-inner input[type="date"]::-webkit-inner-spin-button,
-.popup-inner input[type="date"]::-webkit-calendar-picker-indicator {
-  display:flex;
-  justify-content: right;
-  width: 5%; 
-  
-}
-
-
-
-.popup-inner label {
-  display: flex;
-  width: 25%;
-  
-  margin-top: 20px;
   font-weight: bold;
   color: #182E59;
   font-size: 1rem;
+  
 }
-
-.popup-inner input,
-.popup-inner textarea {
+.popup-inner select {
   display: flex;
-  width: 35%;
-  padding: 10px;
+  width: 21.5rem;
+  height: 3rem;
   border: 1px solid #182E59;
   border-radius: 5px;
-  margin-top: 0.5rem;
   font-size: 1rem;
 }
+
+
+.popup-inner input {
+  display: flex;
+  width: 20rem;
+  border: 1px solid #182E59;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+
+.popup-inner textarea {
+  display: flex;
+  width: 21rem;
+  height: 5rem;
+  border: 1px solid #182E59;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
 
 .text-danger{
   color: red;
   font-size: smaller;
 }
 
-.labeltext{
+
+.labeltext2{
   display: flex;
-  justify-content:center;
-  align-items: center;
-  gap: 8rem;
-  padding-right: 8rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:baseline;
    
 }
 .error-dream {
   color: red;
   font-size: 0.8rem;
-  margin-left: 1rem;
+  
 }
-
