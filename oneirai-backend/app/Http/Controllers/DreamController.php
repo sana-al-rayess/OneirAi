@@ -166,6 +166,17 @@ class DreamController extends Controller
             'dream' => $dream
         ]);
     }
-  
+    public function updateVisualization(Request $request, $id)
+    {
+        $dream = Dream::find($id);
+        if (!$dream) {
+            return response()->json(['message' => 'Dream not found'], 404);
+        }
+    
+        $dream->visualization = $request->input('visualization');
+        $dream->save();
+    
+        return response()->json(['message' => 'Dream visualization updated successfully'], 200);
+    }
     
 }
