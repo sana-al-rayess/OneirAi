@@ -14,6 +14,7 @@ class Dream extends Model
         "title",
         "description",
         "date",
+        "category",
         
     ];
 
