@@ -16,7 +16,8 @@ class DreamController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'date' => 'required'
+            'date' => 'required',
+            'category' => 'required'
         ]);
 
         $dream = Dream::create([
@@ -24,6 +25,7 @@ class DreamController extends Controller
             'title' => $request->input('title'),
             'description' => $request->input('description'),
             'date' => $request->input('date'),
+            'category' => $request->input('category'),
         ]);
 
         return response()->json([
@@ -138,17 +140,17 @@ class DreamController extends Controller
     {
         $apiKey = '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';
         $apiUrl = 'https://api.openai.com/v1/images/generations';
-    
+
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . $apiKey,
         ])->post($apiUrl, [
-            'model' => 'image-alpha-001',
-            'prompt' => $request->input('prompt') . 'visualize it as if it was painted by van gogh',
-            'num_images' => 2,
-            'size' => '256x256',
-          
-        ]);
-    
+                'model' => 'image-alpha-001',
+                'prompt' => $request->input('prompt') . 'visualize it as if it was painted by van gogh',
+                'num_images' => 1,
+                'size' => '256x256',
+
+            ]);
+
         return response($response->body(), $response->status());
     }
 }
