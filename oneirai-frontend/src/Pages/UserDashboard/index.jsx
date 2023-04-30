@@ -128,6 +128,27 @@ const UserDashboard = () => {
     setDreams(data.dreams);
   };
 
+  const handleDownloadDream = (id) => {
+    const token = localStorage.getItem('token'); // replace with your authentication method
+  
+    fetch(`http://127.0.0.1:8000/api/download/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        const blob = new Blob([data], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `dream.txt`;
+        link.click();
+      })
+      .catch((error) => console.error(error));
+  };
+  
+
   return (
     <div className="body2">
       {token ? (
@@ -163,16 +184,13 @@ const UserDashboard = () => {
 
               {dreams.map((dream) => (
                 <div className="dream-card" key={dream.id}>
-                <i className="fas fa-times delete-icon" onClick={() => {
-                    if (window.confirm("Are you sure you want to delete this dream?")) {
-                      handleDeleteDream(dream.id);
-                    }
+                  <i className="fas fa-times delete-icon" onClick={() => {
+                    if (window.confirm("Are you sure you want to delete this dream?")) {handleDeleteDream(dream.id);}
                   }}></i>
-
                   <div className="dream-details">
                     <h3>{dream.title}
                       <i className="fas fa-edit"></i>
-                    
+
                     </h3>
                     <p2>{dream.date}</p2>
                     <br />
@@ -181,18 +199,13 @@ const UserDashboard = () => {
                   </div>
                   <div className="dream-card-button">
                     <div>
-                      <button
-                        className="button-dream"
-                        onClick={() => handleOpenDreamVisualize(dream)}
-                      >
+                      <button className="button-dream" onClick={() => handleOpenDreamVisualize(dream)}>
                         Visualize
                       </button>
                     </div>
                     <div>
-                      <button
-                        className="button-dream"
-                        onClick={() => handleOpenDreamModal(dream)}
-                      >
+                      <button className="button-dream"
+                        onClick={() => handleOpenDreamModal(dream)}>
                         Interpret
                       </button>
                       <div className="dream-card-icons">
@@ -200,11 +213,8 @@ const UserDashboard = () => {
                       </div>
                     </div>
                     <div>
-                      <button
-                        className="button-dream"
-                        
-                      >
-                        View Details
+                      <button className="button-dream" onClick={() => handleDownloadDream(dream.id)}>
+                        Download
                       </button>
                     </div>
                   </div>
