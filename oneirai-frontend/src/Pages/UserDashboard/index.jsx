@@ -163,7 +163,11 @@ const UserDashboard = () => {
 
               {dreams.map((dream) => (
                 <div className="dream-card" key={dream.id}>
-                  <i className="fas fa-times delete-icon" onClick={() => handleDeleteDream(dream.id)}></i>
+                <i className="fas fa-times delete-icon" onClick={() => {
+                    if (window.confirm("Are you sure you want to delete this dream?")) {
+                      handleDeleteDream(dream.id);
+                    }
+                  }}></i>
 
                   <div className="dream-details">
                     <h3>{dream.title}
@@ -198,9 +202,9 @@ const UserDashboard = () => {
                     <div>
                       <button
                         className="button-dream"
-                        onClick={() => handleDeleteDream(dream.id)}
+                        
                       >
-                        Delete
+                        View Details
                       </button>
                     </div>
                   </div>
