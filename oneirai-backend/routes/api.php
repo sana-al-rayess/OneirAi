@@ -33,8 +33,7 @@ Route::group(['middleware' => 'user.role'], function () {
     Route::get('sortByDate/{sort}', [DreamController::class, 'sortByDate']);
    
     Route::put('/dreams/{id}', [DreamController::class, 'updateInterpretation']);
-    
-    
+    Route::post('/visuals/{id}', [DreamController::class, 'updateVisualization']);   
     
 });
 
