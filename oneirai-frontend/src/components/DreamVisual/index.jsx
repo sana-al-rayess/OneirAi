@@ -6,6 +6,7 @@ import axios from "axios";
 function DreamVisual(props) {
   const { description } = props.dream;
   const [images, setImages] = useState([]);
+  const [saveResponse, setSaveResponse] = useState("");
 
   const imageContainerRef = useRef(null);
 
@@ -13,6 +14,10 @@ function DreamVisual(props) {
     const apiUrl = "http://localhost:8000/api/dal-e";
     const response = await axios.post(apiUrl, {
       prompt: description,
+    }, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
     const imageUrls = response.data.data.map((img) => img.url);
     setImages(imageUrls);
@@ -22,11 +27,23 @@ function DreamVisual(props) {
     generateImage();
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submit here
+    try {
+      const apiUrl = `http://localhost:8000/api/visuals/${props.dream.id}`;
+      const response = await axios.post(apiUrl, {
+        visualization: images[0],
+        dreamId: props.dream.id
+      }, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      setSaveResponse(response.data.message);
+    } catch (error) {
+      setSaveResponse("Failed to save dream");
+    }
   };
-
   return (
     <div className="dream-modal">
       <button className="close-button" onClick={props.onClose}>
@@ -59,9 +76,12 @@ function DreamVisual(props) {
         <Button2 type="submit" onClick={handleSubmit}>
           Save
         </Button2>
+        {saveResponse && <p>{saveResponse}</p>}
       </div>
     </div>
   );
 }
+
+const token = localStorage.getItem("token");
 
 export default DreamVisual;
