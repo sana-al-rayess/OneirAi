@@ -1,156 +1,177 @@
 .body2 {
-    background-image: url('../../images/starry0.jpg');
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
+  background-image: url('../../images/starry0.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
 
 .box {
-    display: flex;
-    background-size: cover;
-    flex: 1;
-    padding: 4rem;
+  display: flex;
+  background-size: cover;
+  flex: 1;
+  padding: 4rem;
 }
 
 
 .side-nav {
 
-    background-color: #182E59;
-    width: 20%;
-    height: auto;
-    
-   }
+  background-color: #182E59;
+  width: 20%;
+  height: auto;
+
+}
 
 .page-left {
-    flex: 1;
-    background-color: #334B71;
-    opacity: 80%;
+  flex: 1;
+  background-color: #334B71;
+  opacity: 80%;
 }
 
 
-  .dream-card {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 60rem;
-    height: 10rem;
-    background-color: #fff;
-    box-shadow: 0px 0px 20px ;
-    padding: 2rem;
-    margin: 2rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    border: 4px solid #182E59;
-    transition: all 0.3s ease;
-  }
-  
-  .dream-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
-  }
-   
-  
- 
-  .dream-card h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    
-    color: #182E59;
-  }
-  
-  .dream-card p1 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: #182E59;
-  }
-  
-  .dream-card p2 {
+.dream-card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60rem;
+  height: 10rem;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px;
+  padding: 2rem;
+  margin: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border: 4px solid #182E59;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
 
-    font-size: 1rem;
-    color: #777;
-    
-  }
+.dream-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
 
-  .dream-card:hover h2 {
-    color: #3d3d3d;
-  }
-  
-  .dream-card:hover p {
-    color: #555;
-  }
 
-   
-  .dream-card-button {
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
 
-  .button-dream{
-    width: 10rem;
-    height: 2rem;
-    margin: 0.5rem;
-    align-items: center;
-    text-align: center;
-    background-color: #182E59;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;    
-  }
+.dream-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
 
-  .button-dream:hover{
-    color:  #F2B138;
-    transform: scale(1.1);
-    border: transparent;
-  }
-  .search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
+  color: #182E59;
+}
+
+.dream-card p1 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #182E59;
+}
+
+.dream-card p2 {
+
+  font-size: 1rem;
+  color: #777;
+
+}
+
+.dream-card:hover h2 {
+  color: #3d3d3d;
+}
+
+.dream-card:hover p {
+  color: #555;
+}
+
+
+.dream-card-button {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.button-dream {
+  width: 10rem;
+  height: 2rem;
+  margin: 0.5rem;
+  align-items: center;
+  text-align: center;
+  background-color: #182E59;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.button-dream:hover {
+  color: #F2B138;
+  transform: scale(1.1);
+  border: transparent;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 25px;
+  width: 50%;
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-div input[type="text"] {
+  border: none;
+  color: #182E59;
+  font-size: 18px;
+  width: 100%;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.arrow-icons {
+  cursor: pointer;
+  color: #182E59;
+  padding-left: 10px;
+}
+
+.arrow-icons:hover {
+  transform: scale(1.1)
+}
+
+@media (max-width: 768px) {
   .search-div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 25px;
-    width: 50%;
-    height: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
   }
+}
+.fas.fa-edit::before {
+  margin-left: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.fas.fa-edit:hover::before {
+  transform: scale(1.2);
+}
+.dream-card .delete-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  padding: 1rem;
+}
+.dream-card .delete-icon:hover {
+  transform: scale(1.3); 
   
-  .search-div input[type="text"] {
-    border: none;
-    color: #182E59;
-    font-size: 18px;
-    width: 100%;
-    margin-right: 10px;
-    background-color: transparent;
-  }
-  
-  .arrow-icons {
-    cursor: pointer;
-    color: #182E59;
-    padding-left: 10px;
-  }
-  .arrow-icons:hover{
-    transform: scale(1.1)
-  }
-  
-  @media (max-width: 768px) {
-    .search-div {
-      width: 80%;
-    }
-  }
-  
-  
-  
+}
