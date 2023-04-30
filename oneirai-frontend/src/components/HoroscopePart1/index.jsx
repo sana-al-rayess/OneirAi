@@ -1,5 +1,4 @@
 import "./horoscopepart1.css";
-import Zodiac1 from "../../images/zo1.png"
 import Zodiac2 from "../../images/z03.png"
 import Button2 from "../Button2";
 import DailyHoroscope from "../DailyHoroscope";
