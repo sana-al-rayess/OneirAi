@@ -178,5 +178,25 @@ class DreamController extends Controller
     
         return response()->json(['message' => 'Dream visualization updated successfully'], 200);
     }
+
+    public function download(Request $request, $id) {
+        $dream = Dream::find($id);
+    
+        if (!$dream) {
+            return response()->json(['error' => 'Dream not found'], 404);
+        }
+    
+        $data = "Title: " . $dream->title . "\n"."\n"
+              . "Description: " . $dream->description . "\n"."\n"
+              . "Date: " . $dream->date . "\n"
+              . "Interpretation: " . $dream->interpretation . "\n"."\n"
+              . "Visualization: " . $dream->visualization . "\n"."\n";
+    
+        return response($data, 200, [
+            'Content-Type' => 'text/plain',
+            'Content-Disposition' => 'attachment; filename="dream.txt"'
+        ]);
+    }
+    
     
 }
