@@ -4,6 +4,9 @@ import React, { useState, useRef } from 'react';
 import '../../components/ProfilePhoto/ProfilePhoto.css';
 import Camera from "../../images/camera.png"
 import axios from "axios";
+import Button2 from "../../components/Button2";
+import Select from 'react-flags-select';
+
 const UserProfile = () => {
     const today = new Date().toLocaleDateString();
     const active_user = localStorage.getItem("name");
@@ -14,6 +17,12 @@ const UserProfile = () => {
     const [email, setEmail] = useState("");
     const [age, setAge] = useState("");
     const [showPopup, setShowPopup] = useState(false);
+
+    const [country, setCountry] = useState('');
+
+    const handleLocationChange = (country) => {
+        setCountry(country);
+    };
 
     const togglePopup = () => {
         setShowPopup(!showPopup);
@@ -52,32 +61,32 @@ const UserProfile = () => {
         formData.append("email", email);
         formData.append("Age", age);
         formData.append("profile_picture", profilePic);
-      
+
         axios
-          .post("http://127.0.0.1:8000/api/updateUserInfo", formData, {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-              "Content-Type": "multipart/form-data",
-            },
-          })
-          .then((response) => {
-            console.log(response.data);
-            console.log("edited successfully!");
-      
-            const updatedUser = response.data.updated_user;
-            localStorage.setItem("name", updatedUser.name);
-            localStorage.setItem("profile_picture", updatedUser.profile_picture);
-            localStorage.setItem("email", updatedUser.email);
-      
-            console.log("local storage updated");
-            window.location.reload();
-          })
-          .catch((error) => {
-            console.error(error);
-            console.log("Error editing");
-          });
-      };
-      
+            .post("http://127.0.0.1:8000/api/updateUserInfo", formData, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                    "Content-Type": "multipart/form-data",
+                },
+            })
+            .then((response) => {
+                console.log(response.data);
+                console.log("edited successfully!");
+
+                const updatedUser = response.data.updated_user;
+                localStorage.setItem("name", updatedUser.name);
+                localStorage.setItem("profile_picture", updatedUser.profile_picture);
+                localStorage.setItem("email", updatedUser.email);
+
+                console.log("local storage updated");
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.error(error);
+                console.log("Error editing");
+            });
+    };
+
 
 
     return (
@@ -94,8 +103,9 @@ const UserProfile = () => {
             </div>
             <br /><br />
 
-            <div className="row3">
-                <div><div className="edit-profile-pic2">
+            <div className="row3 profile-box">
+
+                <div className="edit-profile-pic2">
                     {profilePic ? (
                         <img className="profile-pic2" src={profilePic} alt="Profile" />
                     ) : (
@@ -104,47 +114,55 @@ const UserProfile = () => {
                             <img src={Camera} alt='camera' />
                         </div>
                     )}
-                    <input
-                        type="file"
-                        accept="image/*"
-                        onChange={handleFileUpload}
-                        style={{ display: 'none' }}
-                        ref={fileInputRef}
-                    />
-                    <div
-                        className="circular-border"
-                        onClick={() => fileInputRef.current.click()}
-                    >
+                    <input type="file" accept="image/*" onChange={handleFileUpload} style={{ display: 'none' }} ref={fileInputRef} />
+                    <div className="circular-border" onClick={() => fileInputRef.current.click()}>
 
                     </div>
-                </div></div>
+                </div>
 
 
-                <div className="div2"> <div className="edit-profile-form">
-                    <div>
-                        <div className="row1 margin">
-                            <label>Name:</label>
-                            <input type="text" id="name-input" value={name} onChange={handleNameChange} />
+                <div className="div2">
+                    <div className="edit-profile-form">
+                        <div>
+                            <div className="label-input-prof margin">
+                                <label>Name:</label>
+                                <input type="text" id="name-input" value={name} onChange={handleNameChange} />
+                            </div>
+                        </div>
+                        <div>
+                            <div className="label-input-prof margin">
+                                <label>Email:</label>
+                                <input type="email" id="email" value={email} onChange={handleEmailChange} />
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div className="row1 margin">
-                            <label>Email:</label>
-                            <input type="email" id="email" value={email} onChange={handleEmailChange} />
-                        </div>
-                    </div>
-                    <div>
-                        <div className="row1 margin">
+                    <div className="edit-profile-form">
+
+                        <div className="label-input-prof margin">
                             <label>Age:</label>
                             <input type="number" id="age-input" value={age} onChange={handleAgeChange} />
                         </div>
-                        <div><button className="save" onClick={handleSave}>Save</button></div>
+
+                        <div className="label-input-prof margin">
+                            <label>Location</label>
+                            <Select className="location-lbl"
+                                selected={country}
+                                onSelect={handleLocationChange}
+                                searchable={true}
+                                showSelectedLabel={false}
+                                countries={['US', 'GB', 'FR', 'DE', 'ES', 'IT']}
+                                customLabels={{ 'US': 'United States', 'GB': 'United Kingdom' }}
+                            />
+                           
+                        </div>
+
                     </div>
-                </div></div>
+                </div>
 
             </div>
+            <div className="btn-div"><button className="profile-btn" onClick={handleSave}>Save</button></div>
 
-        </div>
+        </div >
 
 
     );
