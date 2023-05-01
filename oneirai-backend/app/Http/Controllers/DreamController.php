@@ -113,7 +113,7 @@ class DreamController extends Controller
         );
 
         $data = array(
-            'prompt' => $message . ' interpret this dream in maximum 3 lines, extract the elements in this dream, tell the meaning of each element',
+            'prompt' => 'act like a dream interpreter and interpret this dream in mx 3 lines:'. $message ,
             'temperature' => 0.4,
             'max_tokens' => 1000,
             'n' => 1,
@@ -160,12 +160,13 @@ class DreamController extends Controller
         $dream->description = $request->input('description');
         $dream->interpretation = $request->input('interpretation');
         $dream->save();
-
+    
         return response()->json([
             'message' => 'Dream updated successfully',
             'dream' => $dream
-        ]);
+        ])->header('Refresh', '0'); 
     }
+    
     public function updateVisualization(Request $request, $id)
     {
         $dream = Dream::find($id);
