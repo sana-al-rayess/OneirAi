@@ -54,10 +54,11 @@ const SideNav = () => {
       <div className="menu">
         <div>
           <div className="menu-item">
-            <img src={Journal} alt="icon" className="menu-icon"></img>
-            <Link to="/user" className="linking" style={window.location.pathname === '/user' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
-              Dream Journal
+            <img src={Edit} alt="icon" className="menu-icon"></img>
+            <Link to="/profile" className="linking" style={window.location.pathname === '/profile' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
+              Profile
             </Link>
+
           </div>
           <br />
           <div>
@@ -70,9 +71,9 @@ const SideNav = () => {
             <br />
             <div>
               <div className="menu-item">
-                <img src={Edit} alt="icon" className="menu-icon"></img>
-                <Link to="/profile" className="linking" style={window.location.pathname === '/profile' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
-                  Profile
+                <img src={Journal} alt="icon" className="menu-icon"></img>
+                <Link to="/user" className="linking" style={window.location.pathname === '/user' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
+                  Dream Journal
                 </Link>
               </div>
             </div>
