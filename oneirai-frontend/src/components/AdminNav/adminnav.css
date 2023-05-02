@@ -1,0 +1,61 @@
+.nav-container2 {
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+    align-items: center;
+    justify-content: left;
+    
+    width: auto;
+    padding: 2rem;
+}
+
+.sidenav2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+   
+    margin-right: 2rem;
+}
+    
+
+.box-admin {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.menu-item-admin {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: large;
+
+    height: 2rem;
+    padding: 1rem;
+    width: 110%;
+    border-radius: 10px;
+
+}
+
+.menu-item-admin:hover {
+    background-color: #3370A6;
+
+}
+
+.menu-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+
+
+}
+
+.admin-info {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    color: #fff;
+}
