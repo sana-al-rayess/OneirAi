@@ -43,6 +43,7 @@ function LoginForm() {
                 localStorage.setItem("name", response.data.user.name);
                 localStorage.setItem("profile_picture", response.data.user.profile_picture);
                 localStorage.setItem("email", response.data.user.email);
+                localStorage.setItem("type", response.data.user.type);
                 console.log('User created successfully:', user);
                 window.location.href = "/user";
             } catch (error) {
@@ -66,6 +67,7 @@ function LoginForm() {
             localStorage.setItem("user_id", response.data.user.id);
             localStorage.setItem("email", response.data.user.email);
             localStorage.setItem("profile_picture", response.data.user.profile_picture);
+            localStorage.setItem("type", response.data.user.type);
             console.log("User logged in successfully:", user);
             if (response.data.user.type == "admin") {
                 window.location.href = "/admin";
