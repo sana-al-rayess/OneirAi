@@ -34,7 +34,10 @@ const DreamModal = ({ dream, onClose }) => {
           Authorization: `Bearer ${token}`,
         },
       });
+      
       console.log(response.data.message);
+      window.location.reload();
+      
       onClose();
     } catch (error) {
       console.error(error);
