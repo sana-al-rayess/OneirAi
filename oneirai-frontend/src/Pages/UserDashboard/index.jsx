@@ -129,7 +129,7 @@ const UserDashboard = () => {
   };
 
   const handleDownloadDream = (id) => {
-    const token = localStorage.getItem('token'); // replace with your authentication method
+    const token = localStorage.getItem('token');
   
     fetch(`http://127.0.0.1:8000/api/download/${id}`, {
       headers: {
@@ -196,6 +196,12 @@ const UserDashboard = () => {
                     <br />
                     <br />
                     <p1>{dream.description}</p1>
+                    
+                    <div className="interpret-label">Interpretation:</div>
+                    <div className="interpret-dream">{dream.interpretation}</div>
+
+
+
                   </div>
                   <div className="dream-card-button">
                     <div>
