@@ -62,7 +62,18 @@ const LineChart = () => {
   }, [data]);
 
   return (
-  
-
+    <div className='body-stats'>
+       <h1>Line Charts of User's Locations</h1>
+      <div className='charts-container'>
+        {data &&
+          data.stats.map((locationData) => (
+            <div key={locationData.location} className='chart-container'>
+              <h3>{locationData.location}</h3>
+              <canvas id={`locationLineChart-${locationData.location}`}></canvas>
+            </div>
+          ))}
+      </div>
+    </div>
+  );
 };
 export default LineChart;
