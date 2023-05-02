@@ -138,6 +138,7 @@ const AddDream = (props) => {
                 <option value="Falling">Falling</option>
                 <option value="Flying">Flying</option>
                 <option value="Death">Death</option>
+                <option value="Sickness">Sickness</option>
                 <option value="Being Lost">Being Lost</option>
                 <option value="Being Late">Being Late</option>
                 <option value="Being Chased">Being Chased</option>
