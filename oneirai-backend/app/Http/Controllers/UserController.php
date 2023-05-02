@@ -118,6 +118,7 @@ class UserController extends Controller
         $user_updated->email = $request->email;
         $user_updated->Age = $request->Age;
         $user_updated->profile_picture = $request->profile_picture;
+        $user_updated->location = $request->location;
         $user_updated->save();
         return response()->json([
             "status" => "success",
@@ -157,20 +158,5 @@ class UserController extends Controller
             "updated_user" => $password_updated
         ], 200);
     }
-
-    public function getUsers()
-    {
-        $users = User::all();
-
-        return response()->json([
-            'status' => 'success',
-            'data' => $users,
-        ]);
-    }
-
-
-
-
-
 
 }
