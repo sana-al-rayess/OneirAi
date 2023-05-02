@@ -3,7 +3,21 @@ import React, { useState, useEffect } from 'react';
 import './UserTable.css'; // import CSS file
 
 function UserTable() {
+  const [users, setUsers] = useState([]);
 
+  useEffect(() => {
+    const config = {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }}
+    
+
+    axios.get('http://127.0.0.1:8000/api/admin/getUsers', config)
+      .then(response => {
+        setUsers(response.data.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <table className="user-table">
