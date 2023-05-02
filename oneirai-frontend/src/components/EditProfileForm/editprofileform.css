@@ -2,23 +2,42 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    
-    }
+    align-items: flex-start;
+    /* border: 2px solid green; */
 
+}
+
+.label-input-prof {
+    display: flex;
+    flex-direction: row;
+    /* border: 5px solid black; */
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+}
 
 
 .row3 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    
+    /* border: 1px solid red; */
+
 }
-.div2{
-    padding-right: 28rem;
+
+.div2 {
+
+    /* border: 4px solid #fff; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    /* width: 20rem; */
 }
-.margin{
+
+.margin {
     margin-bottom: -40px;
 }
 
@@ -31,6 +50,7 @@
     padding: 1rem;
     height: 0.2rem;
     width: 10rem;
+    margin-top: 1rem;
 }
 
 .row2 {
@@ -41,24 +61,81 @@
     padding-right: 1rem;
 }
 
-.save{
-    background-color: #182E59;
-    width: 8rem;
+
+.btn-div {
+    /* border: 1px solid purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52.5rem;
+    margin-left: 4rem;
+    margin-top: 2rem;
+
+}
+
+.profile-btn {
+    background-color: #F2B544;
+    width: 12rem;
     height: 2rem;
-    border-radius: 1rem;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-    color: #fff;
+    color: #334B71;
     border: 0;
     font-size: 1em;
     font-weight: bold;
-    margin-top: 3rem;
-    
-  }
-   
-  .button2:hover {
+}
+
+.profile-btn:hover {
     transform: scale(1.1);
-    border:2px solid #F2B544;
-    }
-  
+    border: 2px solid #fff;
+    background-color: #e9a321;
+}
+
+.profile-box {
+    display: flex;
+    margin-left: 3rem;
+    width: fit-content;
+    /* background-color: #0a2b61; */
+    border-radius: 10px;
+    padding: 2rem;
+
+}
+
+.edit-profile-user {
+    display: flex;
+
+}
+
+.location-lbl {
+    margin-left: -1.5rem;
+    color: #334B71 !important;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    height: 2rem;
+    width: 11.5rem;
+    background-color: #fff;
+}
+
+
+
+.ReactFlagsSelect-module_selectValue__152eS {
+    color: #334B71;
+}
+
+.ReactFlagsSelect-module_flagsSelect__2pfa2 {
+    color: #334B71;
+}
+
+.ReactFlagsSelect-module_label__27pw9 {
+    color: #334B71;
+}
+
+.ReactFlagsSelect-module_flagsSelect__2pfa2 {
+    border: none;
+}
+
+.ReactFlagsSelect-module_flagsSelect__2pfa2 :hover {
+    border: 1px solid white;
+}
