@@ -67,7 +67,7 @@ const PolarAreaChart = () => {
 
   return (
     <div className='body-stats'>
-      <h1>Line Charts of User's Locations</h1>
+      <h1 className='title-chart'>Line Charts of User's Locations</h1>
       <div className='charts-container'>
         {data &&
           data.stats.map((locationData) => (
