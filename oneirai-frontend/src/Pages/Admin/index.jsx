@@ -15,7 +15,9 @@ const Admin = () => {
                 <div>
                     <AdminNav />
                 </div>
-                
+                <div className="admin-left">
+                    <AdminSideLeft />
+                </div>
             </div>
         </div>
        
