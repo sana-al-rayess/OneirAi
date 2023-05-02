@@ -16,11 +16,12 @@ const UserProfile = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [age, setAge] = useState("");
+    
     const [showPopup, setShowPopup] = useState(false);
 
     const [country, setCountry] = useState('');
 
-    const handleLocationChange = (country) => {
+    const handleCountryChange = (country) => {
         setCountry(country);
     };
 
@@ -61,6 +62,7 @@ const UserProfile = () => {
         formData.append("email", email);
         formData.append("Age", age);
         formData.append("profile_picture", profilePic);
+        formData.append("location", country);
 
         axios
             .post("http://127.0.0.1:8000/api/updateUserInfo", formData, {
@@ -147,10 +149,10 @@ const UserProfile = () => {
                             <label>Location</label>
                             <Select className="location-lbl"
                                 selected={country}
-                                onSelect={handleLocationChange}
+                                onSelect={handleCountryChange}
                                 searchable={true}
                                 showSelectedLabel={false}
-                                countries={['US', 'GB', 'FR', 'DE', 'ES', 'IT']}
+                                countries={['US', 'GB', 'FR', 'DE', 'ES', 'IT', 'LB']}
                                 customLabels={{ 'US': 'United States', 'GB': 'United Kingdom' }}
                             />
                            
