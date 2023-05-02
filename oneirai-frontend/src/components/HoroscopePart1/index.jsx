@@ -2,12 +2,12 @@ import "./horoscopepart1.css";
 import Zodiac2 from "../../images/z03.png"
 import Button2 from "../Button2";
 import DailyHoroscope from "../DailyHoroscope";
+import ParticlesBg from "particles-bg";
 function HoroscopePart1() {
 
     return (
         <div className="horoscope-part1">
-
-
+           
             <div class="overlay"></div>
 
             <div class="text">
