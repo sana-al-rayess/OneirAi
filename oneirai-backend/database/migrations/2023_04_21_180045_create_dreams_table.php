@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('dreams', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->on('id');
+            $table->foreignId('user_id')->constrained('users');
             $table->string('title'); 
             $table->string('description'); 
             $table->date('date');
