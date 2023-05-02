@@ -10,7 +10,7 @@ function HoroscopePart4() {
         <div>
 
             <div className="horoscope-part3">
-                <ParticlesBg type="cobweb" bg={true} color="#ffffff" num={50} shape="star" />
+                {/* <ParticlesBg type="cobweb" bg={true} color="#ffffff" num={50} shape="star" /> */}
                 <div className="comp"><img className="comp-img" src={Per2} alt="photo" /></div>
                 <div><h1 className="horo-slogan2"><div>Unlock the Secrets<br /> of Your True Self:<br />Discover Your Unique Personality.
                 </div></h1>
