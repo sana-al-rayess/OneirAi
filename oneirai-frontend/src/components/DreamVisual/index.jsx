@@ -46,9 +46,9 @@ function DreamVisual(props) {
   };
   return (
     <div className="dream-modal">
-      <button className="close-button" onClick={props.onClose}>
+      {/* <button className="close-button" onClick={props.onClose}>
         &times;
-      </button>
+      </button> */}
       <div className="dream-modal-content">
         <div className="dream-details">
           <h3>{props.dream.title}</h3>
