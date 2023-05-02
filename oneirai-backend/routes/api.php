@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DreamController;
 use App\Http\Controllers\HoroscopeController;
+use App\Http\Controllers\SubscriberController;
 
 
 Route::post('register', [UserController::class, 'register']);
@@ -14,7 +15,6 @@ Route::post('logout', [UserController::class, 'logout']);
 Route::post('/chatgpt', [DreamController::class, 'getResponse']);
 Route::post('/dal-e', [DreamController::class, 'generateImage']);
 
-Route::get('/dreamstat', [DreamController::class, 'getLocationStats']);
 
 
 
@@ -35,17 +35,21 @@ Route::group(['middleware' => 'user.role'], function () {
     Route::get('getDreams', [DreamController::class, 'getDreams']);
     Route::get('searchByTitle', [DreamController::class, 'searchByTitle']);
     Route::get('sortByDate/{sort}', [DreamController::class, 'sortByDate']);
-   
+
     Route::put('/dreams/{id}', [DreamController::class, 'updateInterpretation']);
-    Route::post('/visuals/{id}', [DreamController::class, 'updateVisualization']);  
+    Route::post('/visuals/{id}', [DreamController::class, 'updateVisualization']);
 
     Route::get('/download/{id}', [DreamController::class, 'download']);
- 
+
 });
 
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['middleware' => 'admin.role'], function () {
         Route::get('getUsers', [UserController::class, 'getUsers']);
-       
+
+        Route::get('/dreamstat', [DreamController::class, 'getLocationStats']);
+
     });
 });
+
+Route::post('/subscribe', [SubscriberController::class, 'subscribe']);
