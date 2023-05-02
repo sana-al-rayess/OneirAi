@@ -14,6 +14,10 @@ Route::post('logout', [UserController::class, 'logout']);
 Route::post('/chatgpt', [DreamController::class, 'getResponse']);
 Route::post('/dal-e', [DreamController::class, 'generateImage']);
 
+Route::get('/dreamstat', [DreamController::class, 'getLocationStats']);
+
+
+
 Route::post('getHoroscope', [HoroscopeController::class, 'getHoroscope']);
 Route::post('getCompatibility', [HoroscopeController::class, 'getCompatibility']);
 Route::post('getPersonality', [HoroscopeController::class, 'getPersonality']);
@@ -36,12 +40,12 @@ Route::group(['middleware' => 'user.role'], function () {
     Route::post('/visuals/{id}', [DreamController::class, 'updateVisualization']);  
 
     Route::get('/download/{id}', [DreamController::class, 'download']);
-
+ 
 });
 
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['middleware' => 'admin.role'], function () {
         Route::get('getUsers', [UserController::class, 'getUsers']);
-      
+       
     });
 });
