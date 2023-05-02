@@ -67,17 +67,21 @@ const DreamStatsChart = () => {
 
   return (
     <div className='body-stats'>
-      <h1>Pie Charts of User's Locations</h1>
+     <div className='title-chart'><h1>Pie Charts of User's Locations</h1></div> 
       <div className='charts-container'>
         {data &&
           data.stats.map((locationData) => (
             <div key={locationData.location} className='chart-container'>
               <h3>{locationData.location}</h3>
-              <canvas id={`locationChart-${locationData.location}`}></canvas>
+              <canvas
+                id={`locationChart-${locationData.location}`}
+                className='chart-canvas'
+              ></canvas>
             </div>
           ))}
       </div>
     </div>
   );
 };
+
 export default DreamStatsChart;
