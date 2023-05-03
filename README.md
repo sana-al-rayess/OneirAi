@@ -28,8 +28,25 @@
 - As an admin, I want to be able to get count of all registered users on the platform, so that I can track the growth of the website over time.
 
 
+<br><br>
+
+<!-- Prototyping -->
+<img src="./readme/title3.svg"/>
+
+> We designed Coffee Express using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
+
+### Wireframes
+| Login screen  | Register screen |  Landing screen |
+| ---| ---| ---|
+| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+
+### Mockups
+| Login screen  | SignUp Screen | Landing Screen |
+| ---| ---| ---|
+| ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | ![fsdaf](./readme/demo/1440x1024.png) |
 
 <br><br>
+
 
 <!-- Implementation -->
 <img src="./readme/title4.svg"/>
