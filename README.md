@@ -43,7 +43,7 @@
 ### Mockups
 | Login screen  | SignUp Screen | Landing Screen |
 | ---| ---| ---|
-| ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | ![fsdaf](./readme/demo/Landing_mockup.png) |
 
 <br><br>
 
