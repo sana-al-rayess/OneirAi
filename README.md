@@ -21,3 +21,8 @@
 - As a user, I want to be able to receive a personality analysis from OneirAi, so that I can gain insights into my strengths and weaknesses and better understand myself.
 - As a user who is interested in relationships, I want to be able to take a compatibility test on OneirAi, so that I can see how well-matched I am with my partner or potential partners.
 - As a user, I want to be able to subscribe to OneirAi mailing list so that I can receive updates on new features, improvements, and promotions related to the dream interpretation and horoscope services provided by OneirAi.
+
+### Admin Stories
+- As an admin, I want to be able to view a list of all registered users on the platform, so that I can keep track of user activity and identify any potential issues or concerns.
+- As an admin, I want to be able to generate bar charts, polar charts, line charts, and pie charts based on the data analysis of dream categories in each country, so that I can easily visualize the data and see what is the most common category in each country.
+- As an admin, I want to be able to get count of all registered users on the platform, so that I can track the growth of the website over time.
