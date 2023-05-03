@@ -44,6 +44,12 @@
 | Login screen  | SignUp Screen | Landing Screen |
 | ---| ---| ---|
 | ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | ![fsdaf](./readme/demo/Landing_mockup.png) |
+| UserDash Screen | Add Dream Screen | Interpret Dream Screen |
+| ---| ---| ---|
+| ![Landing](./readme/demo/user_dash.png) | ![fsdaf](./readme/demo/add_dream.png) | ![fsdaf](./readme/demo/interpret.png) |
+| Visualize Dream Screen |  Change Password Screen |   Edit Profile  |
+| ---| ---| ---|
+| ![Landing](./readme/demo/visualize.png) | ![fsdaf](./readme/demo/changepass.png) | ![fsdaf](./readme/demo/edit_prof.png) |
 
 <br><br>
 
