@@ -26,3 +26,21 @@
 - As an admin, I want to be able to view a list of all registered users on the platform, so that I can keep track of user activity and identify any potential issues or concerns.
 - As an admin, I want to be able to generate bar charts, polar charts, line charts, and pie charts based on the data analysis of dream categories in each country, so that I can easily visualize the data and see what is the most common category in each country.
 - As an admin, I want to be able to get count of all registered users on the platform, so that I can track the growth of the website over time.
+
+
+
+<br><br>
+
+<!-- Implementation -->
+<img src="./readme/title4.svg"/>
+
+> Using the wireframes and mockups as a guide, we implemented OneirAi app with the following features:
+
+### User Screens (Web)
+| Login screen  | Register screen |  Landing screen |
+| ---| ---| ---|
+| ![Landing](./readme/demo/login.svg) | ![fsdaf](./readme/demo/signup.svg) | ![fsdaf](./readme/demo/1440x1024.png) |
+| Home screen  | Menu Screen | Order Screen |
+| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+
+<br><br>
