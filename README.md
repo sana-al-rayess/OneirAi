@@ -43,13 +43,23 @@
 ### Mockups
 | Login screen  | SignUp Screen | Landing Screen |
 | ---| ---| ---|
-| ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | ![fsdaf](./readme/demo/Landing_mockup.png) |
+| ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | 
+| Login screen  | SignUp Screen | Landing Screen |
+| ---| ---| ---|
+| ![Landing](./readme/demo/Landing_mockup.png) | ![fsdaf](./readme/demo/horoscope.png) | 
 | UserDash Screen | Add Dream Screen | Interpret Dream Screen |
 | ---| ---| ---|
 | ![Landing](./readme/demo/user_dash.png) | ![fsdaf](./readme/demo/add_dream.png) | ![fsdaf](./readme/demo/interpret.png) |
 | Visualize Dream Screen |  Change Password Screen |   Edit Profile  |
 | ---| ---| ---|
 | ![Landing](./readme/demo/visualize.png) | ![fsdaf](./readme/demo/changepass.png) | ![fsdaf](./readme/demo/edit_prof.png) |
+
+| Admin Screen | View Registered Users Screen | Pie Chart Analysis Screen |
+| ---| ---| ---|
+| ![Landing](./readme/demo/admin_home.png) | ![fsdaf](./readme/demo/view-users.png) | ![fsdaf](./readme/demo/pie-chart.png) |
+| Bar Chart Analysis Screen |  Change Password Screen |   Edit Profile  |
+| ---| ---| ---|
+| ![Landing](./readme/demo/bar-chart.png) | 
 
 <br><br>
 
