@@ -16,7 +16,7 @@ class HoroscopeController extends Controller
                 'Authorization' => 'Bearer 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',
             ],
             'json' => [
-                'prompt' => 'Get the current day and predict the Daily Horoscope for ' . $request->input('sign'),
+                'prompt' => 'Act like you are an astrologist, predict the Daily Horoscope for ' . $request->input('sign'),
                 'max_tokens' => 256,
                 'temperature' => 0.7,
             ],
