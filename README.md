@@ -57,7 +57,7 @@
 | Admin Screen | View Registered Users Screen | Pie Chart Analysis Screen |
 | ---| ---| ---|
 | ![Landing](./readme/demo/admin_home.png) | ![fsdaf](./readme/demo/view-users.png) | ![fsdaf](./readme/demo/pie-chart.png) |
-| Bar Chart Analysis Screen |  Change Password Screen |   Edit Profile  |
+| Bar Chart Analysis Screen |
 | ---| ---| ---|
 | ![Landing](./readme/demo/bar-chart.png) | 
 
