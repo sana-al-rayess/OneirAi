@@ -1,76 +1,94 @@
+.admin-left {
 
-
-.admin-left{
-    margin-right: 3rem;
-    width: 100%;
-    /* background-color: #5C88BB; */
-    background-color: #fff;
+    background-color: #334B71;
     height: auto;
-    display: flex;
-    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 85%;
 }
 
-.admin-title{
-    color: #182E59;
-    padding-left: 3rem;
-    padding-top: 3.5rem;
+.admin-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-title {
+    color: #FFF;
+    font-size: 2rem;
+    padding-top: 4rem;
     align-items: center;
     text-align: center;
 }
 
-.chart-row1{
+.chart-box {
+    /* border: 2px solid red; */
+    margin-top: 4rem;
+    
+    width: fit-content;
+}
+
+.chart-row1 {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+
     gap: 5rem;
     padding: 1rem;
-    margin-top: 3rem;
+    /* border: 2px solid yellow; */
+    width: fit-content;
+
 }
-.pie-ad{
-    width: 25rem;
-    height: 25rem;
+.yellow{
+    color: #F2B544;
+}
+
+.pie-ad {
+    width: 15rem;
+    height: 15rem;
     border: 3px solid #182E59;
     border-radius: 10px;
     box-shadow: 0 0 20px #00000033;
     /* background-color: #182E59; */
-    background-color: #fff;
+    background-color: #182E59;
     padding: 2rem;
-    font-size: 2rem;
-    color: #182E59;
+    font-size: 1.5rem;
+    color: #FFF;
     transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+
+}
+.pie-ad p1{
+    font-size: 1rem;
 }
 
-.pie-ad:hover{
+.pie-ad:hover {
     transform: scale(1.1);
     box-shadow: 0 0 30px #00000055;
 }
 
-.chart-img-bar{
-    width: 80%;
+.chart-img-bar {
+    width: 90%;
     height: auto;
-    padding: 1rem;
-    align-items: center;
-    margin-top: 4rem;
-    margin-left: 1rem;
+     
 
 }
 
-.chart-img-pie{
-    width: 60%;
+.chart-img-pie {
+    width: 50%;
     height: auto;
-    padding: 1rem;
-    align-items: center;
-    margin-top: 1rem;
-    margin-left: 4rem;
+    padding: 2rem;
+    
+    margin-left: 2rem; 
 
 }
-.chart-img-line{
+
+.chart-img-line {
     width: 60%;
     height: auto;
     padding: 1rem;
-    align-items: center;
-    margin-top: 1rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
 
 }
