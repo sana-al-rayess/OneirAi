@@ -73,3 +73,11 @@
   .subscribe-btn:hover{
     border: 2px solid #182E59;
   }
+
+  .success-message {
+    color: #f2b544;
+  }
+  
+  .error-message {
+    color: #f2b544;
+  }
