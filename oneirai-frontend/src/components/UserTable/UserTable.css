@@ -1,31 +1,83 @@
 .user-table {
-    font-family: Arial, sans-serif;
-    border-collapse: collapse;
-    width: 50%;
-    margin-top: 10rem;
-    margin-left:15rem;
-    
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  border-collapse: collapse;
 
-  }
+  margin: 10rem auto 0;
+
+}
+
+.user-table th {
+  background-color: #182E59;
+  text-align: left;
+  padding: 10px;
+  color: #fff;
+  height: 2rem;
+  border-bottom: 2px solid #182E59;
+
+}
+
+.user-table td {
+  border: none;
+  border-bottom: 1px solid #182E59;
+  padding: 10px;
+  background-color: #334B71;
+  color: #fff;
+}
+
+.user-table tr:hover {
+  background-color: #182E59;
+}
+
+.pagination {
+  display: flex;
+  justify-content: right;
+  margin-top: 2rem;
+
+  margin-left: 5rem;
+  width: 80%;
   
-  .user-table th {
-    background-color: #182E59;
-    text-align: left;
-    padding: 10px;
-    color: #fff;
-    
-  }
+}
+
+
+.pagination a {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #182E59;
+  color: #fff;
   
-  .user-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-  }
-  
-  .user-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .user-table tr:hover {
-    background-color: #ddd;
-  }
-  
+}
+
+.pagination a:hover {
+  background-color: #182E59;
+  color: #334B71;
+  cursor: pointer;
+}
+
+
+.pagination .previous-page,
+.pagination .next-page {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #182E59;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.pagination .previous-page:hover,
+.pagination .next-page:hover {
+  background-color: #182E59;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagination .disabled a {
+  color: #ccc;
+  cursor: not-allowed;
+
+}
