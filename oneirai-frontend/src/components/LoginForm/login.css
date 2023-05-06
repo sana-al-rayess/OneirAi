@@ -122,7 +122,7 @@ input{
 	background: #182E59;
 	font-size: 1em;
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 2rem;
 	outline: none;
 	border: 1px solid #fff;
 	border-radius: 5px;
@@ -160,4 +160,27 @@ button:hover{
 }
 #chk:checked ~ .signup label{
 	transform: scale(.6);
+}
+
+.forgot-pass{
+	font-size: 0.7rem;
+	font-weight: 800;
+	color: #182E59;
+	width: fit-content;
+	margin-bottom: -1.5rem;
+	margin-left:35%;
+}
+.forgot-pass-btn{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.pass-txt{
+
+	text-decoration: none;
+	color: #182E59;
+	text-align: center;
+	margin-left: 1rem;
+	font-size: 0.7rem;
 }
