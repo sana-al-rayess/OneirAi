@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from 'axios';
 import Logo from "../../images/logo_oneira.png";
 import "./login.css";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
     const [email, setEmail] = useState("");
@@ -48,14 +49,16 @@ function LoginForm() {
                 window.location.href = "/user";
             } catch (error) {
                 console.error(error);
-                
+
             }
 
         }
     }
     const handleLogin = async (e) => {
         e.preventDefault();
-        
+
+
+
         const form = e.target;
         try {
             const formData = { email, password };
@@ -80,7 +83,7 @@ function LoginForm() {
             setLoginError("Wrong Credentials");
             console.log("wrong credentials");
             console.error(error);
-            
+
         }
     }
 
@@ -174,6 +177,11 @@ function LoginForm() {
                                     setPasswordError("");
                                 }}
                             />
+                            <div className="forgot-pass">
+                                <Link className="pass-txt" to="/forgotpass">
+                                Forgot password?</Link>
+
+                            </div>
                             {passwordError && <p className="error-message">{passwordError}</p>}
                             {loginError && <p className="error-message">{loginError}</p>}
                             <button className="button1" type="submit">Login</button>
