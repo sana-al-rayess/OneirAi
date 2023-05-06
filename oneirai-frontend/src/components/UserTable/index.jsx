@@ -1,48 +1,76 @@
-import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import './UserTable.css'; // import CSS file
+import axios from 'axios';
+import './UserTable.css';
+import ReactPaginate from 'react-paginate';
 
 function UserTable() {
   const [users, setUsers] = useState([]);
+  const [pageNumber, setPageNumber] = useState(0);
+  const [itemsPerPage] = useState(5);
 
   useEffect(() => {
     const config = {
-      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }}
-    
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+    };
 
-    axios.get('http://127.0.0.1:8000/api/admin/getUsers', config)
-      .then(response => {
+    axios
+      .get('http://127.0.0.1:8000/api/admin/getUsers', config)
+      .then((response) => {
         setUsers(response.data.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }, []);
 
+  const pageCount = Math.ceil(users.length / itemsPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+
+  const displayUsers = users
+    .slice(pageNumber * itemsPerPage, (pageNumber + 1) * itemsPerPage)
+    .map((user) => (
+      <tr key={user.id}>
+        <td>{user.id}</td>
+        <td>{user.name}</td>
+        <td>{user.email}</td>
+        <td>{user.Age}</td>
+        <td>{user.location}</td>
+      </tr>
+    ));
+
   return (
-    <table className="user-table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Age</th>
-          <th>Location</th>
-          
-        </tr>
-      </thead>
-      <tbody>
-        {users.map(user => (
-          <tr key={user.id}>
-            <td>{user.name}</td>
-            <td>{user.email}</td>
-            <td>{user.Age}</td>
-            <td>{user.location}</td>
-          
+    <>
+      <table className="user-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Location</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>{displayUsers}</tbody>
+      </table>
+    
+      <ReactPaginate
+        previousLabel={'previous'}
+        nextLabel={'next'}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={'pagination'}
+        previousLinkClassName={'previous-page'}
+        nextLinkClassName={'next-page'}
+        disabledClassName={'disabled'}
+        activeClassName={'active'}
+      />
+     
+    </>
+    
   );
 }
-      
+
 export default UserTable;
