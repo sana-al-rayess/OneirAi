@@ -8,14 +8,16 @@ const LineChart = () => {
   const [locationCharts, setLocationCharts] = useState([]);
 
   async function fetchData() {
+    const config = {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+    }
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/dreamstat`);
+      const response = await axios.get(`http://127.0.0.1:8000/api/admin/dreamstat`, config);
       setData(response.data);
     } catch (error) {
       console.log(error);
     }
   }
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -35,7 +37,7 @@ const LineChart = () => {
         const categories = dreams.map((dream) => dream.category);
         const counts = dreams.map((dream) => dream.count);
 
-        const canvasId = `locationLineChart-${location}`;
+        const canvasId = `barChart-${location}`;
 
         const chart = new Chart(canvasId, {
           type: 'line',
@@ -44,12 +46,49 @@ const LineChart = () => {
             datasets: [
               {
                 label: 'Dream Counts',
+                color: 'white',
                 data: counts,
-                fill: false,
-                borderColor: '#4BC0C0',
-                tension: 0.1,
+                backgroundColor: [
+                  '#F2B544',
+                  '#36A2EB',
+                  '#F2EEB6',
+                  '#3370A6',  //navy
+                  '#9966FF',
+                  '#FF9F40',
+                ],
+                borderColor: 'yellow'
               },
             ],
+          },
+          options: {
+            plugins: {
+              legend: {
+                labels: {
+                  color: 'white',
+
+                }
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                grid: {
+                  color: 'white'
+                },
+                ticks: {
+                  color: 'white'
+                }
+              },
+              x: {
+                grid: {
+                  color: 'white'
+                },
+                ticks: {
+                  color: 'white'
+                },
+              },
+
+            },
           },
         });
 
@@ -63,15 +102,17 @@ const LineChart = () => {
 
   return (
     <div className='body-stats'>
-       <h1>Line Charts of User's Locations</h1>
-      <div className='charts-container'>
-        {data &&
-          data.stats.map((locationData) => (
-            <div key={locationData.location} className='chart-container'>
-              <h3>{locationData.location}</h3>
-              <canvas id={`locationLineChart-${locationData.location}`}></canvas>
-            </div>
-          ))}
+      <div className='chart-panel'>
+        <h1 className='title-chart'>Pie Charts of User's Locations</h1>
+        <div className='charts-container'>
+          {data &&
+            data.stats.map((locationData) => (
+              <div key={locationData.location} className='chart-container'>
+                <h3>{locationData.location}</h3>
+                <canvas id={`barChart-${locationData.location}`} className='chart-canvas-bars'></canvas>
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );
