@@ -12,11 +12,11 @@ const Navbar = () => {
                 <img className='logo' src={Logo} alt='logo' />
             </div>
             <div className="button-container-horo">
-                <Link to="/home" className="linking">
-                    Dreams
+                <Link to="/landing" className="linking">
+                    Home
                 </Link>
-                <Link to="/editor" className="linking">
-                    Profile
+                <Link to="/user" className="linking">
+                    Dreams
                 </Link>
                 
                 <Button2 className="button-horo">Logout</Button2>
