@@ -22,7 +22,7 @@ Thanks,<br>
     @endcomponent
 @endslot
 
-{{-- Body --}}
+<!-- {{-- Body --}}
 @slot('bodyStyle')
     style="background-color: {{ $color }}; color: white; font-family: '{{ $font }}', cursive;"
 @endslot
@@ -31,9 +31,9 @@ Thanks,<br>
 
 Dear {{$email}},
 
-OneirAi team is looking forward to communicating more with you. For more information visit our blog.
+OneirAi team is looking forward to communicating more with you. For more information visit our blog. -->
 
-@component('mail::button', ['url' => 'https://laraveltuts.com'])
+<!-- @component('mail::button', ['url' => 'https://laraveltuts.com'])
 Blog
 @endcomponent
 
@@ -46,4 +46,5 @@ Thanks,<br>
         © {{ date('Y') }} {{ config('app.name') }}. All rights reserved.
     @endcomponent
 @endslot
-@endcomponent
+@endcomponent -->
+
