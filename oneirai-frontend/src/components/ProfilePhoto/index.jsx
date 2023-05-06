@@ -38,7 +38,7 @@ const ProfilePhoto = () => {
         className="circular-border"
         onClick={() => fileInputRef.current.click()}
       >
-        {/* <p className="upload-text">Choose your photo</p> */}
+        
       </div>
     </div>
   );
