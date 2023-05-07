@@ -13,7 +13,7 @@ class HoroscopeController extends Controller
         $response = $client->request('POST', '/v1/engines/text-davinci-002/completions', [
             'headers' => [
                 'Content-Type' => 'application/json',
-                'Authorization' => 'Bearer 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',
+                'Authorization' => 'Bearer ' . env('CHAT_GPT_KEY'),
             ],
             'json' => [
                 'prompt' => 'Act like you are an astrologist, predict the Daily Horoscope for ' . $request->input('sign'),
@@ -37,7 +37,7 @@ class HoroscopeController extends Controller
         $client = new Client(['base_uri' => 'https://api.openai.com/v1/']);
         $response = $client->request('POST', 'engines/text-davinci-002/completions', [
             'headers' => [
-                'Authorization' => 'Bearer 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',
+                'Authorization' => 'Bearer ' . env('CHAT_GPT_KEY'),
                 'Content-Type' => 'application/json',
             ],
             'json' => [
@@ -62,7 +62,7 @@ class HoroscopeController extends Controller
         $client = new Client(['base_uri' => 'https://api.openai.com/v1/']);
         $response = $client->request('POST', 'engines/text-davinci-002/completions', [
             'headers' => [
-                'Authorization' => 'Bearer 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',
+                'Authorization' => 'Bearer ' . env('CHAT_GPT_KEY'),
                 'Content-Type' => 'application/json',
             ],
             'json' => [
@@ -104,7 +104,7 @@ class HoroscopeController extends Controller
         $client = new Client(['base_uri' => 'https://api.openai.com/v1/']);
         $response = $client->request('POST', 'engines/text-davinci-002/completions', [
             'headers' => [
-                'Authorization' => 'Bearer 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',
+                'Authorization' => 'Bearer ' . env('CHAT_GPT_KEY'),
                 'Content-Type' => 'application/json',
             ],
             'json' => [

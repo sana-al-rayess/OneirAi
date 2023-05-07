@@ -110,7 +110,8 @@ class DreamController extends Controller
 
         $headers = array(
             'Content-Type: application/json',
-            'Authorization: Bearer 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',
+            'Authorization: Bearer ' . env('CHAT_GPT_KEY'),
+
         );
 
         $data = array(
@@ -139,9 +140,9 @@ class DreamController extends Controller
 
     public function generateImage(Request $request)
     {
-        $apiKey = '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';
+        $apiKey = env('CHAT_GPT_KEY');
         $apiUrl = 'https://api.openai.com/v1/images/generations';
-
+    
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . $apiKey,
         ])->post($apiUrl, [
