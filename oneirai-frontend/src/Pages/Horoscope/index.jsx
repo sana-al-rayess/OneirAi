@@ -15,7 +15,6 @@ const Horoscope = () => {
       <ParticlesBg type="cobweb" bg={true} color="#ffffff" num={80} shape="stars" className="tsparticles" />
       <Navbar className="navbar-horo" />
       <HoroscopePart1 />
-      {/* <HoroscopePart2 /> */}
       <HoroscopePart4 />
       <HoroscopePart3 />
     
