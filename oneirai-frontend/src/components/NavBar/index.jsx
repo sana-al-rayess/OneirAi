@@ -4,7 +4,11 @@ import Logo from "../../images/logo_oneira.png";
 import Button2 from "../Button2";
 
 const Navbar = () => {
-
+    const handleClick = () => {
+        window.location.href = "/login";
+        localStorage.clear();
+      };
+    
 
     return (
         <div className='header1'>
@@ -19,7 +23,7 @@ const Navbar = () => {
                     Dreams
                 </Link>
                 
-                <Button2 className="button-horo">Logout</Button2>
+                <Button2 className="button-horo" onClick={handleClick}>Logout</Button2>
 
             </div>
         </div>
