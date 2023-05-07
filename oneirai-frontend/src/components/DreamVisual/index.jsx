@@ -60,6 +60,7 @@ function DreamVisual(props) {
       </div>
       <div>
         <h1 className="interpret">Visualization</h1>
+        {saveResponse && <p className="dream-msg">{saveResponse}</p>}
       </div>
       <div className="dream-modal-content">
         <div className="image-container-visual" ref={imageContainerRef}>
@@ -76,7 +77,7 @@ function DreamVisual(props) {
         <Button2 type="submit" onClick={handleSubmit}>
           Save
         </Button2>
-        {saveResponse && <p>{saveResponse}</p>}
+       
       </div>
     </div>
   );
