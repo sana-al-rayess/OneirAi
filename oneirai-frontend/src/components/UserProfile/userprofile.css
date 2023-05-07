@@ -1,36 +1,4 @@
-.edit-profile-user {
-    display: flex;
-
-}
-
-.location-lbl {
-    margin-left: -1.5rem;
-    color: #334B71 !important;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    height: 2rem;
-    width: 11.5rem;
-    background-color: #fff;
-}
-
-
-
-.ReactFlagsSelect-module_selectValue__152eS {
-    color: #334B71;
-}
-
-.ReactFlagsSelect-module_flagsSelect__2pfa2 {
-    color: #334B71;
-}
-
-.ReactFlagsSelect-module_label__27pw9 {
-    color: #334B71;
-}
-
-.ReactFlagsSelect-module_flagsSelect__2pfa2{
-    border:none;
-}
-
-.ReactFlagsSelect-module_flagsSelect__2pfa2 :hover {
-    border: 1px solid white;
+.error-name{
+    color: #F2B138;
+    padding-left: 1rem;
 }
