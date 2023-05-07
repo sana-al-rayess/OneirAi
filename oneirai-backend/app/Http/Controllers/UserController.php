@@ -18,6 +18,7 @@ class UserController extends Controller
         $this->middleware('auth:api', ['except' => ['login', 'register']]);
     }
 
+
     public function login(Request $request)
     {
         $request->validate([
@@ -111,7 +112,7 @@ class UserController extends Controller
 
     public function updateUser(Request $request)
     {
-        
+
         $user_id = Auth::id();
         $user_updated = User::find($user_id);
         $user_updated->name = $request->name;
@@ -126,7 +127,7 @@ class UserController extends Controller
         ], 200);
     }
 
-    public function updatePassword(Request $request)
+        public function updatePassword(Request $request)
     {
         $user_id = Auth::id();
         $password_updated = User::find($user_id);
@@ -159,16 +160,15 @@ class UserController extends Controller
         ], 200);
     }
 
-  
+
 
     public function getUsers()
     {
         $users = User::all();
-    
+
         return response()->json([
             'status' => 'success',
             'data' => $users,
         ]);
     }
-
 }
