@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20rem;
+    gap: 25rem;
     padding: 3rem;
   }
   
@@ -32,7 +32,7 @@
       position: relative;
       overflow: hidden;
       white-space: nowrap;
-      border-right: 0.15em solid orange;
+      /* border-right: 0.08em solid orange; */
       animation: typing 4s steps(40) forwards infinite;
     }
     

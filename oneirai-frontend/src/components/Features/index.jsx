@@ -18,7 +18,7 @@ const Features = () => {
                 <img className="photo" src={Feature1} alt="photo" />
 
                 <div className="feature-txt-button">
-                    <div><p className="feature1">Lorem Epsum Lorem Epsum <br />Lorem Epsum Lorem Epsum  </p></div>
+                    <div><p className="feature1">"Experience the Future of Dream Analysis Today - <br />Try Now and Unleash the Power of AI to Interpret Your Dreams!"</p></div>
                   
                         <Link to="/user">
                             <div><Button>Try Now</Button></div>
@@ -30,7 +30,8 @@ const Features = () => {
             <div className="features-container">
 
                 <div className="feature-txt-button">
-                    <div><p className="feature1">Lorem Epsum Lorem Epsum <br />Lorem Epsum Lorem Epsum  </p></div>
+                    <div><p className="feature1">See Your Dreams Come to Life -<br />
+                     Try Now & Visualize Your Dreams with the Power of AI Technology!</p></div>
 
                     <div><Button>Try Now</Button></div>
                 </div>
@@ -42,7 +43,7 @@ const Features = () => {
                 <img className="photo" src={Feature3} alt="photo" />
 
                 <div className="feature-txt-button">
-                    <div><p className="feature1">Lorem Epsum Lorem Epsum <br />Lorem Epsum Lorem Epsum  </p></div>
+                    <div><p className="feature1">Explore the Royal Road to Your Unconscious Mind -<br /> Try Now and Uncover the Psychology of Your Dreams with AI Technology!"</p></div>
 
                     <div><Button>Try Now</Button></div>
                 </div>
@@ -51,7 +52,7 @@ const Features = () => {
             <div className="features-container">
 
                 <div className="feature-txt-button">
-                    <div><p className="feature1">Lorem Epsum Lorem Epsum <br />Lorem Epsum Lorem Epsum  </p></div>
+                    <div><p className="feature1">Get Personalized Horoscopes Like Never Before - <br />Try Now and Discover the Power of AI Technology!</p></div>
 
                     <div><Button>Try Now</Button></div>
                 </div>
