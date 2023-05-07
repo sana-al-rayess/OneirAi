@@ -1,6 +1,6 @@
 import "./userprofile.css"
 import EditProfileForm from "../EditProfileForm";
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../../components/ProfilePhoto/ProfilePhoto.css';
 import Camera from "../../images/camera.png"
 import axios from "axios";
@@ -16,6 +16,7 @@ const UserProfile = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [age, setAge] = useState("");
+    const [error, setError] = useState("");
     
     const [showPopup, setShowPopup] = useState(false);
 
@@ -31,6 +32,7 @@ const UserProfile = () => {
 
     const handleNameChange = (event) => {
         setName(event.target.value);
+        
     };
 
     const handleEmailChange = (event) => {
@@ -57,12 +59,14 @@ const UserProfile = () => {
     };
 
     const handleSave = () => {
+      
         const formData = new FormData();
         formData.append("name", name);
         formData.append("email", email);
         formData.append("Age", age);
         formData.append("profile_picture", profilePic);
         formData.append("location", country);
+        
 
         axios
             .post("http://127.0.0.1:8000/api/updateUserInfo", formData, {
@@ -86,9 +90,23 @@ const UserProfile = () => {
             .catch((error) => {
                 console.error(error);
                 console.log("Error editing");
+                setError(error.message);
+                
             });
+            
+           
     };
+    useEffect(() => {
+        const name = localStorage.getItem('name');
+        const email = localStorage.getItem('email');
+        
+        setName(name);
+        setEmail(email);
+      
+      }, []);
+      
 
+  
 
 
     return (
@@ -128,13 +146,15 @@ const UserProfile = () => {
                         <div>
                             <div className="label-input-prof margin">
                                 <label>Name:</label>
-                                <input type="text" id="name-input" value={name} onChange={handleNameChange} />
+                                <input type="text" id="name-input" value={name}  onChange={handleNameChange} />
+                                {error && <div className="error-name" >Name can't be empty</div>}
+                                
                             </div>
                         </div>
                         <div>
                             <div className="label-input-prof margin">
                                 <label>Email:</label>
-                                <input type="email" id="email" value={email} onChange={handleEmailChange} />
+                                <input type="email" readOnly id="email" value={email} onChange={handleEmailChange} />
                             </div>
                         </div>
                     </div>
