@@ -1,4 +1,28 @@
 body{
     background-color: #182E59;
-    
+    overflow-x: hidden !important;
+        
 }
+
+
+
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #F2B138 #182E59;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #182E59;
+    border: 1px solid #F2B138;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #F2B138;
+    border-radius: 10px;
+    border: 3px solid #F2B138;
+  }

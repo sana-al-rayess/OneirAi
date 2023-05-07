@@ -14,32 +14,34 @@ import Image3 from "../../images/starry3.jpg";
 
 
 const Landing = () => {
+   
     return (
+        
         <div className="landing">
+            <div className="force-overflow">
+                <div > <Header /> </div>
+                <div> <Intro /> </div>
+                <br /><br />
+                <div className="parallax-div"> <Parallax backgroundImage={Image2}>
+                </Parallax></div>
+                <br /><br />
+                <div> <Features /> </div>
+                <br /><br />
+                <div> <Parallax backgroundImage={Image2}>
+                </Parallax></div>
+                <br /><br />
+                <div> <Facts /> </div>
+                <br /><br />
+                <div> <Parallax backgroundImage={Image2}>
+                </Parallax></div>
+                <br /><br />
+                <div> <Subscribe /> </div>
+                <div> <Feedback /> </div>
+                <br /><br />
+                <div> <Footer /> </div>
 
-            <div > <Header /> </div>
-            <div> <Intro /> </div>
-            <br/><br/>
-            <div> <Parallax backgroundImage={Image2}>
-            </Parallax></div>
-            <br/><br/>
-            <div> <Features /> </div>
-            <br/><br/>
-            <div> <Parallax backgroundImage={Image2}>
-            </Parallax></div>
-            <br/><br/>
-            <div> <Facts /> </div>
-            <br/><br/>
-            <div> <Parallax backgroundImage={Image2}>
-            </Parallax></div>
-            <br/><br/>
-            <div> <Subscribe /> </div>
-            <div> <Feedback /> </div>
-            <br/><br/>
-            <div> <Footer /> </div>
 
-
-
+            </div>
         </div>
     );
 };
