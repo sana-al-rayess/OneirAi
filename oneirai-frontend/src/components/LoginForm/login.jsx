@@ -13,6 +13,7 @@ function LoginForm() {
     const [nameError, setNameError] = useState("");
 
     const [loginError, setLoginError] = useState("");
+    const [registerError, setRegisterError] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -45,11 +46,13 @@ function LoginForm() {
                 localStorage.setItem("profile_picture", response.data.user.profile_picture);
                 localStorage.setItem("email", response.data.user.email);
                 localStorage.setItem("type", response.data.user.type);
+                localStorage.setItem("id", response.data.user.id);
                 console.log('User created successfully:', user);
                 window.location.href = "/user";
             } catch (error) {
                 console.error(error);
-
+                console.log("email already exists");
+                setRegisterError("Email already Exists");
             }
 
         }
@@ -71,6 +74,7 @@ function LoginForm() {
             localStorage.setItem("email", response.data.user.email);
             localStorage.setItem("profile_picture", response.data.user.profile_picture);
             localStorage.setItem("type", response.data.user.type);
+            localStorage.setItem("id", response.data.user.id);
             console.log("User logged in successfully:", user);
             if (response.data.user.type == "admin") {
                 window.location.href = "/admin";
@@ -122,14 +126,15 @@ function LoginForm() {
                                 name="email"
                                 placeholder="Email"
                                 required
-                                className={`input-with-mail-icon ${emailError ? "error" : ""}`}
+                                className={`input-with-mail-icon ${registerError ? "error" : ""}`}
                                 value={email}
                                 onChange={(e) => {
                                     setEmail(e.target.value);
                                     setEmailError("");
+                                    setRegisterError("")
                                 }}
                             />
-                            {emailError && <p className="error-message">{emailError}</p>}
+                            {registerError && <p className="error-message">{registerError}</p>}
                             <input
                                 type="password"
                                 name="password"
@@ -177,14 +182,17 @@ function LoginForm() {
                                     setPasswordError("");
                                 }}
                             />
+                            {passwordError && <p className="error1">{passwordError}</p>}
+                            {loginError && <p className="error1">{loginError}</p>}
+                            <br />
                             <div className="forgot-pass">
                                 <Link className="pass-txt" to="/forgotpass">
                                 Forgot password?</Link>
-
+                              
                             </div>
-                            {passwordError && <p className="error-message">{passwordError}</p>}
-                            {loginError && <p className="error-message">{loginError}</p>}
+                                
                             <button className="button1" type="submit">Login</button>
+                           
                         </form>
                     </div>
                 </div>

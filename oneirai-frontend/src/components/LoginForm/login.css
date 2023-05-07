@@ -183,4 +183,15 @@ button:hover{
 	text-align: center;
 	margin-left: 1rem;
 	font-size: 0.7rem;
+	/* border: 1px solid saddlebrown; */
+	margin-top: -2rem;
+}
+
+.error1{
+	color: #182E59;
+	margin-left: 3rem;
+	font-size: 0.8rem;
+	width: fit-content;
+	margin-top: -1rem;
+	font-weight: 300;
 }
