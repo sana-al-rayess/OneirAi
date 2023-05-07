@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button3 from "../Button3";
-
+import Button2 from "../Button2";
+import "./changepass.css";
 import axios from "axios";
 
 
@@ -40,7 +41,7 @@ const ChangePass = (props) => {
     })
       .then((response) => {
         console.log(response.data);
-        localStorage.clear(); 
+        localStorage.clear();
         window.location.href = '/login';
 
       })
@@ -55,13 +56,14 @@ const ChangePass = (props) => {
   }
 
   return (
-    <div className="popup">
-      <div className="popup-inner">
+    <div className="popup-forgotpass">
+      <div className="popup-inner-forgotpass">
         <div className="title-model">
           <h1>Change Password</h1>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="labeltext">
+
+          <div className="labeltext2">
             <label>Current Password:</label>
             <input
               type={showPasswords ? "text" : "password"} // conditionally set type
@@ -69,11 +71,14 @@ const ChangePass = (props) => {
               value={currentPassword || ''}
               onChange={handleCurrentPasswordChange}
             />
-            {errors?.current_password && (
-              <span className="text-danger">{errors.current_password[0]}</span>
-            )}
+
           </div>
-          <div className="labeltext">
+          <div className="error-forgotpass">{errors?.current_password && (
+            <span className="text-danger">{errors.current_password[0]}</span>
+          )}</div>
+
+
+          <div className="labeltext2">
             <label htmlFor="password">New Password:</label>
             <input
               type={showPasswords ? "text" : "password"} // conditionally set type
@@ -81,11 +86,12 @@ const ChangePass = (props) => {
               value={newPassword || ''}
               onChange={handleNewPasswordChange}
             />
-            {errors?.password && (
+            </div>
+            <div className="error-forgotpass">{errors?.password && (
               <span className="text-danger">{errors.password[0]}</span>
             )}
           </div>
-          <div className="labeltext">
+          <div className="labeltext2">
             <label>Confirm Password:</label>
             <input
               type={showPasswords ? "text" : "password"} // conditionally set type
@@ -93,15 +99,17 @@ const ChangePass = (props) => {
               value={confirmPassword || ''}
               onChange={handleConfirmPasswordChange}
             />
-            {errors?.password_confirmation && (
+            </div>
+            <div className="error-forgotpass"> {errors?.password_confirmation && (
               <span className="text-danger">
                 {errors.password_confirmation[0]}
               </span>
             )}
           </div>
-          <div className="model-btn">
-            <Button3 type="submit">Save</Button3>
+          <div className="model-btn btn3">
+            
             <Button3 onClick={props.closePopup}>Close</Button3>
+            <Button2 type="submit">Save</Button2>
           </div>
         </form>
       </div>
