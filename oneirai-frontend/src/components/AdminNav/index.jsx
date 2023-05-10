@@ -46,7 +46,16 @@ const AdminNav = () => {
             <br /><br />
             <div className="menu-admin">
                 <div>
+                <div className="menu-item-admin">
+                        
+
+                        <Link to="/admin" className="linking" style={window.location.pathname === '/admin' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
+                            Home
+                        </Link>
+                    </div>
+
                     <div className="menu-item-admin">
+                        
 
                         <Link to="/admin/view-users" className="linking" style={window.location.pathname === '/admin/view-users' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
                             Users
