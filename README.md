@@ -79,13 +79,13 @@
 > Using the wireframes and mockups as a guide, we implemented OneirAi app with the following features:
 
 ### User Screens (Web)
-| Login screen  | Register screen |  Landing screen |
+| Landing Page  | Register |  Login |
 | ---| ---| ---|
-| ![Landing](./readme/gifs/landing_demo.gif) | ![fsdaf](./readme/demo/signup.svg) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/gifs/landing_demo.gif) | ![fsdaf](./readme/gifs/register.gif) | ![fsdaf](./readme/gifs/login.gif) |
 | Home screen  | Menu Screen | Order Screen |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/gifs/add_dream.gif) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
 | Daily Horoscope  | Personality Analysis | Compatibility Test |
-| ![Landing](./readme/gifs/daily_horo.gif) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/gifs/compatibility.gif) |
+| ![Landing](./readme/gifs/daily_horo.gif) | ![fsdaf](./readme/gifs/personality.gif) | ![fsdaf](./readme/gifs/compatibility.gif) |
 
 <br><br>
 
