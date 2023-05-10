@@ -84,8 +84,10 @@
 | ![Landing](./readme/gifs/landing_demo.gif) | ![fsdaf](./readme/gifs/register.gif) | ![fsdaf](./readme/gifs/login.gif) |
 | Add Dream  |  Visualize Dream | Interpret & Download Dream |
 | ![Landing](./readme/gifs/add_dream.gif) | ![fsdaf](./readme/gifs/visualize.gif) | ![fsdaf](./readme/gifs/interpret.gif) |
-| Search  and Sort Dreams  |  Screen | Order Screen |
-| ![Landing](./readme/gifs/add_dream.gif) | ![fsdaf](./readme/gifs/visualize.gif) | ![fsdaf](./readme/gifs/interpret.gif) |
+| Search & Sort Dreams  |  Edit Profile | Search, Sort & Delete |
+| ![Landing](./readme/gifs/add_dream.gif) | ![fsdaf](./readme/gifs/profile.gif) | ![fsdaf](./readme/gifs/search_sort.gif) |
+| Change Password |  Edit Profile | Search, Sort & Delete |
+| ![Landing](./readme/gifs/changepass.gif) | ![fsdaf](./readme/gifs/horoscope_demo.gif) | ![fsdaf](./readme/gifs/search_sort.gif) |
 | Daily Horoscope  | Personality Analysis | Compatibility Test |
 | ![Landing](./readme/gifs/daily_horo.gif) | ![fsdaf](./readme/gifs/personality.gif) | ![fsdaf](./readme/gifs/compatibility.gif) |
 
