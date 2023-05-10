@@ -33,7 +33,7 @@
 <!-- Prototyping -->
 <img src="./readme/title3.svg"/>
 
-> We designed Coffee Express using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
+>I designed OneirAi using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
 
 ### Wireframes
 | Login screen  | Register screen |  Landing screen |
@@ -82,8 +82,10 @@
 | Landing Page  | Register |  Login |
 | ---| ---| ---|
 | ![Landing](./readme/gifs/landing_demo.gif) | ![fsdaf](./readme/gifs/register.gif) | ![fsdaf](./readme/gifs/login.gif) |
-| Home screen  | Menu Screen | Order Screen |
-| ![Landing](./readme/gifs/add_dream.gif) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| Add Dream  |  Visualize Dream | Interpret & Download Dream |
+| ![Landing](./readme/gifs/add_dream.gif) | ![fsdaf](./readme/gifs/visualize.gif) | ![fsdaf](./readme/gifs/interpret.gif) |
+| Search  and Sort Dreams  |  Screen | Order Screen |
+| ![Landing](./readme/gifs/add_dream.gif) | ![fsdaf](./readme/gifs/visualize.gif) | ![fsdaf](./readme/gifs/interpret.gif) |
 | Daily Horoscope  | Personality Analysis | Compatibility Test |
 | ![Landing](./readme/gifs/daily_horo.gif) | ![fsdaf](./readme/gifs/personality.gif) | ![fsdaf](./readme/gifs/compatibility.gif) |
 
@@ -95,7 +97,7 @@
 <img src="./readme/title6.svg"/>
 
 
-> These are the instructions on setting up your project locally.
+> These are the instructions on setting up this project locally.
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
