@@ -6,6 +6,7 @@ import './dreamstatschat.css';
 const DreamStatsChart = () => {
   const [data, setData] = useState(null);
   const [locationCharts, setLocationCharts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   async function fetchData() {
     const config = {
@@ -14,6 +15,7 @@ const DreamStatsChart = () => {
     try {
       const response = await axios.get(`http://127.0.0.1:8000/api/admin/dreamstat`, config);
       setData(response.data);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -88,7 +90,12 @@ const DreamStatsChart = () => {
       <div className='chart-panel'>
         <div className='title-chart'><h1>Pie Charts of User's Locations</h1></div>
         <div className='pie-container'>
-          {data &&
+          {isLoading ? (
+            <div className='loading-spinner'>
+              <i className='fa fa-spinner fa-spin'></i>
+            </div>
+          ) : (
+            data &&
             data.stats.map((locationData) => (
               <div key={locationData.location} className='pie-chart-container'>
                 <h3>{locationData.location}</h3>
@@ -97,11 +104,13 @@ const DreamStatsChart = () => {
                   className='chart-canvas-pie'
                 ></canvas>
               </div>
-            ))}
+            ))
+          )}
         </div>
       </div>
     
   );
 };
+
 
 export default DreamStatsChart;
