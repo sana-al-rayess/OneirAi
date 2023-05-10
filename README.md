@@ -47,7 +47,7 @@
 | Login screen  | SignUp Screen |  |
 | ---| ---| ---|
 | ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | 
-| Login screen  | SignUp Screen |  |
+| Landing Page  | Horoscope Page |  |
 | ---| ---| ---|
 | ![Landing](./readme/demo/Landing_mockup.png) | ![fsdaf](./readme/demo/horoscope.png) | 
 
@@ -90,6 +90,8 @@
 | | ![fsdaf](./readme/gifs/horoscope_demo.gif) |  |
 | Daily Horoscope  | Personality Analysis | Compatibility Test |
 | ![Landing](./readme/gifs/daily_horo.gif) | ![fsdaf](./readme/gifs/personality.gif) | ![fsdaf](./readme/gifs/compatibility.gif) |
+| Authorization  | Admin Panel| Data Analysis: Charts |
+| ![Landing](./readme/gifs/error.gif) | ![fsdaf](./readme/gifs/admin.gif) | ![fsdaf](./readme/gifs/charts.gif) |
 
 <br><br>
 
