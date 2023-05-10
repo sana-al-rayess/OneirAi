@@ -47,6 +47,9 @@
 | Login screen  | SignUp Screen | Landing Screen |
 | ---| ---| ---|
 | ![Landing](./readme/demo/Landing_mockup.png) | ![fsdaf](./readme/demo/horoscope.png) | 
+
+<details><summary>See more mockups</summary>
+
 | UserDash Screen | Add Dream Screen | Interpret Dream Screen |
 | ---| ---| ---|
 | ![Landing](./readme/demo/user_dash.png) | ![fsdaf](./readme/demo/add_dream.png) | ![fsdaf](./readme/demo/interpret.png) |
@@ -60,6 +63,9 @@
 | Bar Chart Analysis Screen |
 | ---| ---| ---|
 | ![Landing](./readme/demo/bar-chart.png) | 
+
+</details>
+#
 
 <br><br>
 
@@ -77,3 +83,69 @@
 | ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
 
 <br><br>
+
+
+
+<br><br>
+<img src="./readme/title6.svg"/>
+
+
+> These are the instructions on setting up your project locally.
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+This is a list of things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+* Apache, PHP, MySQL [Download](https://downloadsapachefriends.global.ssl.fastly.net/8.1.6/xampp-windows-x64-8.1.6-0-VS16-installer.exe?from_af=true)
+* Download composer   [Download](https://getcomposer.org/Composer-Setup.exe)
+
+<a id="how-to-run"></a>
+
+### Installation
+
+1. Open your XAMPP control panel and start Apache and MySQL
+2. Clone the repo 
+```sh
+   git clone https://github.com/sanarayess/OneirAi.git
+```
+  
+3. Go into the back-end folder
+```sh
+   cd oneirai-backend
+```
+4. Rename the .env.example file to .env and specify your database name
+
+5. Migrate the database schema
+```sh
+   php artisan migrate
+```
+6. Generate a secret key to handle token encryption 
+```sh
+   php artisan jwt:secret
+```
+7. Install the dependencies 
+```sh
+   composer install
+```
+8. Launch the server
+```sh
+   php artisan serve
+```
+9. Now to get the front-end up and running go into the front-end folder in a new terminal
+```sh
+   cd oneirai-frontend
+```
+10. Install the dependencies
+   ```sh
+   npm install
+   ```
+11. Rename .env.example to .env.local
+
+12. Start the application
+   ```sh
+   npm start
+   ```
