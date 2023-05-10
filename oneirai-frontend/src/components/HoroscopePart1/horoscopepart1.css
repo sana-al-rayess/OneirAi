@@ -77,3 +77,77 @@
     transform: translateY(200%);
   }
 
+/* Styles for screens up to 768px wide */
+@media screen and (max-width: 768px) {
+  .text-photo-horo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .zodiac-photo {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .text {
+    font-size: 2rem;
+    margin-right: 2rem;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  
+  .text .wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .text-photo-horo {
+    gap: 5rem;
+  }
+  
+  .zodiac-photo {
+    width: 50%;
+    max-width: 400px;
+  }
+  
+  .text {
+    font-size: 4rem;
+    margin-right: 15rem;
+    text-align: center;
+  }
+  
+  .text .wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .text-photo-horo {
+    gap: 10rem;
+  }
+  
+  .zodiac-photo {
+    width: 80%;
+  }
+  
+  .text {
+    font-size: 5rem;
+    margin-left: 18rem;
+    text-align: center;
+  }
+  
+  .text .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+}
