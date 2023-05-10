@@ -38,13 +38,16 @@
 ### Wireframes
 | Login screen  | Register screen |  Landing screen |
 | ---| ---| ---|
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/demo/Login_wireframe.png) | ![fsdaf](./readme/demo/Register_wireframe.png) | ![fsdaf](./readme/demo/landing_wireframe.png) |
+| UserDashboard screen  | Add Dream screen |  Landing screen |
+| ---| ---| ---|
+| ![Landing](./readme/demo/Userdash_wireframe.png) | ![fsdaf](./readme/demo/AddDream_wireframe.png) | ![fsdaf](./readme/demo/Interpretation_wireframe.png) |
 
 ### Mockups
-| Login screen  | SignUp Screen | Landing Screen |
+| Login screen  | SignUp Screen |  |
 | ---| ---| ---|
 | ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | 
-| Login screen  | SignUp Screen | Landing Screen |
+| Login screen  | SignUp Screen |  |
 | ---| ---| ---|
 | ![Landing](./readme/demo/Landing_mockup.png) | ![fsdaf](./readme/demo/horoscope.png) | 
 
@@ -78,7 +81,7 @@
 ### User Screens (Web)
 | Login screen  | Register screen |  Landing screen |
 | ---| ---| ---|
-| ![Landing](./readme/demo/login.svg) | ![fsdaf](./readme/demo/signup.svg) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/gifs/horoscope_demo.gif) | ![fsdaf](./readme/demo/signup.svg) | ![fsdaf](./readme/demo/1440x1024.png) |
 | Home screen  | Menu Screen | Order Screen |
 | ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
 
