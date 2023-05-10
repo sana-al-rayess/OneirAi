@@ -24,6 +24,7 @@
     "react-datepicker": "^4.11.0",
     "react-dom": "^18.2.0",
     "react-flags-select": "^2.2.3",
+    "react-modal": "^3.16.1",
     "react-paginate": "^8.2.0",
     "react-router": "^6.10.0",
     "react-router-dom": "^6.10.0",
