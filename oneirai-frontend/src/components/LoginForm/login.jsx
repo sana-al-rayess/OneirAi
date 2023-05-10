@@ -4,6 +4,7 @@ import Logo from "../../images/logo_oneira.png";
 import "./login.css";
 import { Link } from "react-router-dom";
 
+
 function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -48,7 +49,7 @@ function LoginForm() {
                 localStorage.setItem("type", response.data.user.type);
                 localStorage.setItem("id", response.data.user.id);
                 console.log('User created successfully:', user);
-                window.location.href = "/user";
+                window.location.href = "/profile";
             } catch (error) {
                 console.error(error);
                 console.log("email already exists");
@@ -186,7 +187,7 @@ function LoginForm() {
                             {loginError && <p className="error1">{loginError}</p>}
                             <br />
                             <div className="forgot-pass">
-                                <Link className="pass-txt" to="/forgotpass">
+                                <Link className="pass-txt" to="/ForgotPass">
                                 Forgot password?</Link>
                               
                             </div>
