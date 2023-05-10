@@ -56,7 +56,7 @@ const LineChart = () => {
                   '#9966FF',
                   '#FF9F40',
                 ],
-                borderColor: 'yellow'
+                borderColor: '#F2B138'
               },
             ],
           },
@@ -103,7 +103,7 @@ const LineChart = () => {
   return (
     <div className='body-stats'>
       <div className='chart-panel'>
-        <h1 className='title-chart'>Pie Charts of User's Locations</h1>
+        <h1 className='title-chart'>Line Charts of User's Locations</h1>
         <div className='charts-container'>
           {data &&
             data.stats.map((locationData) => (
