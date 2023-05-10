@@ -100,15 +100,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function getUser()
-    {
-        $user = Auth::user();
-        return response()->json([
-            'status' => 'success',
-            'user' => $user
-        ], 200);
-    }
-
+  
 
     public function updateUser(Request $request)
     {
@@ -162,13 +154,9 @@ class UserController extends Controller
 
 
 
-    public function getUsers()
-    {
-        $users = User::all();
+   
 
-        return response()->json([
-            'status' => 'success',
-            'data' => $users,
-        ]);
-    }
+
+
+    
 }
