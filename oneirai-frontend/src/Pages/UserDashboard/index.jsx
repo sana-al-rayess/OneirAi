@@ -9,6 +9,9 @@ import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import DreamModal from "../../components/DreamModal";
 import ErrorPage from "../../components/ErrorPage";
 import DreamVisual from "../../components/DreamVisual";
+import Modal from 'react-modal';
+import Button2 from "../../components/Button2";
+import Button3 from "../../components/Button3";
 
 const UserDashboard = () => {
   const token = localStorage.getItem("token");
@@ -17,6 +20,8 @@ const UserDashboard = () => {
   const [selectedDream, setSelectedDream] = useState(null);
   const [dreamVisualizeOpen, setDreamVisualizeOpen] = useState(false);
   const [dreamModalOpen, setDreamModalOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
 
   const handleOpenDreamVisualize = (dream) => {
     setSelectedDream(dream);
@@ -130,7 +135,7 @@ const UserDashboard = () => {
 
   const handleDownloadDream = (id) => {
     const token = localStorage.getItem('token');
-  
+
     fetch(`http://127.0.0.1:8000/api/download/${id}`, {
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -147,7 +152,7 @@ const UserDashboard = () => {
       })
       .catch((error) => console.error(error));
   };
-  
+
 
   return (
     <div className="body2">
@@ -184,19 +189,70 @@ const UserDashboard = () => {
 
               {dreams.map((dream) => (
                 <div className="dream-card" key={dream.id}>
-                  <i className="fas fa-times delete-icon" onClick={() => {
+                  {/* <i className="fas fa-times delete-icon" onClick={() => {
                     if (window.confirm("Are you sure you want to delete this dream?")) {handleDeleteDream(dream.id);}
-                  }}></i>
+                  }}></i> */}
+                  <i className="fas fa-times delete-icon" onClick={() => setShowModal(true)}></i>
+                  <Modal
+                    isOpen={showModal}
+                    onRequestClose={() => setShowModal(false)}
+                    style={{
+                      content: {
+                        textAlign: 'left',
+                        marginTop: '15rem',
+                        marginLeft: '35rem',
+                        width: '23rem',
+                        height: '10rem',
+                        backgroundColor: '#fff',
+                        borderRadius: '5px',
+                        padding: '2rem',
+                        boxShadow: '0 2px 12px rgba(0, 0, 0, 0.5)',
+                        outline: 'none',
+                        color: '#182E59',
+                      },
+                      overlay: {
+                        backgroundColor: 'transparent',
+                      },
+                    }}
+                  >
+                    <div className="modal-content">
+                      <i
+                        className="fas fa-times"
+                        style={{
+                          position: 'absolute',
+                          top: '0.5rem',
+                          right: '0.5rem',
+                          cursor: 'pointer',
+                        }}
+                        onClick={() => setShowModal(false)}
+                      />
+                      <h2>Are you sure you want to delete this dream?</h2>
+                      <div className="modal-btn">
+                        <div className="yes-btn"><Button3 onClick={() => setShowModal(false)}>Cancel</Button3></div>
+                        <div><Button2
+                          onClick={() => {
+                            handleDeleteDream(dream.id);
+                            setShowModal(false);
+                          }}
+                        >
+                          Yes
+                        </Button2></div>
+                      </div>
+
+                    </div>
+                  </Modal>
+
+
                   <div className="dream-details">
                     <h3>{dream.title}
-                      <i className="fas fa-edit"></i>
+                      {/* <i className="fas fa-edit"></i> */}
 
                     </h3>
                     <p2>{dream.date}</p2>
                     <br />
                     <br />
                     <p1>{dream.description}</p1>
-                    
+
                     <div className="interpret-label">Interpretation:</div>
                     <div className="interpret-dream">{dream.interpretation}</div>
 
