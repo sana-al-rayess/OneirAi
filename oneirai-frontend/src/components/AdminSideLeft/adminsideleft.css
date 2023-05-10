@@ -17,7 +17,7 @@
 
 .admin-title {
     color: #FFF;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-top: 4rem;
     align-items: center;
     text-align: center;
@@ -91,4 +91,51 @@
     padding: 1rem;
     margin-left: 2rem;
 
+}
+
+.usercount{
+      width: 15rem;
+    height: 6rem;
+    border: 3px solid #182E59;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00000033;
+    background-color: #182E59;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #FFF;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.user-img-count{
+width: 30%;
+height: auto;
+margin-left: -0.2rem;
+margin-top: -1rem;
+}
+.user-img-count2{
+    width: 30%;
+    height: auto;
+    margin-left: -0.6rem;
+    margin-top: -1rem;
+    }
+
+.count-txt{
+    font-size: 1.2rem;
+    margin-left: -0.3rem;
+    margin-top: 0.5rem;
+    display: flex;
+}
+.count-txt2{
+    font-size: 1.2rem;
+    margin-left: -0.4rem;
+    margin-top: 0.5rem;
+}
+.count{
+    color:#F2B544;
+    /* margin-left: 3rem; */
+    font-size: 4rem;
+    display: flex;
+   
 }

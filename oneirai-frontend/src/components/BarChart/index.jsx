@@ -94,8 +94,9 @@ const BarChart = () => {
   return (
     <div className='body-stats'>
       <div className='chart-panel'>
-        <h1 className='title-chart'>Pie Charts of User's Locations</h1>
+        <h1 className='title-chart'>Bar Charts of User's Locations</h1>
         <div className='charts-container'>
+          
           {data &&
             data.stats.map((locationData) => (
               <div key={locationData.location} className='chart-container'>
