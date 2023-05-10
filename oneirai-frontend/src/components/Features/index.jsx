@@ -54,7 +54,9 @@ const Features = () => {
                 <div className="feature-txt-button">
                     <div><p className="feature1">Get Personalized Horoscopes Like Never Before - <br />Try Now and Discover the Power of AI Technology!</p></div>
 
-                    <div><Button>Try Now</Button></div>
+                    <Link to="/horo">
+                            <div><Button>Try Now</Button></div>
+                        </Link>
                 </div>
                 <img className="photo" src={Feature4} alt="photo" />
             </div>

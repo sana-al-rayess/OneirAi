@@ -15,7 +15,7 @@ const Intro = () => {
 
     <div className="intro-container">
       <div>
-        <p className="slogan-txt">Oneir<span>Ai</span>: where imagination<br /> meets AI interpretation.</p>
+        <p className="slogan-txt">Oneir<span>Ai</span>: Where Imagination<br /> Meets AI Interpretation.</p>
       </div>
       <div>
         <p className="slogan-txt2">Unleash the power of AI to visualize and interpret<br /> your subconscious mind!</p></div>
