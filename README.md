@@ -81,9 +81,11 @@
 ### User Screens (Web)
 | Login screen  | Register screen |  Landing screen |
 | ---| ---| ---|
-| ![Landing](./readme/gifs/horoscope_demo.gif) | ![fsdaf](./readme/demo/signup.svg) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Landing](./readme/gifs/landing_demo.gif) | ![fsdaf](./readme/demo/signup.svg) | ![fsdaf](./readme/demo/1440x1024.png) |
 | Home screen  | Menu Screen | Order Screen |
 | ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| Daily Horoscope  | Personality Analysis | Compatibility Test |
+| ![Landing](./readme/gifs/daily_horo.gif) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/gifs/compatibility.gif) |
 
 <br><br>
 
