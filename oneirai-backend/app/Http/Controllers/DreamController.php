@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Dream;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\DB;
+
 
 
 class DreamController extends Controller
@@ -202,26 +202,7 @@ class DreamController extends Controller
     }
     
   
-    public function getLocationStats() {
-        $dreams = DB::table('dreams')
-          ->join('users', 'dreams.user_id', '=', 'users.id')
-          ->select('category', 'users.location', DB::raw('count(*) as count'))
-          ->groupBy('category', 'users.location')
-          ->get();
-      
-        $locations = $dreams->groupBy('location');
-      
-        $stats = [];
-      
-        foreach ($locations as $location => $dreamsByLocation) {
-          $stats[] = [
-            'location' => $location,
-            'dreams' => $dreamsByLocation->toArray(),
-          ];
-        }
-      
-        return response()->json(['stats' => $stats]);
-      }
+   
       
     
 }
