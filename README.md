@@ -110,7 +110,7 @@ This is a list of things you need to use the software and how to install them.
   ```sh
   npm install npm@latest -g
   ```
-* Apache, PHP, MySQL [Download](https://downloadsapachefriends.global.ssl.fastly.net/8.1.6/xampp-windows-x64-8.1.6-0-VS16-installer.exe?from_af=true)
+* Apache, PHP, MySQL [Download](https://www.apachefriends.org/)
 * Download composer   [Download](https://getcomposer.org/Composer-Setup.exe)
 
 <a id="how-to-run"></a>

@@ -64,7 +64,7 @@ const AdminNav = () => {
                     <div className="menu-item-admin">
 
                         <Link to="/admin/piechart" className="linking" style={window.location.pathname === '/admin/piechart' ? { fontWeight: 'bold', textDecoration: 'underline' } : {}}>
-                            Pie Charts
+                            Doughnut Charts
                         </Link>
 
                     </div>

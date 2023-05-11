@@ -88,7 +88,7 @@ const DreamStatsChart = () => {
   return (
    
       <div className='chart-panel'>
-        <div className='title-chart'><h1>Pie Charts of User's Locations</h1></div>
+        <div className='title-chart'><h1>Doughnut Charts of User's Locations</h1></div>
         <div className='pie-container'>
           {isLoading ? (
             <div className='loading-spinner'>

@@ -112,7 +112,7 @@ const UserProfile = () => {
     return (
         <div className="user-container">
             <div>
-                <p> Hello, {active_user}</p>
+                <p className="greetings"> Hello, {active_user}</p>
             </div>
             <div className="date">
                 <p> Today is, {today}</p>
