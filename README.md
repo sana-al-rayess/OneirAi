@@ -51,7 +51,7 @@
 | ---| ---| ---|
 | ![Landing](./readme/demo/Landing_mockup.png) | ![fsdaf](./readme/demo/horoscope.png) | 
 
-<details><summary>See more mockups</summary>
+<!-- <details><summary>See more mockups</summary> -->
 
 | UserDash Screen | Add Dream Screen | Interpret Dream Screen |
 | ---| ---| ---|
@@ -92,10 +92,9 @@
 | ![Landing](./readme/gifs/daily_horo.gif) | ![fsdaf](./readme/gifs/personality.gif) | ![fsdaf](./readme/gifs/compatibility.gif) |
 | Authorization  | Admin Panel| Data Analysis: Charts |
 | ![Landing](./readme/gifs/error.gif) | ![fsdaf](./readme/gifs/admin.gif) | ![fsdaf](./readme/gifs/charts.gif) |
-
+| Subscribe | |  |
+| ![Landing](./readme/gifs/subscribe.gif) | ![fsdaf](./readme/gifs/.gif) | ![fsdaf](./readme/gifs/.gif) |
 <br><br>
-
-
 
 <br><br>
 <img src="./readme/title6.svg"/>
