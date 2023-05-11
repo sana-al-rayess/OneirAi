@@ -141,19 +141,21 @@
 <br><br>
 
 <br><br>
+
+
+<br><br>
+<a id="implementation"></a>
+<img src="./readme/title5.svg"/>
 <a id="tech-stack"></a>
-<img src="./readme/title4.svg"/>
 
 Here's a brief high-level overview of the tech stack OneirAi app uses:
 - This project uses the [Laravel framework](https://laravel.com/). Laravel is a web application framework with expressive, elegant syntax.
 - As database, MySQL was used.
 - OneirAi uses the [React](https://reactjs.org/) library for the front-end. React makes it painless to create interactive UIs, is component-based and is reusable.
 
+- For state management, the project used [Zustand](https://github.com/pmndrs/zustand).
+<br><br>
 
-<br><br>
-<a id="implementation"></a>
-<img src="./readme/title5.svg"/>
-<br><br>
 <img src="./readme/title6.svg"/>
 
 
