@@ -33,7 +33,7 @@
 <!-- Prototyping -->
 <img src="./readme/title3.svg"/>
 
->I designed OneirAi using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
+>I designed OneirAi using wireframes and mockups, iterating on the design until I reached the ideal layout for easy navigation and a seamless user experience.
 
 ### Wireframes
 
