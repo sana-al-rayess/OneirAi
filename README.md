@@ -36,14 +36,25 @@
 >I designed OneirAi using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
 
 ### Wireframes
-| Login screen  | Register screen |  Landing screen |
+
+
+| Login  | Register Screen |  |
 | ---| ---| ---|
-| ![Landing](./readme/demo/Login_wireframe.png) | ![fsdaf](./readme/demo/Register_wireframe.png) | ![fsdaf](./readme/demo/landing_wireframe.png) |
-| UserDashboard screen  | Add Dream screen |  Landing screen |
+| ![Landing](./readme/demo/Login_wireframe.png) | ![fsdaf](./readme/demo/Register_wireframe.png) | 
+
+| Landing Page  | User Dashboard |  |
 | ---| ---| ---|
-| ![Landing](./readme/demo/Userdash_wireframe.png) | ![fsdaf](./readme/demo/AddDream_wireframe.png) | ![fsdaf](./readme/demo/Interpretation_wireframe.png) |
+| ![Landing](./readme/demo/landing_wireframe.png) | ![fsdaf](./readme/demo/Userdash_wireframe.png) | 
+
+| Add Dream  | Interpret Dream |  |
+| ---| ---| ---|
+| ![Landing](./readme/demo/AddDream_wireframe.png) | ![fsdaf](./readme/demo/Interpretation_wireframe.png) | 
+
+
 
 ### Mockups
+
+
 | Login screen  | SignUp Screen |  |
 | ---| ---| ---|
 | ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | 
@@ -53,19 +64,25 @@
 
 <!-- <details><summary>See more mockups</summary> -->
 
-| UserDash Screen | Add Dream Screen | Interpret Dream Screen |
+|| User Dashboard |  Add Dream  |
 | ---| ---| ---|
-| ![Landing](./readme/demo/user_dash.png) | ![fsdaf](./readme/demo/add_dream.png) | ![fsdaf](./readme/demo/interpret.png) |
-| Visualize Dream Screen |  Change Password Screen |   Edit Profile  |
-| ---| ---| ---|
-| ![Landing](./readme/demo/visualize.png) | ![fsdaf](./readme/demo/changepass.png) | ![fsdaf](./readme/demo/edit_prof.png) |
+|  | ![fsdaf](./readme/demo/user_dash.png) | ![fsdaf](./readme/demo/add_dream.png) |
 
-| Admin Screen | View Registered Users Screen | Pie Chart Analysis Screen |
+|| Interpret Dream |  Visualize Dream |
 | ---| ---| ---|
-| ![Landing](./readme/demo/admin_home.png) | ![fsdaf](./readme/demo/view-users.png) | ![fsdaf](./readme/demo/pie-chart.png) |
-| Bar Chart Analysis Screen |
+|  | ![fsdaf](./readme/demo/interpret.png) | ![fsdaf](./readme/demo/visualize.png) |
+
+|| Change Password | Edit Profile |
 | ---| ---| ---|
-| ![Landing](./readme/demo/bar-chart.png) | 
+|  | ![fsdaf](./readme/demo/changepass.png) | ![fsdaf](./readme/demo/edit_prof.png) |
+
+|| Admin Panel |  View Registered Users |
+| ---| ---| ---|
+|  | ![fsdaf](./readme/demo/admin_home.png) | ![fsdaf](./readme/demo/view-users.png) |
+
+|| Pie Chart Analysis |  Bar Chart Analysis |
+| ---| ---| ---|
+|  | ![fsdaf](./readme/demo/pie-chart.png) | ![fsdaf](./readme/demo/bar-chart.png) |
 
 </details>
 #
@@ -79,21 +96,48 @@
 > Using the wireframes and mockups as a guide, we implemented OneirAi app with the following features:
 
 ### User Screens (Web)
-| Landing Page  | Register |  Login |
+|  | Landing Page |   |
 | ---| ---| ---|
-| ![Landing](./readme/gifs/landing_demo.gif) | ![fsdaf](./readme/gifs/register.gif) | ![fsdaf](./readme/gifs/login.gif) |
-| Add Dream  |  Visualize Dream | Interpret & Download Dream |
-| ![Landing](./readme/gifs/add_dream.gif) | ![fsdaf](./readme/gifs/visualize.gif) | ![fsdaf](./readme/gifs/interpret.gif) |
-| Change Password |  Edit Profile | Search, Sort & Delete |
-| ![Landing](./readme/gifs/changepass.gif) | ![fsdaf](./readme/gifs/profile.gif) | ![fsdaf](./readme/gifs/search_sort.gif) |
-|  |  Horoscope |  |
-| | ![fsdaf](./readme/gifs/horoscope_demo.gif) |  |
-| Daily Horoscope  | Personality Analysis | Compatibility Test |
-| ![Landing](./readme/gifs/daily_horo.gif) | ![fsdaf](./readme/gifs/personality.gif) | ![fsdaf](./readme/gifs/compatibility.gif) |
-| Authorization  | Admin Panel| Data Analysis: Charts |
-| ![Landing](./readme/gifs/error.gif) | ![fsdaf](./readme/gifs/admin.gif) | ![fsdaf](./readme/gifs/charts.gif) |
-| Subscribe | |  |
-| ![Landing](./readme/gifs/subscribe.gif) | ![fsdaf](./readme/gifs/.gif) | ![fsdaf](./readme/gifs/.gif) |
+|  | ![fsdaf](./readme/gifs/landing_demo.gif) | |
+
+|| Register |  Login |
+| ---| ---| ---|
+|  | ![fsdaf](./readme/gifs/register.gif) | ![fsdaf](./readme/gifs/login.gif) |
+
+|| Add Dream |  Visualize Dream |
+| ---| ---| ---|
+|  | ![fsdaf](./readme/gifs/add_dream.gif) | ![fsdaf](./readme/gifs/visualize.gif) |
+
+|| Interpret & Download Dream |  Search, Sort & Delete |
+| ---| ---| ---|
+|  | ![fsdaf](./readme/gifs/interpret.gif) | ![fsdaf](./readme/gifs/search_sort.gif) |
+
+|| Edit Profile |  Change Password |
+| ---| ---| ---|
+|  | ![fsdaf](./readme/gifs/profile.gif) | ![fsdaf](./readme/gifs/changepass.gif) |
+
+
+|| Horoscope Page |  Daily Horoscope |
+| ---| ---| ---|
+|  | ![fsdaf](./readme/gifs/horoscope_demo.gif) | ![fsdaf](./readme/gifs/daily_horo.gif) |
+
+|| Personality Analysis |  Compatibility Test |
+| ---| ---| ---|
+|  | ![fsdaf](./readme/gifs/personality.gif) | ![fsdaf](./readme/gifs/compatibility.gif) |
+
+
+|| Admin Panel |  Data Analysis: Charts |
+| ---| ---| ---|
+|  | ![fsdaf](./readme/gifs/admin.gif) | ![fsdaf](./readme/gifs/charts.gif) |
+
+|| Subscribe |  Reset Password |
+| ---| ---| ---|
+|  | ![fsdaf](./readme/gifs/subscribe.gif) | ![fsdaf](./readme/gifs/reset.gif) |
+
+|| Permissions |   |
+| ---| ---| ---|
+|  | ![fsdaf](./readme/gifs/error.gif) | |
+
 <br><br>
 
 <br><br>

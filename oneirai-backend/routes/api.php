@@ -23,7 +23,7 @@ Route::controller(ForgotPasswordController::class)->group(function () {
     Route::post('password/reset/{token}', 'showResetForm')->name('password.reset');
     Route::post('/password/email', 'sendResetLinkEmail');
     Route::post('/reset', 'reset')->name('password.update');
- });
+});
 
 
 
@@ -44,7 +44,7 @@ Route::group(['middleware' => 'user.role'], function () {
     Route::get('userInfo', [UserController::class, 'getUser']);
     Route::post('updateUserInfo', [UserController::class, 'updateUser']);
     Route::post('updatePassword', [UserController::class, 'updatePassword']);
-    
+
 
 
     Route::post('addDream', [DreamController::class, 'addDream']);
@@ -64,10 +64,8 @@ Route::group(['middleware' => 'user.role'], function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['middleware' => 'admin.role'], function () {
         Route::get('getUsers', [AdminController::class, 'getUsers']);
-      
+        Route::get('userCount', [AdminController::class, 'userCount']);
         Route::get('/dreamstat', [AdminController::class, 'getLocationStats']);
 
     });
 });
-
-  Route::get('userCount', [AdminController::class, 'userCount']);

@@ -13,7 +13,7 @@ const AdminSideLeft = () => {
     const [count, setCount] = useState(null);
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/userCount')
+        axios.get('http://127.0.0.1:8000/api/admin/userCount')
             .then(response => setCount(response.data.count))
             .catch(error => console.log(error));
     }, []);
