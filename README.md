@@ -93,7 +93,7 @@
 <!-- Implementation -->
 <img src="./readme/title4.svg"/>
 
-> Using the wireframes and mockups as a guide, we implemented OneirAi app with the following features:
+> Using the wireframes and mockups as a guide, I implemented OneirAi app  with the following features:
 
 ### User Screens (Web)
 |  | Landing Page |   |
@@ -134,9 +134,9 @@
 | ---| ---| ---|
 |  | ![fsdaf](./readme/gifs/subscribe.gif) | ![fsdaf](./readme/gifs/reset.gif) |
 
-|| Permissions |   |
+|| Permissions |  Responsiveness |
 | ---| ---| ---|
-|  | ![fsdaf](./readme/gifs/error.gif) | |
+|  | ![fsdaf](./readme/gifs/error.gif) | ![fsdaf](./readme/gifs/resp.gif) |
 
 <br><br>
 
