@@ -153,7 +153,6 @@ Here's a brief high-level overview of the tech stack OneirAi app uses:
 - As database, MySQL was used.
 - OneirAi uses the [React](https://reactjs.org/) library for the front-end. React makes it painless to create interactive UIs, is component-based and is reusable.
 
-- For state management, the project used [Zustand](https://github.com/pmndrs/zustand).
 <br><br>
 
 <img src="./readme/title6.svg"/>
