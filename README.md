@@ -59,7 +59,7 @@
 | ---| ---| ---|
 | ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | 
 | Landing Page  | Horoscope Page |  |
-| ---| ---| ---|
+| | | |
 | ![Landing](./readme/demo/Landing_mockup.png) | ![fsdaf](./readme/demo/horoscope.png) | 
 
 <!-- <details><summary>See more mockups</summary> -->
