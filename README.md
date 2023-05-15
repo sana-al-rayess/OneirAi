@@ -10,22 +10,16 @@
 > Our mission is to empower individuals to understand themselves better and to provide a unique and personalized experience for each user.
 
 ### User Stories
-- As a new user, I want to register an account on OneirAi, so that I can begin keeping track of my dreams and exploring their meaning.
-- As a user, I want to log in to my account on OneirAi, so that I can access my dream journal and past interpretations.
-- As a user, I want to be able to log out of my account on OneirAi, so that I ensure the privacy and security of my dream data.
-- As a user, I want to be able to edit my profile on OneirAi, so that I can update my personal information or change my password.
 - As a user, I want to be able to enter details about my dream, so that I can get an AI-generated interpretation of my dream that offers insights into my subconscious thoughts.
 - As a user, I want to be able to view a visual representation of my dream, so that I can explore and connect to my dream in a creative way.
-- As a user, I want to be able to download my dream details as a text file, so that I can have a record of my dreams and refer to them in the future
-- As a user, I want to be able to access my daily horoscope through the OneirAi website, so that I can see what the stars have in store for me each day.
-- As a user, I want to be able to receive a personality analysis from OneirAi, so that I can gain insights into my strengths and weaknesses and better understand myself.
+- As a user, I want to be able to access my daily AI horoscope, so that I can see what the stars have in store for me each day.
+- As a user, I want to be able to receive an AI personality analysis, so that I can gain insights into my strengths and weaknesses and better understand myself.
 - As a user who is interested in relationships, I want to be able to take a compatibility test on OneirAi, so that I can see how well-matched I am with my partner or potential partners.
-- As a user, I want to be able to subscribe to OneirAi mailing list so that I can receive updates on new features, improvements, and promotions related to the dream interpretation and horoscope services provided by OneirAi.
 
 ### Admin Stories
 - As an admin, I want to be able to view a list of all registered users on the platform, so that I can keep track of user activity and identify any potential issues or concerns.
 - As an admin, I want to be able to generate bar charts, polar charts, line charts, and pie charts based on the data analysis of dream categories in each country, so that I can easily visualize the data and see what is the most common category in each country.
-- As an admin, I want to be able to get count of all registered users on the platform, so that I can track the growth of the website over time.
+- As an admin, I want to be able to get count of all registered and subscribed users on the platform, so that I can track the growth of the website over time.
 
 
 <br><br>
@@ -38,13 +32,9 @@
 ### Wireframes
 
 
-| Login  | Register Screen |  |
+| Register Screen  | User Dashboard |  |
 | ---| ---| ---|
-| ![Landing](./readme/demo/Login_wireframe.png) | ![fsdaf](./readme/demo/Register_wireframe.png) | 
-
-| Landing Page  | User Dashboard |  |
-| ---| ---| ---|
-| ![Landing](./readme/demo/landing_wireframe.png) | ![fsdaf](./readme/demo/Userdash_wireframe.png) | 
+| ![Landing](./readme/demo/Register_wireframe.png) | ![fsdaf](./readme/demo/Userdash_wireframe.png) | 
 
 | Add Dream  | Interpret Dream |  |
 | ---| ---| ---|
@@ -58,15 +48,11 @@
 | Login screen  | SignUp Screen |  |
 | ---| ---| ---|
 | ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | 
-| Landing Page  | Horoscope Page |  |
-| | | |
-| ![Landing](./readme/demo/Landing_mockup.png) | ![fsdaf](./readme/demo/horoscope.png) | 
-
-<!-- <details><summary>See more mockups</summary> -->
 
 || User Dashboard |  Add Dream  |
 | ---| ---| ---|
 |  | ![fsdaf](./readme/demo/user_dash.png) | ![fsdaf](./readme/demo/add_dream.png) |
+<details><summary>See more mockups</summary>
 
 || Interpret Dream |  Visualize Dream |
 | ---| ---| ---|
@@ -83,6 +69,10 @@
 || Pie Chart Analysis |  Bar Chart Analysis |
 | ---| ---| ---|
 |  | ![fsdaf](./readme/demo/pie-chart.png) | ![fsdaf](./readme/demo/bar-chart.png) |
+
+| Landing Page  | Horoscope Page |  |
+| | | |
+| ![Landing](./readme/demo/Landing_mockup.png) | ![fsdaf](./readme/demo/horoscope.png) | 
 
 </details>
 #
