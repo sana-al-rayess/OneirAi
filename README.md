@@ -12,9 +12,7 @@
 ### User Stories
 - As a user, I want to be able to enter details about my dream, so that I can get an AI-generated interpretation of my dream that offers insights into my subconscious thoughts.
 - As a user, I want to be able to view a visual representation of my dream, so that I can explore and connect to my dream in a creative way.
-- As a user, I want to be able to access my daily AI horoscope, so that I can see what the stars have in store for me each day.
-- As a user, I want to be able to receive an AI personality analysis, so that I can gain insights into my strengths and weaknesses and better understand myself.
-- As a user who is interested in relationships, I want to be able to take a compatibility test on OneirAi, so that I can see how well-matched I am with my partner or potential partners.
+- As a user, I want to be able to access my daily horoscope, receive a personality analysis and take a compatibility test using AI, so that I can see what the stars have in store for me each day, and gain valuable insights into my personality and compatibility with others.
 
 ### Admin Stories
 - As an admin, I want to be able to view a list of all registered users on the platform, so that I can keep track of user activity and identify any potential issues or concerns.
