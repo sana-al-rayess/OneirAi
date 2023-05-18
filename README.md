@@ -42,10 +42,13 @@
 
 ### Mockups
 
-
+> | Landing                                      | Signup/Signin/Profile                                                                                        |
+> | ------------------------------------------------- | -------------------------------------------- |
+> | <img src="./readme/demo/Landing_mockup.png"/> | <img src="./readme/demo/SignUp_mockup.png" width="75%"  /> !<img src="./readme/demo/Login_mockup.png" width="75%" /> !<img src="./readme/demo/Login_mockup.png" width="75%" /> 
+<!-- 
 | Login screen  | SignUp Screen |  |
 | ---| ---| ---|
-| ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) | 
+| ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) |  -->
 
 || User Dashboard |  Add Dream  |
 | ---| ---| ---|
@@ -68,9 +71,9 @@
 | ---| ---| ---|
 |  | ![fsdaf](./readme/demo/pie-chart.png) | ![fsdaf](./readme/demo/bar-chart.png) |
 
-| Landing Page  | Horoscope Page |  |
-| | | |
-| ![Landing](./readme/demo/Landing_mockup.png) | ![fsdaf](./readme/demo/horoscope.png) | 
+<!-- || Landing Page  | Horoscope Page |  
+| ---| ---| ---|
+| | ![Landing](./readme/demo/Landing_mockup.png) | ![fsdaf](./readme/demo/horoscope.png) |  -->
 
 </details>
 #
