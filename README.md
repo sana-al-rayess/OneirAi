@@ -42,17 +42,17 @@
 
 ### Mockups
 
-> | Landing                                      | Signup/Signin/Profile                                                                                        |
+> | Landing                                      | Signup/Signin/UserPanel                                                                                        |
 > | ------------------------------------------------- | -------------------------------------------- |
-> | <img src="./readme/demo/Landing_mockup.png"/> | <img src="./readme/demo/SignUp_mockup.png" width="75%"  /> !<img src="./readme/demo/Login_mockup.png" width="75%" /> !<img src="./readme/demo/Login_mockup.png" width="75%" /> 
+> | <img src="./readme/demo/Landing_mockup.png"/> | <img src="./readme/demo/SignUp_mockup.png" width="75%"  /> !<img src="./readme/demo/Login_mockup.png" width="75%" /> !<img src="./readme/demo/user_dash.png" width="75%" /> |
 <!-- 
 | Login screen  | SignUp Screen |  |
 | ---| ---| ---|
 | ![Landing](./readme/demo/Login_mockup.png) | ![fsdaf](./readme/demo/SignUp_mockup.png) |  -->
 
-|| User Dashboard |  Add Dream  |
+|| Add Dream |  Interpret Dream  |
 | ---| ---| ---|
-|  | ![fsdaf](./readme/demo/user_dash.png) | ![fsdaf](./readme/demo/add_dream.png) |
+|  | ![fsdaf](./readme/demo/add_dream.png) | ![fsdaf](./readme/demo/interpret.png) |
 <details><summary>See more mockups</summary>
 
 || Interpret Dream |  Visualize Dream |
