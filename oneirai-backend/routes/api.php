@@ -27,7 +27,7 @@ Route::controller(ForgotPasswordController::class)->group(function () {
 
 Route::post('/chatgpt', [DreamController::class, 'getResponse']);
 Route::post('/dal-e', [DreamController::class, 'generateImage']);
-
+ Route::get('userCount', [AdminController::class, 'userCount']);
 
 Route::post('getHoroscope', [HoroscopeController::class, 'getHoroscope']);
 Route::post('getCompatibility', [HoroscopeController::class, 'getCompatibility']);
@@ -53,7 +53,7 @@ Route::group(['middleware' => 'user.role'], function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['middleware' => 'admin.role'], function () {
         Route::get('getUsers', [AdminController::class, 'getUsers']);
-        Route::get('userCount', [AdminController::class, 'userCount']);
+       
         Route::get('/dreamstat', [AdminController::class, 'getLocationStats']);
 
     });

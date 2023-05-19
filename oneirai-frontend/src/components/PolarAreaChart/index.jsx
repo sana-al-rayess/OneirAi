@@ -3,6 +3,10 @@ import axios from 'axios';
 import Chart from 'chart.js/auto';
 import "./polarchartarea.css";
 
+const api = axios.create({
+  baseURL: 'http://127.0.0.1:8000/api/admin',
+ 
+});
 
 const PolarAreaChart = () => {
   const [data, setData] = useState(null);
@@ -14,7 +18,7 @@ const PolarAreaChart = () => {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     }
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/admin/dreamstat`, config);
+      const response = await api.get(`/dreamstat`, config);
       setData(response.data);
       setIsLoading(false);
     } catch (error) {

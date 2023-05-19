@@ -13,7 +13,7 @@ const AdminSideLeft = () => {
     const [count, setCount] = useState(null);
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/admin/userCount')
+        axios.get('http://127.0.0.1:8000/api/userCount')
             .then(response => setCount(response.data.count))
             .catch(error => console.log(error));
     }, []);
@@ -34,7 +34,7 @@ const AdminSideLeft = () => {
 
                         <div className="usercount">
                             <div><img className="user-img-count" src={Subscribers} alt="image" />
-                            <h3 className='yellow count-txt2'>Subscribers</h3>
+                                <h3 className='yellow count-txt2'>Subscribers</h3>
                             </div>
 
                             <h1 className='count'>{count}</h1>

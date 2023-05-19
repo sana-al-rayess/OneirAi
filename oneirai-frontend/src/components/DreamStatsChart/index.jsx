@@ -3,6 +3,11 @@ import axios from 'axios';
 import Chart from 'chart.js/auto';
 import './dreamstatschat.css';
 
+const api = axios.create({
+  baseURL: 'http://127.0.0.1:8000/api',
+  
+});
+
 const DreamStatsChart = () => {
   const [data, setData] = useState(null);
   const [locationCharts, setLocationCharts] = useState([]);
@@ -13,7 +18,7 @@ const DreamStatsChart = () => {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     }
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/admin/dreamstat`, config);
+      const response = await api.get(`/admin/dreamstat`, config);
       setData(response.data);
       setIsLoading(false);
     } catch (error) {

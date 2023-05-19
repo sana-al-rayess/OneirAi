@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Chart from 'chart.js/auto';
 
+const api = axios.create({
+  baseURL: 'http://127.0.0.1:8000/api',
+  
+});
+
+
 const BarChart = () => {
   const [data, setData] = useState(null);
   const [locationCharts, setLocationCharts] = useState([]);
@@ -11,7 +17,7 @@ const BarChart = () => {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     }
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/admin/dreamstat`, config);
+      const response = await api.get(`/admin/dreamstat`, config);
       setData(response.data);
     } catch (error) {
       console.log(error);

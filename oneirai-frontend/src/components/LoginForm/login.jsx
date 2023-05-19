@@ -4,7 +4,13 @@ import Logo from "../../images/logo_oneira.png";
 import "./login.css";
 import { Link } from "react-router-dom";
 
-
+const api = axios.create({
+    baseURL: 'http://127.0.0.1:8000/api',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  
 function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -19,17 +25,7 @@ function LoginForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         let valid = true;
-        if (!name.trim()) {
-            setNameError("Name is required");
-            valid = false;
-        }
-        if (!email.trim()) {
-            setEmailError("Email is required");
-            valid = false;
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            setEmailError("Email is invalid");
-            valid = false;
-        }
+       
         if (!password.trim()) {
             setPasswordError("Password is required");
             valid = false;
@@ -40,7 +36,7 @@ function LoginForm() {
         if (valid) {
             try {
                 const formData = { name, email, password };
-                const response = await axios.post('http://127.0.0.1:8000/api/register', formData);
+                const response = await api.post("/register", formData);
                 const { user, authorisation } = response.data;
                 localStorage.setItem('token', authorisation.token);
                 localStorage.setItem("name", response.data.user.name);
@@ -55,19 +51,15 @@ function LoginForm() {
                 console.log("email already exists");
                 setRegisterError("Email already Exists");
             }
-
         }
+        
     }
     const handleLogin = async (e) => {
         e.preventDefault();
-
-
-
         const form = e.target;
         try {
             const formData = { email, password };
-            const response = await axios.post(
-                "http://127.0.0.1:8000/api/login", formData);
+            const response = await api.post("/login", formData);
             const { user, authorisation } = response.data;
             localStorage.setItem("token", authorisation.token);
             localStorage.setItem("name", response.data.user.name);

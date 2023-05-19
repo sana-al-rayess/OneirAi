@@ -3,6 +3,15 @@ import Button3 from "../Button3";
 import Button2 from "../Button2";
 import "./adddream.css";
 import axios from "axios";
+
+const api = axios.create({
+  baseURL: 'http://127.0.0.1:8000/api',
+  headers: {
+    Authorization: `Bearer ${localStorage.getItem("token")}`,
+    "Content-Type": "multipart/form-data",
+  },
+});
+
 const AddDream = (props) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -31,7 +40,6 @@ const AddDream = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const token = localStorage.getItem('access_token');
 
     const formData = new FormData();
     formData.append('title', title);
@@ -55,23 +63,17 @@ const AddDream = (props) => {
       return;
     }
 
-    axios
-      .post("http://127.0.0.1:8000/api/addDream", formData, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-          "Content-Type": "multipart/form-data",
-        },
-      })
-      .then((response) => {
-        console.log(response.data);
-        console.log("Dream added successfully!")
-        window.location.reload();
-      })
-      .catch((error) => {
-        console.log(error.response.data);
-        console.log("Error adding dream")
-      });
-  };
+    api.post("/addDream", formData)
+    .then((response) => {
+      console.log(response.data);
+      console.log("Dream added successfully!");
+      window.location.reload();
+    })
+    .catch((error) => {
+      console.log(error.response.data);
+      console.log("Error adding dream");
+    });
+};
 
   return (
     <div className="popup">
