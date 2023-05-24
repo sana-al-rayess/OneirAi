@@ -3,12 +3,15 @@ import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import "./dailyhoroscope.css";
 import Button2 from "../Button2";
+import CustomCircularProgress from "../CircularProgress";
 
 function DailyHoroscope() {
   const [sign, setSign] = useState("");
   const [horoscope, setHoroscope] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const getHoroscope = async () => {
+    setIsLoading(true);
     const response = await fetch("http://127.0.0.1:8000/api/getHoroscope", {
       method: "POST",
       headers: {
@@ -19,6 +22,7 @@ function DailyHoroscope() {
 
     const data = await response.json();
     setHoroscope(data.horoscope);
+    setIsLoading(false);
   };
 
   const signs = [
@@ -52,9 +56,10 @@ function DailyHoroscope() {
             </option>
           ))}
         </select>
-        <Button2 onClick={getHoroscope}>
+        <Button2 onClick={getHoroscope} disabled={isLoading}>
           Daily Horoscope
         </Button2>
+        {isLoading && <CustomCircularProgress />}
       </div>
       <div>
         {horoscope && (
